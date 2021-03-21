@@ -1,0 +1,17 @@
+// Your custom variables
+
+$primary-color: #e40046; // Pinkish red
+$secondary-color: #efb661; // amber
+
+$blake-dark-grey: #282828;
+$blake-brown: #d7a048;
+
+
+$boston-font-path:                            "../font/boston/" !default;
+$boston-font-family:                          "Boston", sans-serif !default;
+
+$stolzl-font-path:                            "../font/stolzl/" !default;
+$stolzl-font-family:                          "Stolzl", sans-serif !default;
+
+// Basic font properties (Overriding bootstrap/_variables.scss)
+$mdb-font-family:                             $stolzl-font-family !default;
