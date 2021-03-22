@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import { MDBBtn, MDBCol, MDBIcon, MDBJumbotron, MDBRow } from "mdbreact"
+import { MDBBtn, MDBIcon, MDBJumbotron } from "mdbreact"
 
 //import { FaYoutube } from "react-icons/fa"
 
@@ -11,11 +11,6 @@ const Jumbotron = () => {
       <div className="bg-img text-center">
         <div className="site-header">
           <h1 className="headline">The Jamieson Collection</h1>
-          <h2>
-            <span className="tag1">ART</span>
-            <span className="tag2">- BOOKS</span>
-            <span className="tag3">- CARDS</span>
-          </h2>
         </div>
         { false &&
           <div className="front-promo">
@@ -37,16 +32,16 @@ const Jumbotron = () => {
               <h4>Subscribe to my YouTube Channel</h4>
               <p>Live Streams Mon, Wed & Fri at 10:23pm Eastern</p>
             </div>
-          </div>
+          </div>*/}
           <div className="featured-link">
-            <Link to="/topps/1951">
+            <Link to="/haitian-art">
               <MDBBtn color="secondary">
-                Topps 1951 Cards
+                Haitian Art
                 <MDBIcon icon="caret-right" className="ml-2" />
               </MDBBtn>
             </Link>
           </div>
-        </div>*/}
+        {/*</div>*/}
 
       </div>
     </MDBJumbotron>

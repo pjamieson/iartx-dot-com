@@ -3,8 +3,8 @@ import React from 'react';
 import { MDBCardImage, MDBMask, MDBView } from "mdbreact";
 
 const FeaturedImagelink = ({ location, item }) => {
-  //console.log("FeaturedImagelink item", item.)
-  
+  //console.log("FeaturedImagelink item", item)
+
   // The primary image is the first of the images set
   //const image = getImage(item.images[0].localFile.childImageSharp.gatsbyImageData)
 
@@ -19,7 +19,7 @@ const FeaturedImagelink = ({ location, item }) => {
   const link = `/${menu}/${submenu}/`
 
   return (
-    <MDBView hover zoom shadow-1-strong rounded>
+    <MDBView hover zoom rounded>
       {/*<GatsbyImage className="img-fluid w-100" image={image} alt={item.title} />*/}
       <MDBCardImage src={item.images[0].url} className="img-fluid" waves />
       <a href={link}>

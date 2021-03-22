@@ -114,16 +114,19 @@ p {
     }
   }
   .navbar-brand {
+    font-size: 1.6rem;
     margin-right: 2rem;
     a {
       text-decoration: none;
     }
     .logo {
       max-height: 40px;
+      padding-right: .4rem;
+      margin-left: -.5rem;
     }
     .brand-name {
       vertical-align: middle;
-      &.blake {
+      &.fat {
         font-weight: 700;
       }
       &.dot {
@@ -137,10 +140,11 @@ p {
   }
   .nav-menu-item {
     text-align: center;
+    font-size: 1.2rem;
     p {
       margin: 0;
-      padding: 0;
-      line-height: 1.2;
+      padding: 0 0 .5rem 0;
+      //line-height: 1.2;
       color: white;
       font-family: "Boston" !important;
     }
@@ -191,10 +195,6 @@ p {
     top: .7rem;
     right: 4rem;
   }
-  .hidden-nav-item {
-    margin: 0 -10px 0 -20px;
-    color: $blake-dark-grey;
-  }
   @media (min-width: 768px) {
     padding: 0;
   }
@@ -204,7 +204,7 @@ p {
   position: absolute;
   top: .8rem;
   right: 1.5rem;
-  padding-left: 0;
+  padding-left: 1.5rem;
   .success-text {
     color: $secondary-color !important;
     border-color: $secondary-color !important;
@@ -267,162 +267,37 @@ p {
         font-size: 3.5rem;
       }
     }
-    h2 {
-      position: absolute;
-      right: 2.5rem;
-      bottom: -1rem;
-      width: 100%;
-      font-size: 1rem !important;
-      letter-spacing: -0.05em;
-      color: white !important;
-      text-shadow: 2px 2px 16px $blake-dark-grey;
-      span {
-        font-family: "Boston";
-        font-weight: 300;
-      }
-      @media (min-width: 414px) {
-        font-size: 1.2rem !important;
-      }
-      @media (min-width: 576px) {
-        margin-top: -.5rem;
-        font-size: 1.35rem !important;
-      }
-      @media (min-width: 768px) {
-        margin-top: -1rem;
-        font-size: 1.5rem !important;
-      }
-    }
   }
   .headline {
-    animation: headline 1s;
+    animation: headline 3s;
   }
-  .tag1 {
-    animation: tagreveal1 5s;
-  }
-  .tag2 {
-    padding: 0 5px 0 6px;
-    animation: tagreveal2 5s;
-  }
-  .tag3 {
-    animation: tagreveal3 5s;
-  }
-  .front-promo {
-    margin-top: -220px;
-    animation: promoreveal 5s;
-    h3 {
-      margin-bottom: 0;
-      font-size: 2.5rem;
+  .featured-link {
+    position: absolute;
+    right: 0;
+    bottom: -.4rem;
+    margin: 1rem 0 .5rem 0;
+    height: fit-content;
+    animation: featuredreveal 5s;
+    button {
+      color: white;
+      opacity: .8;
+      font-size: 1.2rem;
       font-weight: 500;
-      //letter-spacing: -0.05em;
-      color: white !important;
-    }
-    h4 {
-      margin-top: 0;
-      font-size: 1.5rem !important;
-      //letter-spacing: -0.05em;
-      color: $blake-brown !important;
-    }
-  }
-  .actions {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    animation: featuredreveal3 5s;
-    @media (min-width: 768px) {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .you-tube-plug {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      padding: 0;
-      margin: 0;
-      text-align: left;
-      a {
-        padding-left: 0;
-        color: white;
-        opacity: .8;
-      }
-      .pitch {
-        margin-top: 0;
-        @media (min-width: 768px) {
-          margin-top: 1rem;
-        }
-        h4 {
-          color: white;
-          opacity: .8;
-          margin: 0;
-          font-size: .9rem;
-          line-height: 1.2rem;
-          @media (min-width: 576px) {
-            font-size: 1.4rem;
-            line-height: 1.6rem;
-          }
-          @media (min-width: 768px) {
-            font-size: 1.2rem;
-            margin-top: -1rem;
-          }
-        }
-        p {
-          color: white;
-          opacity: .6;
-          font-size: .75rem;
-          line-height: 1rem;
-          margin: 0;
-          @media (min-width: 576px) {
-            font-size: 1rem;
-            line-height: 1.2rem;
-          }
-        }
-      }
-    }
-    .featured-link {
-      margin: 1rem 0 .5rem 0;
-      height: fit-content;
-      button {
-        color: $blake-dark-grey;
-      }
+      text-shadow: 1px 1px 2px black;
     }
   }
 }
 
 @keyframes headline {
-    0% { opacity: 0; }
-    20% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-@keyframes tagreveal1 {
-  0% { opacity: 0; }
-  25% { opacity: 0; }
-  32% { opacity: 1; }
-}
-
-@keyframes tagreveal2 {
-  0% { opacity: 0; }
-  35% { opacity: 0; }
-  42% { opacity: 1; }
-}
-
-@keyframes tagreveal3 {
-  0% { opacity: 0; }
-  45% { opacity: 0; }
-  52% { opacity: 1; }
-}
-
-@keyframes featuredreveal3 {
   0% { opacity: 0; }
   50% { opacity: 0; }
-  65% { opacity: 1; }
+  100% { opacity: 1; }
 }
 
-@keyframes promoreveal {
+@keyframes featuredreveal {
   0% { opacity: 0; }
-  60% { opacity: 0; }
-  80% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 .front-content {
@@ -433,9 +308,6 @@ p {
       -ms-animation: fadein 1s; /* Internet Explorer */
        -o-animation: fadein 1s; /* Opera < 12.1 */
           animation: fadein 1s;
-  /*img, .card {
-    border-radius: .25rem;
-  }*/
   .intro-content {
     margin: -1rem 0 1rem 0;
     padding: 1.5rem 1.5rem .75rem 1.5rem;
@@ -545,10 +417,6 @@ p {
     to   { opacity: 1; }
 }
 
-.card .rgba-white-slight {
-  cursor: pointer;
-}
-
 .gallery, .p2020 {
   .card {
     .btn-action {
@@ -565,10 +433,15 @@ p {
     }
     .card-body {
       padding: .8rem ;
-      h3, h4 {
+      h3, h4, h5 {
         margin: 0;
       }
+      h4 {
+        font-style: italic;
+        font-weight: 500;
+      }
       .card-subtitle {
+        padding-bottom: .4rem;
         color: $secondary-color;
       }
     }
@@ -727,14 +600,14 @@ p {
   }
 }
 
-.members, .sports, .topps {
+.members, .artists, .topps {
   display: flex;
   .btn-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     margin-bottom: 1rem;
-    width: 17rem;
+    width: 22rem;
     text-align: right;
     hr {
       border: none;
@@ -775,18 +648,53 @@ p {
         margin: 0 0 -8px 1rem;
       }
     }
+    h3 {
+      color: $primary-color;
+      font-weight: 500;
+    }
     p {
       margin: .8rem 0 0 0;
     }
-    .img-container {
-      padding: 0 2rem 1rem 0;
-      width: 40%;
-      min-width: 40%;
-      float: left;
+    .image-container {
+      padding: 0 0 1rem 1rem;
+      width: 20vw;
+      max-width: calc(1100px * .2);
+      float: right;
+      @media (min-width: 576px) {
+        width: 20vw;
+      }
+      @media (min-width: 768px) {
+        width: 20vw;
+      }
+      @media (min-width: 960px) {
+        width: 20vw;
+      }
+      img, .card {
+        width: 20vw;
+        max-width: calc(1100px * .2);
+        border-radius: .25rem;
+      }
+    }
+    .subhead {
+      margin: -.4rem 0 1rem 0;
+      text-align: bottom;
+      h2 {
+        margin: -.2rem 0 0 0;
+        padding: 0 1rem 0 0;
+      }
       p {
-        margin: 2px 0;
-        font-size: .8rem;
-        color: grey;
+        margin: 0;
+        padding: .5rem 0 0 0;
+        font-style: italic;
+      }
+    }
+    .bio {
+      padding-bottom: 2rem;
+      .bio-credit {
+        //width: 100%;
+        text-align: right;
+        font-size: 14px;
+        font-style: italic;
       }
     }
     .alt {
