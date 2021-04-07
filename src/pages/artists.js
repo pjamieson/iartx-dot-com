@@ -6,7 +6,7 @@ import { MDBContainer } from "mdbreact";
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ArtistInfo from "../components/artist-info"
-import CardImageLinkTitle from "../components/card-image-link-title"
+import CardImageCaptionLink from "../components/card-image-caption-link"
 
 const ArtistsPage = ({ location, data }) => {
   const {
@@ -22,7 +22,7 @@ const ArtistsPage = ({ location, data }) => {
     <Layout>
       <SEO title="Artists" />
       <div className="container page-container">
-        <h1 className="page-head">Artists - {artists[ndx].firstname} {artists[ndx].lastname}</h1>
+        <h1 className="page-head">Artists - {artists[ndx].firstname} {artists[ndx].lastname} {artists[ndx].aka ? `(aka ${artists[ndx].aka})` : ``}</h1>
         <section className="artists">
 
           <div className="btn-container">
@@ -44,6 +44,9 @@ const ArtistsPage = ({ location, data }) => {
               { (artists[ndx].image[0] && artists[ndx].image[0].url) &&
                 <div className="image-container">
                   <img className="img-fluid card" src={artists[ndx].image[0].url} alt="Portrait of the artist" />
+                  { (artists[ndx].imagecredit) &&
+                    <em><p className="img-credit">{artists[ndx].imagecredit}</p></em>
+                  }
                 </div>
               }
 
@@ -59,7 +62,7 @@ const ArtistsPage = ({ location, data }) => {
                   return (
                     painting.artist && painting.artist.lastname === artists[ndx].lastname ?
                      <div key={painting.id}>
-                      {painting.images && <CardImageLinkTitle item={painting} /> }
+                      {painting.images && <CardImageCaptionLink item={painting} caption_format="Artist" /> }
                     </div>
                     : null
                   )
@@ -83,11 +86,13 @@ export const query = graphql`
       nodes {
         lastname
         firstname
+        aka
         birth
         death
         image {
           url
         }
+        imagecredit
         bio
         biocredit
         country {
@@ -111,6 +116,7 @@ export const query = graphql`
           lastname
         }
         title
+        subtitle
         images {
           url
           localFile {

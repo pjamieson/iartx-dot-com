@@ -5,6 +5,9 @@ exports.createPages = async ({ graphql, actions }) => {
     query GetAvailableItems {
       paintings: allStrapiPainting {
         nodes {
+          artist {
+            slug
+          }
           subgenres {
             slug
           }
@@ -25,9 +28,8 @@ exports.createPages = async ({ graphql, actions }) => {
 
   // Create painting detail pages.
   paintings.forEach((painting) => {
-    const section = painting.qty > 0 ? '/gallery/' : '/archive/'
     createPage({
-      path: `${section}${painting.slug}`,
+      path: `/gallery/${painting.slug}`,
       component: path.resolve(`./src/templates/painting.js`),
       context: {
         slug: painting.slug,

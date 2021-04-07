@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import CardImageLinkTitle from "../components/card-image-link-title"
+import CardImageCaptionLink from "../components/card-image-caption-link"
 
 const HaitianArtPage = ({ data }) => {
   const {
@@ -14,16 +14,18 @@ const HaitianArtPage = ({ data }) => {
     <Layout>
       <SEO title="Haitian Art" />
       <div className="container page-container">
-        <h1>Haitian Art</h1>
+        <h1>Haitian Art - Available Works</h1>
+
         <section className="gallery">
           <div className="uk-grid-small uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid="masonry: true">
-            {paintings.map(card => {
-              return <div key={card.identifier}>
-                {card.image && <CardImageLinkTitle card={card} /> }
+            {paintings.map(painting => {
+              return <div key={painting.slug}>
+                {painting.images && <CardImageCaptionLink item={painting} caption_format="Gallery" />}
               </div>
             })}
           </div>
         </section>
+
       </div>
     </Layout>
   )
@@ -33,6 +35,7 @@ export const query = graphql`
   {
     allStrapiPainting(
       filter: {
+        subgenres: {elemMatch: {slug: {eq: "haitian-art"}}},
         qty: {gt: 0}
       },
       sort: {
@@ -47,8 +50,6 @@ export const query = graphql`
           lastname
         }
         title
-        subtitle
-        price
         images {
           url
           localFile {
@@ -60,8 +61,11 @@ export const query = graphql`
             }
           }
         }
+        price
+        subgenres {
+          slug
+        }
         slug
-        qty
       }
     }
   }

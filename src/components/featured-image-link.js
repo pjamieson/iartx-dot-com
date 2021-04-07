@@ -8,15 +8,7 @@ const FeaturedImagelink = ({ location, item }) => {
   // The primary image is the first of the images set
   //const image = getImage(item.images[0].localFile.childImageSharp.gatsbyImageData)
 
-  const isTradingcard = false
-
-  const isBook = false
-
-  const menu = (isTradingcard ? 'cards' : (isBook ? 'books' : (item.qty > 0 ? 'gallery' : 'portfolio')))
-
-  const submenu = item.slug
-
-  const link = `/${menu}/${submenu}/`
+  const link = `/gallery/${item.slug}/`
 
   return (
     <MDBView hover zoom rounded>

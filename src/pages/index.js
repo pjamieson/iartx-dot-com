@@ -57,6 +57,7 @@ const IndexPage = ({data}) => {
             })}
           </div>
         </section>
+        
       </div>
     </div>
   </Layout>
@@ -74,6 +75,9 @@ export const query = graphql`
       }
     ) {
       nodes {
+        artist {
+          slug
+        }
         images {
           url
           localFile {

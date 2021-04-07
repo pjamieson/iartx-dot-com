@@ -656,9 +656,10 @@ p {
       margin: .8rem 0 0 0;
     }
     .image-container {
-      padding: 0 0 1rem 1rem;
+      margon: 0 0 1rem 1rem;
       width: 20vw;
       max-width: calc(1100px * .2);
+      right: 1rem;
       float: right;
       @media (min-width: 576px) {
         width: 20vw;
@@ -673,6 +674,12 @@ p {
         width: 20vw;
         max-width: calc(1100px * .2);
         border-radius: .25rem;
+      }
+      .img-credit {
+        margin: .25rem 0 0 0;
+        text-align: right;
+        font-size: 14px;
+        font-style: italic;
       }
     }
     .subhead {

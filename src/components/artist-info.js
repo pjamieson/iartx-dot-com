@@ -7,13 +7,17 @@ const ArtistInfo = ({ artist }) => {
 
   const country = artist.country.name
 
-  const birth_death = `(${artist.birth} - ${artist.death})`
+  let birth_death = "( "
+  if (artist.birth) {birth_death += artist.birth}
+  birth_death += " - "
+  if (artist.death) {birth_death += artist.death}
+  birth_death += " )"
 
   return (
     <MDBContainer className="subhead">
       <MDBRow>
         <h2>{country}</h2>
-        <p>{birth_death}</p>
+        { (artist.birth || artist.death) && <p>{birth_death}</p> }
       </MDBRow>
     </MDBContainer>
   )
