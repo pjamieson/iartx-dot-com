@@ -62,7 +62,7 @@ const Navbar = () => {
                     <Link className="menu-link" to="/artists/">Artists</Link>
                   </MDBDropdownItem>
                   <MDBDropdownItem>
-                    <Link className="menu-link" to="/haitian-art/">Haitian Art</Link>
+                    <Link className="menu-link" to="/art/haitian-art/">Haitian Art</Link>
                   </MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>
@@ -77,25 +77,25 @@ const Navbar = () => {
               </MDBDropdownToggle>
                 <MDBDropdownMenu>
                   <MDBDropdownItem>
-                    <Link className="menu-link" to="/gallery/athlete-portraits/">Authors</Link>
+                    <Link className="menu-link" to="/books/authors/">Authors</Link>
                   </MDBDropdownItem>
                   <MDBDropdownItem>
-                    <Link className="menu-link" to="/gallery/pop-art/">Countries</Link>
+                    <Link className="menu-link" to="/books/countries/">Countries</Link>
                   </MDBDropdownItem>
                   <MDBDropdownItem>
-                    <Link className="menu-link" to="/gallery/prints/">West Indian Lit</Link>
+                    <Link className="menu-link" to="/books/west-indian-lit/">West Indian Lit</Link>
                   </MDBDropdownItem>
                   <MDBDropdownItem>
-                    <Link className="menu-link" to="/gallery/abstracts/">Art Books</Link>
+                    <Link className="menu-link" to="/books/art/">Art Books</Link>
                   </MDBDropdownItem>
                   <MDBDropdownItem>
-                    <Link className="menu-link" to="/gallery/b206/">Auction Catalogs</Link>
+                    <Link className="menu-link" to="/books/catalogs/">Auction Catalogs</Link>
                   </MDBDropdownItem>
                   <MDBDropdownItem>
-                    <Link className="menu-link" to="/gallery/collabs/">Scandinavian Noir</Link>
+                    <Link className="menu-link" to="/books/scandinavian/">Scandinavian Noir</Link>
                   </MDBDropdownItem>
                   <MDBDropdownItem>
-                    <Link className="menu-link" to="/gallery/painted-objects/">Modern Lit</Link>
+                    <Link className="menu-link" to="/books/modern-lit/">Modern Lit</Link>
                   </MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>
@@ -116,13 +116,13 @@ const Navbar = () => {
                 </MDBDropdownToggle>
                 <MDBDropdownMenu>
                   <MDBDropdownItem>
-                    <Link className="menu-link" to="/topps/project2020/">Artists</Link>
+                    <Link className="menu-link" to="/cards/artists/">Artists</Link>
                   </MDBDropdownItem>
                   <MDBDropdownItem>
-                    <Link className="menu-link" to="/topps/1951/">Series</Link>
+                    <Link className="menu-link" to="/cards/series/">Series</Link>
                   </MDBDropdownItem>
                   <MDBDropdownItem>
-                    <Link className="menu-link" to="/topps/project70/">Players</Link>
+                    <Link className="menu-link" to="/cards/players/">Players</Link>
                   </MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>

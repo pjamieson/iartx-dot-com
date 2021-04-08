@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback, useContext } from 'react';
 import { Link, navigate } from "gatsby"
-import Img from "gatsby-image"
+//import { GatsbyImage } from "gatsby-plugin-image"
 
 import { CartContext } from "../context/cart-context"
 
@@ -8,15 +8,18 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import {
-  MDBContainer,
-  MDBRow,
+  MDBBtn,
   MDBCard,
   MDBCardBody,
-  MDBBtn,
+  MDBCardImage,
+  MDBContainer,
+  MDBIcon,
+  MDBMask,
+  MDBRow,
   MDBTable,
   MDBTableBody,
   MDBTableHead,
-  MDBIcon
+  MDBView
 } from 'mdbreact';
 
 import {
@@ -107,15 +110,21 @@ const CartPage = () => {
                     </MDBTableHead>
                     <MDBTableBody>
                       {cart.map(item => {
-                        return <tr key={item.identifier}>
+                        return <tr key={item.sku}>
                           <td className="img-cell">
-                            <Img className="cart-image" fluid={item.fluid} alt={item.title}/>
+                            <MDBView hover zoom>
+                              <MDBCardImage src={item.url} className="img-fluid cart-image" alt={item.title}/>
+                              <a href={`/gallery/${item.slug}/`}>
+                                <MDBMask overlay="white-slight" />
+                              </a>
+                            </MDBView>
                           </td>
                           <td className="item-cell">
                             <div className="cart-item">
-                              <h4 className='mt-3' key={item.identifier}>
+                              <h4 className="mt-3 mb-0" key={item.sku}>
                                 {item.title}
                               </h4>
+                              <p className='text-muted'>by {item.creator}</p>
                               <p className='text-muted'>{item.subtitle}</p>
                             </div>
                           </td>

@@ -8,6 +8,8 @@ import SEO from "../components/seo"
 import ArtistInfo from "../components/artist-info"
 import CardImageCaptionLink from "../components/card-image-caption-link"
 
+import { getCreatorAlphaName, getCreatorFullName } from "../utils/creator"
+
 const ArtistsPage = ({ location, data }) => {
   const {
     allStrapiArtist: { nodes: artists },
@@ -22,7 +24,7 @@ const ArtistsPage = ({ location, data }) => {
     <Layout>
       <SEO title="Artists" />
       <div className="container page-container">
-        <h1 className="page-head">Artists - {artists[ndx].firstname} {artists[ndx].lastname} {artists[ndx].aka ? `(aka ${artists[ndx].aka})` : ``}</h1>
+        <h1 className="page-head">Artists - {getCreatorFullName(artists[ndx])}</h1>
         <section className="artists">
 
           <div className="btn-container">
@@ -30,7 +32,7 @@ const ArtistsPage = ({ location, data }) => {
             {artists.map((artist, index) => {
               return (
                 <div key={index}>
-                  <button className={`std-btn ${index === ndx && "active-btn"}`} onClick={() => setNdx(index)}>{artist.lastname}, {artist.firstname}</button>
+                  <button className={`std-btn ${index === ndx && "active-btn"}`} onClick={() => setNdx(index)}>{getCreatorAlphaName(artist)}</button>
                 </div>
               )
             })}

@@ -18,7 +18,7 @@ const Footer = () => {
           <a href="https://patrickjamieson.com" target="_blank" rel="noopener noreferrer">
             Patrick Jamieson
           </a>{" "}
-          <span className="muted">- Copyright © {new Date().getFullYear()} Blake Jamieson LLC. All rights reserved. - </span>
+          <span className="muted">- Copyright © {new Date().getFullYear()} The Jamieson Collection. All rights reserved. - </span>
           <Link className="" to="/admin/orders"> Stay Awesome!</Link>
         </div>
       </div>

@@ -13,8 +13,9 @@ import SEO from "../components/seo"
 import ImageSet from "../components/image-set"
 
 //import { getGatsbyImage } from "../utils/image"
-import { getPaintingQtyAvailable } from "../utils/inventory"
+import { getCreatorFullName } from "../utils/creator"
 import { formatPrice } from "../utils/format"
+import { getPaintingQtyAvailable } from "../utils/inventory"
 
 const Painting = ({
   data: {
@@ -55,15 +56,17 @@ const Painting = ({
   //console.log("painting.js imageset", imageset)
 
   const itemType = "painting"
-  const subt = subtitle ? subtitle : ""
+  const subt = subtitle ? subtitle : "An Original Painting"
   const qty = 1 //initialize with 1 of item
   const cartItem = {
     itemType,
     id,
     sku,
+    slug,
+    creator: getCreatorFullName(artist),
     title,
     subtitle: subt,
-    image: image0.gatsbyImage,
+    image: image0,
     url: image0.url,
     qty,
     qtyAvail,
@@ -89,7 +92,8 @@ const Painting = ({
     setInCart(false)
   }
 
-  const artistrname = (artist.firstname && artist.lastname ? `${artist.firstname} ${artist.lastname}` : (artist.firstname ? artist.firstname : artist.lastname))
+  //console.log("painting.js artist", artist)
+  const artistname = getCreatorFullName(artist)
 
   // Schema.org calculated values
   const productUrl = `https://iartx.com/gallery/${slug}`
@@ -166,7 +170,7 @@ const Painting = ({
 
             <div className="buy-or-inquire">
               <div className="card-description">
-                <h2>An original painting<br />by {artistrname}</h2>
+                <h2>An original painting<br />by {artistname}</h2>
                 { (subtitle && subtitle.length) &&
                   <h3 className="subtitle">{subtitle}</h3>
                 }
@@ -237,6 +241,7 @@ export const query = graphql`
       artist {
         firstname
         lastname
+        aka
         slug
       }
       title

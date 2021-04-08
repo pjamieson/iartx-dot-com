@@ -15,7 +15,7 @@ export default ({children}) => {
 
   const isInCart = (cartItem) => {
     const indexOfItem = cart.findIndex(item =>
-      item.identifier === cartItem.identifier
+      item.sku === cartItem.sku
     )
     return indexOfItem !== -1 ? true : false
   }
@@ -23,9 +23,9 @@ export default ({children}) => {
   const addToCart = (cartItem, qty = 1) => {
     const cartCopy = [...cart]
 
-    // Find identifier in Cart
+    // Find sku in Cart
     const indexOfItem = cartCopy.findIndex(item =>
-      item.identifier === cartItem.identifier
+      item.sku === cartItem.sku
     )
 
     if (indexOfItem !== -1 && cartCopy[indexOfItem].qty <= 0) {

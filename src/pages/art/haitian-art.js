@@ -1,9 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import CardImageCaptionLink from "../components/card-image-caption-link"
+import Layout from "../../components/layout"
+import SEO from "../../components/seo"
+import CardImageCaptionLink from "../../components/card-image-caption-link"
 
 const HaitianArtPage = ({ data }) => {
   const {

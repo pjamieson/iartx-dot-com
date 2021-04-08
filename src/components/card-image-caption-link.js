@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 //import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { MDBCardImage, MDBMask, MDBView } from "mdbreact";
 
+import { getCreatorFullName } from "../utils/creator"
 import { formatPrice } from "../utils/format"
 
 const CardImageCaptionLink = ({ item, caption_format }) => {
@@ -16,31 +17,7 @@ const CardImageCaptionLink = ({ item, caption_format }) => {
   if (caption_format === "Artist" || caption_format === "Author") {
     line2 = item.subtitle && item.subtitle.length > 0 ? item.subtitle : "An Original Painting"
   } else if (caption_format === "Gallery") {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    line2 = `by ${item.artist.firstname} ${item.artist.lastname}`
+    line2 = `by ${getCreatorFullName(item.artist)}`
   }
 
   const link = `/gallery/${item.slug}`
@@ -50,7 +27,7 @@ const CardImageCaptionLink = ({ item, caption_format }) => {
 
       <MDBView hover zoom rounded>
         {/*<GatsbyImage className="img-fluid w-100" image={image} alt={item.title} />*/}
-        <MDBCardImage src={item.images[0].url} className="img-fluid" waves />
+        <MDBCardImage src={item.images[0].url} className="img-fluid" />
         <a href={link}>
           <MDBMask overlay="white-slight" />
         </a>

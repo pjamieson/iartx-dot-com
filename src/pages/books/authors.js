@@ -1,9 +1,11 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import CardImageCaptionLink from "../components/card-image-caption-link"
+import { MDBCard, MDBCardBody } from "mdbreact"
+
+import Layout from "../../components/layout"
+import SEO from "../../components/seo"
+import CardImageCaptionLink from "../../components/card-image-caption-link"
 
 const AuthorsPage = ({ data }) => {
   const {
@@ -12,18 +14,16 @@ const AuthorsPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Artists" />
+      <SEO title="Authors" />
       <div className="container page-container">
-        <h1>Artists</h1>
-        <section className="gallery">
-          <div className="uk-grid-small uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid="masonry: true">
-            {paintings.map(book => {
-              return <div key={book.identifier}>
-                {book.image && <CardImageCaptionLink item={book} caption_format="Author" /> }
-              </div>
-            })}
-          </div>
-        </section>
+        <h1>Authors</h1>
+        <MDBCard>
+          <MDBCardBody>
+            <div>
+              <h2 className='mt-1 text-center'>Coming soon...</h2>
+            </div>
+          </MDBCardBody>
+        </MDBCard>
       </div>
     </Layout>
   )
