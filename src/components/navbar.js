@@ -64,6 +64,9 @@ const Navbar = () => {
                   <MDBDropdownItem>
                     <Link className="menu-link" to="/art/haitian-art/">Haitian Art</Link>
                   </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/art/sports-art/">Sports Art</Link>
+                  </MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>
             </MDBNavItem>

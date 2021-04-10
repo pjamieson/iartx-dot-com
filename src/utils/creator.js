@@ -1,4 +1,4 @@
-// Functions to get creator name
+// Functions to get formatted creator name
 
 export const getCreatorFullName = (creator) => {
   //console.log("getCreatorFullName creator", creator)

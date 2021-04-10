@@ -5,16 +5,16 @@ import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import CardImageCaptionLink from "../../components/card-image-caption-link"
 
-const HaitianArtPage = ({ data }) => {
+const SportsArtPage = ({ data }) => {
   const {
     allStrapiPainting: { nodes: paintings },
   } = data
 
   return (
     <Layout>
-      <SEO title="Haitian Art" />
+      <SEO title="Sports Art" />
       <div className="container page-container">
-        <h1>Haitian Art - Available Works</h1>
+        <h1>Sports Art - Available Works</h1>
 
         <section className="gallery">
           <div className="uk-grid-small uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid="masonry: true">
@@ -35,7 +35,7 @@ export const query = graphql`
   {
     allStrapiPainting(
       filter: {
-        subgenres: {elemMatch: {slug: {eq: "haitian-art"}}},
+        subgenres: {elemMatch: {slug: {eq: "sports-art"}}},
         qty: {gt: 0}
       },
       sort: {
@@ -72,4 +72,4 @@ export const query = graphql`
   }
 `
 
-export default HaitianArtPage
+export default SportsArtPage

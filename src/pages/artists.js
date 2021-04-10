@@ -57,7 +57,7 @@ const ArtistsPage = ({ location, data }) => {
                 { artists[ndx].biocredit && <em><p className="bio-credit">{artists[ndx].biocredit}</p></em> }
               </div>
 
-              <h3>Available Works</h3>
+              <h3>Available Works:</h3>
 
               <div className="uk-grid-small uk-child-width-1-1@s uk-child-width-1-2@m" uk-grid="masonry: true">
                 {paintings.map((painting) => {
@@ -70,6 +70,15 @@ const ArtistsPage = ({ location, data }) => {
                   )
                 })}
               </div>
+
+              { artists[ndx].publications &&
+                <>
+                  <h3>Selected Publications:</h3>
+                  <div className="bio">
+                      <ReactMarkdown source={artists[ndx].publications} />
+                  </div>
+                </>
+              }
             </article>
           </MDBContainer>
 
@@ -100,6 +109,7 @@ export const query = graphql`
         country {
           name
         }
+        publications
       }
     },
     allStrapiPainting(

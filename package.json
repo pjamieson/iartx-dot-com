@@ -17,6 +17,8 @@
   "dependencies": {
     "@babel/core": "^7.0.0-0",
     "@popperjs/core": "^2.5.4",
+    "@stripe/react-stripe-js": "1.4.0",
+    "@stripe/stripe-js": "1.13.2",
     "babel-preset-gatsby": "^1.0.0",
     "bootstrap": "5.0.0-beta2",
     "gatsby": "^3.1.0",
@@ -34,6 +36,7 @@
     "gatsby-transformer-sharp": "^3.1.0",
     "mdbreact": "git+https://oauth2:yayBkZHbysdtkJvvF5sK@git.mdbootstrap.com/mdb/react/re-pro.git",
     "react": "^17.0.1",
+    "react-country-region-selector": "^2.1.0",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.2.0",
