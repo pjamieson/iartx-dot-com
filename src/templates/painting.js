@@ -34,6 +34,7 @@ const Painting = ({
       qty: qtyAvail,
       slug,
       archive,
+      form,
     },
   },
 }) => {
@@ -56,7 +57,7 @@ const Painting = ({
   //console.log("painting.js imageset", imageset)
 
   const itemType = "painting"
-  const subt = subtitle ? subtitle : "An Original Painting"
+  const subt = subtitle ? subtitle : `An original ${form}`
   const qty = 1 //initialize with 1 of item
   const cartItem = {
     itemType,
@@ -170,7 +171,7 @@ const Painting = ({
 
             <div className="buy-or-inquire">
               <div className="card-description">
-                <h2>An original painting<br />by {artistname}</h2>
+                <h2>An original {form}<br />by {artistname}</h2>
                 { (subtitle && subtitle.length) &&
                   <h3 className="subtitle">{subtitle}</h3>
                 }
@@ -265,6 +266,7 @@ export const query = graphql`
       qty
       slug
       archive
+      form
     }
   }
 `

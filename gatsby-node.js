@@ -14,6 +14,11 @@ exports.createPages = async ({ graphql, actions }) => {
           qty
           slug
         }
+      },
+      artists: allStrapiArtist {
+        nodes {
+          slug
+        }
       }
     }
     `
@@ -25,6 +30,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const path = require('path')
   const paintings = result.data.paintings.nodes;
+  const artists = result.data.artists.nodes;
 
   // Create painting detail pages.
   paintings.forEach((painting) => {
@@ -33,6 +39,17 @@ exports.createPages = async ({ graphql, actions }) => {
       component: path.resolve(`./src/templates/painting.js`),
       context: {
         slug: painting.slug,
+      },
+    })
+  })
+
+  // Create artist pages.
+  artists.forEach((artist) => {
+    createPage({
+      path: `/artists/${artist.slug}`,
+      component: path.resolve(`./src/templates/artist.js`),
+      context: {
+        slug: artist.slug,
       },
     })
   })
@@ -54,7 +71,7 @@ exports.onCreateNode = async ({
 
    let itemImages = node.images
 
-   if (node.internal.type !== null && (node.internal.type === "StrapiProduct" || node.internal.type === "StrapiPainting")) {
+   if (node.internal.type !== null && (node.internal.type === "StrapiPainting")) {
      if (itemImages.length > 0) {
        // itemImages.forEach(el => console.log(el))
        const images = await Promise.all(

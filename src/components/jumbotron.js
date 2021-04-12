@@ -34,7 +34,7 @@ const Jumbotron = () => {
             </div>
           </div>*/}
           <div className="featured-link">
-            <Link to="/haitian-art">
+            <Link to="/art/haitian-art/">
               <MDBBtn color="secondary">
                 Haitian Art
                 <MDBIcon icon="caret-right" className="ml-2" />
