@@ -9,7 +9,7 @@ import { MDBBadge } from "mdbreact"
 import { CartContext } from "../context/cart-context"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import ImageSet from "../components/image-set"
 
 //import { getGatsbyImage } from "../utils/image"
@@ -116,7 +116,7 @@ const PaintingPage = ({
 
   return (
     <Layout>
-      <SEO title={title} description={seo_description} />
+      <Seo title={title} description={seo_description} />
 
       <Helmet>
         <script type="application/ld+json">

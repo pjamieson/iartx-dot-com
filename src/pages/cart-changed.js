@@ -5,13 +5,13 @@ import { MDBCard, MDBCardBody } from "mdbreact"
 import { CartContext } from "../context/cart-context"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const CartChangedPage = ({ location }) => {
   const { cart } = useContext(CartContext)
   return (
     <Layout>
-      <SEO title="Cart Changed" />
+      <Seo title="Cart Changed" />
         <div className="container page-container success">
           <h1 className="page-head">Cart Changed</h1>
           <MDBCard>

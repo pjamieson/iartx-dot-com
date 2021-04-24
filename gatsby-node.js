@@ -55,7 +55,7 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 
 }
-
+/*
 // Need to create a localFile___NODE for content types with multiple images
 // See: https://stackoverflow.com/questions/62745591/how-to-query-multiple-images-in-gatsby-from-strapi-using-graphql
 const { createRemoteFileNode } = require(`gatsby-source-filesystem`);
@@ -94,3 +94,4 @@ exports.onCreateNode = async ({
     }
   }
 };
+*/

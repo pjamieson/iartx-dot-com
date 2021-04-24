@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Jumbotron from "../components/jumbotron"
 import FeaturedImagelink from "../components/featured-image-link"
 
@@ -17,7 +17,7 @@ const IndexPage = ({data}) => {
   //console.log("index.js paintings", paintings)
   return (
     <Layout>
-      <SEO title="Home - The Jamieson Collection" />
+      <Seo title="Home - The Jamieson Collection" />
       <div className="container">
         <Jumbotron />
         <div className="container front-content">

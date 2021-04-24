@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import { MDBCard, MDBCardBody } from "mdbreact"
 
 import Layout from "../../components/layout"
-import SEO from "../../components/seo"
+import Seo from "../../components/seo"
 import CardImageCaptionLink from "../../components/card-image-caption-link"
 
 const AuthorsPage = ({ data }) => {
@@ -14,7 +14,7 @@ const AuthorsPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Authors" />
+      <Seo title="Authors" />
       <div className="container page-container">
         <h1>Authors</h1>
         <MDBCard>

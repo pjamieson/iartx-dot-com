@@ -5,7 +5,7 @@ import { Link, navigate } from "gatsby"
 import { CartContext } from "../context/cart-context"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 import {
   MDBBtn,
@@ -88,7 +88,7 @@ const CartPage = () => {
 
   return (
     <Layout>
-      <SEO title="Cart" />
+      <Seo title="Cart" />
       <div className="container page-container">
         <MDBContainer className="cart">
           <h1 className="page-head">Cart</h1>

@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../../components/layout"
-import SEO from "../../components/seo"
+import Seo from "../../components/seo"
 import CardImageCaptionLink from "../../components/card-image-caption-link"
 
 const CaribbeanArtPage = ({ data }) => {
@@ -14,7 +14,7 @@ const CaribbeanArtPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Caribbean Art - The Jamieson Collection" description={seo_description} />
+      <Seo title="Caribbean Art - The Jamieson Collection" description={seo_description} />
       <div className="container page-container">
         <h1>Caribbean Art - Available Works</h1>
 

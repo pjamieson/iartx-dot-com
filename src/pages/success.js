@@ -3,14 +3,14 @@ import React from 'react';
 import { MDBCard, MDBCardBody } from "mdbreact"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const SuccessPage = ({ location }) => {
   const firstname = (location && location.state && location.state.firstname) ? location.state.firstname : ''
 
   return (
     <Layout>
-      <SEO title="Order Processed" />
+      <Seo title="Order Processed" />
         <div className="container page-container success">
           <h1 className="page-head">Order Processed</h1>
           <MDBCard>

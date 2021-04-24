@@ -4,7 +4,7 @@ import ReactMarkdown from "react-markdown";
 import { MDBContainer } from "mdbreact";
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import ArtistInfo from "../components/artist-info"
 import CardImageCaptionLink from "../components/card-image-caption-link"
 
@@ -24,7 +24,7 @@ const ArtistsPage = ({ location, data }) => {
 
   return (
     <Layout>
-      <SEO title="Artists - The Jamieson Collection" description={seo_description} />
+      <Seo title="Artists - The Jamieson Collection" description={seo_description} />
       <div className="container page-container">
         <h1 className="page-head">Artists - {getCreatorFullName(artists[ndx])}</h1>
         <section className="artists">
