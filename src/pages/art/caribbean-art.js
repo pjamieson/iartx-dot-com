@@ -5,18 +5,18 @@ import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import CardImageCaptionLink from "../../components/card-image-caption-link"
 
-const HaitianArtPage = ({ data }) => {
+const CaribbeanArtPage = ({ data }) => {
   const {
     allStrapiPainting: { nodes: paintings },
   } = data
 
-  const seo_description = "Illustrates the Haitian Art offered for sale on iArtX.com, including paintings, and wood and metal sculptures."
+  const seo_description = "Illustrates the Caribbean Art offered for sale on iArtX.com, including paintings by artists from Grenada, Jamaica and Puerto Rico."
 
   return (
     <Layout>
-      <SEO title="Haitian Art - The Jamieson Collection" description={seo_description} />
+      <SEO title="Caribbean Art - The Jamieson Collection" description={seo_description} />
       <div className="container page-container">
-        <h1>Haitian Art - Available Works</h1>
+        <h1>Caribbean Art - Available Works</h1>
 
         <section className="gallery">
           <div className="uk-grid-small uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid="masonry: true">
@@ -37,7 +37,7 @@ export const query = graphql`
   {
     allStrapiPainting(
       filter: {
-        subgenres: {elemMatch: {slug: {eq: "haitian-art"}}},
+        subgenres: {elemMatch: {slug: {eq: "caribbean-art"}}},
         qty: {gt: 0}
       },
       sort: {
@@ -74,4 +74,4 @@ export const query = graphql`
   }
 `
 
-export default HaitianArtPage
+export default CaribbeanArtPage

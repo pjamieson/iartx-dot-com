@@ -16,13 +16,20 @@ const ArtistPage = ({data}) => {
     strapiArtist: artist,
     allStrapiPainting: { nodes: paintings }
   } = data
-  //console.log("ArtistPage data", data)
+  //console.log("artist.js data", data)
 
-  const pageTitle = `Artist - ${getCreatorFullName(artist)}`
+  const artistname = getCreatorFullName(artist)
+
+  const pageTitle = `Artist - ${artistname}`
+
+  const works = artist.country.name === "Haiti" ? "Haitian Art" : "paintings"
+
+  const seo_description = `Images of and details about ${works} by ${artistname} offered for sale on iArtX.com.`
+  //console.log("artist.js seo_description", seo_description)
 
   return (
     <Layout>
-      <SEO title={pageTitle} />
+      <SEO title={pageTitle} description={seo_description} />
       <div className="container page-container">
         <h1 className="page-head">{pageTitle}</h1>
         <section className="artists">
@@ -80,6 +87,9 @@ query GetArtistAndWorks($slug: String) {
     lastname
     firstname
     aka
+    country {
+      name
+    }
     birth
     death
     image {
@@ -88,9 +98,6 @@ query GetArtistAndWorks($slug: String) {
     imagecredit
     bio
     biocredit
-    country {
-      name
-    }
     publications
   },
   allStrapiPainting(

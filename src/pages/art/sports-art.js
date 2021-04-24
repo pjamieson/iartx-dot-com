@@ -10,9 +10,11 @@ const SportsArtPage = ({ data }) => {
     allStrapiPainting: { nodes: paintings },
   } = data
 
+  const seo_description = "Illustrates the Sports Art offered for sale on iArtX.com, including works by the artists Blake Jamieson and Efdot."
+
   return (
     <Layout>
-      <SEO title="Sports Art" />
+      <SEO title="Sports Art - The Jamieson Collection" description={seo_description} />
       <div className="container page-container">
         <h1>Sports Art - Available Works</h1>
 

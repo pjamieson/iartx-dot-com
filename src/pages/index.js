@@ -17,7 +17,7 @@ const IndexPage = ({data}) => {
   //console.log("index.js paintings", paintings)
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Home - The Jamieson Collection" />
       <div className="container">
         <Jumbotron />
         <div className="container front-content">
@@ -57,7 +57,7 @@ const IndexPage = ({data}) => {
             })}
           </div>
         </section>
-        
+
       </div>
     </div>
   </Layout>

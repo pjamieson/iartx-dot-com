@@ -59,13 +59,76 @@ const Navbar = () => {
                 </MDBDropdownToggle>
                 <MDBDropdownMenu>
                   <MDBDropdownItem>
-                    <Link className="menu-link" to="/artists/">Artists</Link>
+                    <Link className="menu-link" to="/artists">Artists</Link>
                   </MDBDropdownItem>
                   <MDBDropdownItem>
-                    <Link className="menu-link" to="/art/haitian-art/">Haitian Art</Link>
+                    <Link className="menu-link" to="/art/caribbean-art">Caribbean Art</Link>
                   </MDBDropdownItem>
                   <MDBDropdownItem>
-                    <Link className="menu-link" to="/art/sports-art/">Sports Art</Link>
+                    <Link className="menu-link" to="/art/haitian-art">Haitian Art</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/art/sports-art">Sports Art</Link>
+                  </MDBDropdownItem>
+                </MDBDropdownMenu>
+              </MDBDropdown>
+            </MDBNavItem>
+
+            <MDBNavItem>
+              <MDBDropdown>
+                <MDBDropdownToggle nav>
+                  <div className="hidden-nav-item nav-menu-item">
+                    <p>ARTISTS</p>
+                  </div>
+                </MDBDropdownToggle>
+                <MDBDropdownMenu>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/artists/aladin-agathe">Aladin, Agathe</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/artists/auguste-toussaint">Auguste, Toussaint</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/artists/benjamin-john">Benjamin, John</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/artists/bien-aime-gabriel">Bien-Aimé, Gabriel</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/artists/bigaud-wilson">Bigaud, Wilson</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/artists/bottex-s-e">Bottex, Seymour E</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/artists/caliste-canute">Caliste, Canute</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/artists/casimir-laurent">Casimir, Laurent</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/artists/chery-j-r">Chéry, Jacques-Richard</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/artists/desrosiers-m">Desrosiers, M.</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/artists/domond-wilmino">Domond, Wilmino</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/artists/dreux-nicolas">Dreux, Nicolas</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/artists/francois-roger">François, Roger</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/artists/friedensohn-eric">Friedensohn, Eric</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/artists/hector-j-v">Hector, Jean Voltaire</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/artists/jean-jacques-carlo">Jean-Jacques, Carlo</Link>
                   </MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>

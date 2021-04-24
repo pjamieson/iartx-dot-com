@@ -3,7 +3,7 @@ import React from 'react';
 import { MDBContainer, MDBRow } from "mdbreact";
 
 const ArtistInfo = ({ artist }) => {
-  console.log("ArtistInfo artist", artist)
+  //console.log("ArtistInfo artist", artist)
 
   const country = artist.country.name
 

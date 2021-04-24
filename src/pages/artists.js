@@ -20,9 +20,11 @@ const ArtistsPage = ({ location, data }) => {
   const [ndx, setNdx] = useState(location.state && location.state.artist ?
     artists.findIndex(a => a.lastname === location.state.artist.lastname && a.firstname === location.state.artist.firstname) : 0)
 
+  const seo_description = "Lists the artists represented on iArtX.com, including biographical details and paintings offered for sale."
+
   return (
     <Layout>
-      <SEO title="Artists" />
+      <SEO title="Artists - The Jamieson Collection" description={seo_description} />
       <div className="container page-container">
         <h1 className="page-head">Artists - {getCreatorFullName(artists[ndx])}</h1>
         <section className="artists">

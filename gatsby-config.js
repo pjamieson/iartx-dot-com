@@ -4,8 +4,8 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: "iArtX.com",
-    description: "iArtX.com is an online gallery offering Haitian Art and other Art of the Americas for sale. Choose from our curated selection of quality Haitian paintings and sculpture.",
+    title: "iArtX.com - The Jamieson Collection",
+    description: "iArtX.com features a curated selection of Haitian Art, Art Books, Caribbean Literature, and Sports Trading Cards.",
     author: "@patrickjamieson",
     twitterUsername: "@patrickjamieson",
     image: "/static/BlakeCrownMask-95feca21dd9d7e285f52f75d8ca79c8a.jpg",

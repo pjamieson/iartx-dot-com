@@ -17,7 +17,7 @@ import { getCreatorFullName } from "../utils/creator"
 import { formatPrice } from "../utils/format"
 import { getPaintingQtyAvailable } from "../utils/inventory"
 
-const Painting = ({
+const PaintingPage = ({
   data: {
     painting: {
       id,
@@ -26,6 +26,7 @@ const Painting = ({
       subtitle = {},
       artist = {},
       images,
+      subgenres = {},
       date = {},
       size = {},
       medium = {},
@@ -56,6 +57,9 @@ const Painting = ({
   const image0 = imageset.shift()
   //console.log("painting.js imageset", imageset)
 
+  //console.log("painting.js artist", artist)
+  const artistname = getCreatorFullName(artist)
+
   const itemType = "painting"
   const subt = subtitle ? subtitle : `An original ${form}`
   const qty = 1 //initialize with 1 of item
@@ -64,7 +68,7 @@ const Painting = ({
     id,
     sku,
     slug,
-    creator: getCreatorFullName(artist),
+    creator: artistname,
     title,
     subtitle: subt,
     image: image0,
@@ -93,13 +97,16 @@ const Painting = ({
     setInCart(false)
   }
 
-  //console.log("painting.js artist", artist)
-  const artistname = getCreatorFullName(artist)
+  //console.log("painting.js subgenres", subgenres)
+  const prof = subgenres[0].name === "Haitian Art" ? "Haitian artist" : "artist"
+
+  const seo_description = `Images of and details about the original ${form} “${title}” by the ${prof} ${artistname}.`
+  //console.log("painting.js seo_description", seo_description)
 
   // Schema.org calculated values
   const productUrl = `https://iartx.com/gallery/${slug}`
   //const productUrl = `localhost:8000/gallery/${subgenre.slug}/${slug}`
-  //console.log("productUrl", productUrl)
+  //console.log("painting.js productUrl", productUrl)
 
   //console.log("painting.js file", file)
   const productImageUrl = image0.url
@@ -109,7 +116,7 @@ const Painting = ({
 
   return (
     <Layout>
-      <SEO title={title} />
+      <SEO title={title} description={seo_description} />
 
       <Helmet>
         <script type="application/ld+json">
@@ -232,7 +239,7 @@ const Painting = ({
   )
 }
 
-export default Painting
+export default PaintingPage
 
 export const query = graphql`
   query GetSinglePainting($slug: String) {
@@ -257,6 +264,9 @@ export const query = graphql`
             )
           }
         }
+      }
+      subgenres {
+        name
       }
       date
       size
