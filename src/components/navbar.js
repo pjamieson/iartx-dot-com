@@ -125,7 +125,61 @@ const Navbar = () => {
                     <Link className="menu-link" to="/artists/hector-j-v">Hector, Jean Voltaire</Link>
                   </MDBDropdownItem>
                   <MDBDropdownItem>
+                    <Link className="menu-link" to="/artists/hung-pham-quoc">Hung, Pham Quoc</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/artists/jamieson-blake">Jamieson, Blake</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/artists/jean-ulrick">Jean, Ulrick M.</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
                     <Link className="menu-link" to="/artists/jean-jacques-carlo">Jean-Jacques, Carlo</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/artists/jose-hilome">Jose, Hilome</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/artists/joseph-reynald">Joseph, Reynald</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/artists/joseph-reynald">Joseph, Reynald</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/artists/khanh-kao-van">Khanh, Kao Van</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/artists/kuhlman-walter">Kuhlman, Walter</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/artists/maurice-a-m">Maurice, A.M.</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/artists/obin-philome">Obin, Philomé</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/artists/pierre-andre">Pierre, André</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/artists/profil-jonas">Profil, Jonas</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/artists/rodriguez-maria-dolores">Rodríguez, Maria Dolores</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/artists/st-fleur-michelle">St. Fleur, Michelle</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/artists/stephane-micius">Stephane, Micius</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/artists/taylor-j">Taylor, J.</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/artists/thomas-kingsley">Thomas, Kingsley</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/artists/zephirin-frantz">Zephirin, Frantz</Link>
                   </MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>
