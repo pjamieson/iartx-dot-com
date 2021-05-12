@@ -162,7 +162,7 @@ const PaintingPage = ({
 
               { (qtyAvail > 0) &&
                 <div className="back-btn">
-                  <Link to={`/artists/`} state={{ artist: artist }} className="btn-floating btn-action btn-primary">
+                  <Link to={`/artists/${artist.slug}`} className="btn-floating btn-action btn-primary">
                     <i className="fas fa-chevron-left"></i>
                   </Link>
                 </div>

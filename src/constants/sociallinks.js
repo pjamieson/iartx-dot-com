@@ -1,32 +1,32 @@
 import React from "react"
 import {
-  FaInstagram,
+  FaFacebook,
   FaLinkedin,
   FaTwitter,
-  FaYoutube
+  FaGithub
 } from "react-icons/fa"
 // FaFacebook,
 
 const data = [
   {
     id: 1,
-    icon: <FaYoutube className="social-icon fa-lg"></FaYoutube>,
-    url: "https://www.youtube.com/user/BlakeJamieson",
+    icon: <FaFacebook className="social-icon fa-lg"></FaFacebook>,
+    url: "https://www.facebook.com/JamiesonCollection",
   },
   {
     id: 2,
-    icon: <FaInstagram className="social-icon fa-lg"></FaInstagram>,
-    url: "https://www.instagram.com/athlete.portraits/",
+    icon: <FaGithub className="social-icon fa-lg"></FaGithub>,
+    url: "https://github.com/pjamieson",
   },
   {
     id: 3,
-    icon: <FaTwitter className="social-icon fa-lg"></FaTwitter>,
-    url: "https://twitter.com/patrickjamieson",
+    icon: <FaLinkedin className="social-icon fa-lg"></FaLinkedin>,
+    url: "https://www.linkedin.com/in/patrick-react-jamieson/",
   },
   {
     id: 4,
-    icon: <FaLinkedin className="social-icon fa-lg"></FaLinkedin>,
-    url: "https://www.linkedin.com/in/patrick-react-jamieson/",
+    icon: <FaTwitter className="social-icon fa-lg"></FaTwitter>,
+    url: "https://twitter.com/patrickjamieson",
   },
 ]
 

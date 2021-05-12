@@ -15,7 +15,7 @@ import {
   MDBNavbarNav,
   MDBNavbarBrand,
   MDBNavbarToggler,
-  MDBNavItem,
+  MDBNavItem
 } from "mdbreact"
 
 import logo from "../images/icon.png"
@@ -24,7 +24,7 @@ const Navbar = () => {
   const { cart } = useContext(CartContext)
   const [isOpen, setIsOpen] = useState(false)
 
-  return (
+  return ( <>
     <div className="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
       <div className="container">
 
@@ -58,8 +58,125 @@ const Navbar = () => {
                   </div>
                 </MDBDropdownToggle>
                 <MDBDropdownMenu>
-                  <MDBDropdownItem>
+                  <li className="dropdown-submenu">
+                    <a className="dropdown-item" tabindex="-1" href="#">Artists A - E</a>
+                    <ul className="dropdown-menu">
+<MDBDropdownItem>
+  <Link className="menu-link" to="/artists/aladin-agathe">Aladin, Agathe</Link>
+</MDBDropdownItem>
+<MDBDropdownItem>
+  <Link className="menu-link" to="/artists/auguste-toussaint">Auguste, Toussaint</Link>
+</MDBDropdownItem>
+<MDBDropdownItem>
+  <Link className="menu-link" to="/artists/benjamin-john">Benjamin, John</Link>
+</MDBDropdownItem>
+<MDBDropdownItem>
+  <Link className="menu-link" to="/artists/bien-aime-gabriel">Bien-Aimé, Gabriel</Link>
+</MDBDropdownItem>
+<MDBDropdownItem>
+  <Link className="menu-link" to="/artists/bigaud-wilson">Bigaud, Wilson</Link>
+</MDBDropdownItem>
+<MDBDropdownItem>
+  <Link className="menu-link" to="/artists/bottex-seymour-e">Bottex, Seymour E</Link>
+</MDBDropdownItem>
+<MDBDropdownItem>
+  <Link className="menu-link" to="/artists/caliste-canute">Caliste, Canute</Link>
+</MDBDropdownItem>
+<MDBDropdownItem>
+  <Link className="menu-link" to="/artists/casimir-laurent">Casimir, Laurent</Link>
+</MDBDropdownItem>
+<MDBDropdownItem>
+  <Link className="menu-link" to="/artists/chery-jacques-richard">Chéry, Jacques-Richard</Link>
+</MDBDropdownItem>
+<MDBDropdownItem>
+  <Link className="menu-link" to="/artists/desrosiers-m">Desrosiers, M.</Link>
+</MDBDropdownItem>
+<MDBDropdownItem>
+  <Link className="menu-link" to="/artists/domond-wilmino">Domond, Wilmino</Link>
+</MDBDropdownItem>
+<MDBDropdownItem>
+  <Link className="menu-link" to="/artists/duong-tran-huu">Duong, Tran Huu</Link>
+</MDBDropdownItem>
+                    </ul>
+                  </li>
+                  <li className="dropdown-submenu">
+                    <a className="dropdown-item" tabindex="-1" href="#">Artists F - L</a>
+                    <ul className="dropdown-menu">
+<MDBDropdownItem>
+  <Link className="menu-link" to="/artists/francois-roger">François, Roger</Link>
+</MDBDropdownItem>
+<MDBDropdownItem>
+  <Link className="menu-link" to="/artists/efdot-friedensohn-eric">Friedensohn, Eric "Efdot"</Link>
+</MDBDropdownItem>
+<MDBDropdownItem>
+  <Link className="menu-link" to="/artists/hector-jean-voltaire">Hector, Jean Voltaire</Link>
+</MDBDropdownItem>
+<MDBDropdownItem>
+  <Link className="menu-link" to="/artists/hung-pham-quoc">Hùng, Phạm Quốc</Link>
+</MDBDropdownItem>
+<MDBDropdownItem>
+  <Link className="menu-link" to="/artists/jamieson-blake">Jamieson, Blake</Link>
+</MDBDropdownItem>
+<MDBDropdownItem>
+  <Link className="menu-link" to="/artists/jean-ulrick">Jean, Ulrick M.</Link>
+</MDBDropdownItem>
+<MDBDropdownItem>
+  <Link className="menu-link" to="/artists/jean-jacques-carlo">Jean-Jacques, Carlo</Link>
+</MDBDropdownItem>
+<MDBDropdownItem>
+  <Link className="menu-link" to="/artists/jose-hilome">Jose, Hilome</Link>
+</MDBDropdownItem>
+<MDBDropdownItem>
+  <Link className="menu-link" to="/artists/joseph-reynald">Joseph, Reynald</Link>
+</MDBDropdownItem>
+<MDBDropdownItem>
+  <Link className="menu-link" to="/artists/khanh-kao-van">Khánh, Kao Vân</Link>
+</MDBDropdownItem>
+<MDBDropdownItem>
+  <Link className="menu-link" to="/artists/kuhlman-walter">Kuhlman, Walter</Link>
+</MDBDropdownItem>
+                    </ul>
+                  </li>
+                  <li className="dropdown-submenu">
+                    <a className="dropdown-item" tabindex="-1" href="#">Artists M - Z</a>
+                    <ul className="dropdown-menu">
+<MDBDropdownItem>
+  <Link className="menu-link" to="/artists/maurice-a-m">Maurice, A.M.</Link>
+</MDBDropdownItem>
+<MDBDropdownItem>
+  <Link className="menu-link" to="/artists/obin-philome">Obin, Philomé</Link>
+</MDBDropdownItem>
+<MDBDropdownItem>
+  <Link className="menu-link" to="/artists/pierre-andre">Pierre, André</Link>
+</MDBDropdownItem>
+<MDBDropdownItem>
+  <Link className="menu-link" to="/artists/profil-jonas">Profil, Jonas</Link>
+</MDBDropdownItem>
+<MDBDropdownItem>
+  <Link className="menu-link" to="/artists/rodriguez-maria-dolores">Rodríguez, Maria Dolores</Link>
+</MDBDropdownItem>
+<MDBDropdownItem>
+  <Link className="menu-link" to="/artists/st-fleur-michelle">St. Fleur, Michelle</Link>
+</MDBDropdownItem>
+<MDBDropdownItem>
+  <Link className="menu-link" to="/artists/stephane-micius">Stephane, Micius</Link>
+</MDBDropdownItem>
+<MDBDropdownItem>
+  <Link className="menu-link" to="/artists/taylor-j">Taylor, J.</Link>
+</MDBDropdownItem>
+<MDBDropdownItem>
+  <Link className="menu-link" to="/artists/thomas-kingsley">Thomas, Kingsley</Link>
+</MDBDropdownItem>
+<MDBDropdownItem>
+  <Link className="menu-link" to="/artists/zephirin-frantz">Zéphirin, Frantz</Link>
+</MDBDropdownItem>
+                    </ul>
+                  </li>
+                  {/*<MDBDropdownItem>
                     <Link className="menu-link" to="/artists">Artists</Link>
+                  </MDBDropdownItem>*/}
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/art/20th-century-art">20th Century Art</Link>
                   </MDBDropdownItem>
                   <MDBDropdownItem>
                     <Link className="menu-link" to="/art/caribbean-art">Caribbean Art</Link>
@@ -70,121 +187,12 @@ const Navbar = () => {
                   <MDBDropdownItem>
                     <Link className="menu-link" to="/art/sports-art">Sports Art</Link>
                   </MDBDropdownItem>
-                </MDBDropdownMenu>
-              </MDBDropdown>
-            </MDBNavItem>
-
-            <MDBNavItem>
-              <MDBDropdown>
-                <MDBDropdownToggle nav>
-                  <div className="hidden-nav-item nav-menu-item">
-                    <p>ARTISTS</p>
-                  </div>
-                </MDBDropdownToggle>
-                <MDBDropdownMenu>
                   <MDBDropdownItem>
-                    <Link className="menu-link" to="/artists/aladin-agathe">Aladin, Agathe</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link className="menu-link" to="/artists/auguste-toussaint">Auguste, Toussaint</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link className="menu-link" to="/artists/benjamin-john">Benjamin, John</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link className="menu-link" to="/artists/bien-aime-gabriel">Bien-Aimé, Gabriel</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link className="menu-link" to="/artists/bigaud-wilson">Bigaud, Wilson</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link className="menu-link" to="/artists/bottex-s-e">Bottex, Seymour E</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link className="menu-link" to="/artists/caliste-canute">Caliste, Canute</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link className="menu-link" to="/artists/casimir-laurent">Casimir, Laurent</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link className="menu-link" to="/artists/chery-j-r">Chéry, Jacques-Richard</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link className="menu-link" to="/artists/desrosiers-m">Desrosiers, M.</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link className="menu-link" to="/artists/domond-wilmino">Domond, Wilmino</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link className="menu-link" to="/artists/francois-roger">François, Roger</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link className="menu-link" to="/artists/friedensohn-eric">Friedensohn, Eric</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link className="menu-link" to="/artists/hector-j-v">Hector, Jean Voltaire</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link className="menu-link" to="/artists/hung-pham-quoc">Hung, Pham Quoc</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link className="menu-link" to="/artists/jamieson-blake">Jamieson, Blake</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link className="menu-link" to="/artists/jean-ulrick">Jean, Ulrick M.</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link className="menu-link" to="/artists/jean-jacques-carlo">Jean-Jacques, Carlo</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link className="menu-link" to="/artists/jose-hilome">Jose, Hilome</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link className="menu-link" to="/artists/joseph-reynald">Joseph, Reynald</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link className="menu-link" to="/artists/joseph-reynald">Joseph, Reynald</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link className="menu-link" to="/artists/khanh-kao-van">Khanh, Kao Van</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link className="menu-link" to="/artists/kuhlman-walter">Kuhlman, Walter</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link className="menu-link" to="/artists/maurice-a-m">Maurice, A.M.</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link className="menu-link" to="/artists/obin-philome">Obin, Philomé</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link className="menu-link" to="/artists/pierre-andre">Pierre, André</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link className="menu-link" to="/artists/profil-jonas">Profil, Jonas</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link className="menu-link" to="/artists/rodriguez-maria-dolores">Rodríguez, Maria Dolores</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link className="menu-link" to="/artists/st-fleur-michelle">St. Fleur, Michelle</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link className="menu-link" to="/artists/stephane-micius">Stephane, Micius</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link className="menu-link" to="/artists/taylor-j">Taylor, J.</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link className="menu-link" to="/artists/thomas-kingsley">Thomas, Kingsley</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link className="menu-link" to="/artists/zephirin-frantz">Zephirin, Frantz</Link>
+                    <Link className="menu-link" to="/art/vietnamese-art">Vietnamese Art</Link>
                   </MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>
             </MDBNavItem>
-
             <MDBNavItem>
               <MDBDropdown>
               <MDBDropdownToggle nav>
@@ -193,26 +201,26 @@ const Navbar = () => {
                 </div>
               </MDBDropdownToggle>
                 <MDBDropdownMenu>
-                  <MDBDropdownItem>
+                  {/*<MDBDropdownItem>
                     <Link className="menu-link" to="/books/authors/">Authors</Link>
                   </MDBDropdownItem>
                   <MDBDropdownItem>
                     <Link className="menu-link" to="/books/countries/">Countries</Link>
+                  </MDBDropdownItem>*/}
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/books/art-books/">Art Books</Link>
                   </MDBDropdownItem>
                   <MDBDropdownItem>
-                    <Link className="menu-link" to="/books/west-indian-lit/">West Indian Lit</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link className="menu-link" to="/books/art/">Art Books</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link className="menu-link" to="/books/catalogs/">Auction Catalogs</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link className="menu-link" to="/books/scandinavian/">Scandinavian Noir</Link>
+                    <Link className="menu-link" to="/books/auction-catalogs/">Auction Catalogs</Link>
                   </MDBDropdownItem>
                   <MDBDropdownItem>
                     <Link className="menu-link" to="/books/modern-lit/">Modern Lit</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/books/nordic-noir/">Nordic Noir</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/books/west-indian-lit/">West Indian Lit</Link>
                   </MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>
@@ -233,10 +241,10 @@ const Navbar = () => {
                 </MDBDropdownToggle>
                 <MDBDropdownMenu>
                   <MDBDropdownItem>
-                    <Link className="menu-link" to="/cards/artists/">Artists</Link>
+                    <Link className="menu-link" to="/cards/card-artists/">Card Artists</Link>
                   </MDBDropdownItem>
                   <MDBDropdownItem>
-                    <Link className="menu-link" to="/cards/series/">Series</Link>
+                    <Link className="menu-link" to="/cards/card-series/">Card Series</Link>
                   </MDBDropdownItem>
                   <MDBDropdownItem>
                     <Link className="menu-link" to="/cards/players/">Players</Link>
@@ -254,6 +262,12 @@ const Navbar = () => {
                 </MDBDropdownToggle>
                 <MDBDropdownMenu>
                   <MDBDropdownItem>
+                    <Link className="menu-link" to="/about/collection/">Collection Notes</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/about/tech/">Tech Notes</Link>
+                  </MDBDropdownItem>
+                  {/*<MDBDropdownItem>
                     <Link className="menu-link" to="/about/team/">#TeamBlake</Link>
                   </MDBDropdownItem>
                   <MDBDropdownItem>
@@ -264,7 +278,7 @@ const Navbar = () => {
                   </MDBDropdownItem>
                   <MDBDropdownItem>
                     <Link className="menu-link" to="/subscribe/">Mailing List</Link>
-                  </MDBDropdownItem>
+                  </MDBDropdownItem>*/}
                 </MDBDropdownMenu>
               </MDBDropdown>
             </MDBNavItem>
@@ -279,7 +293,7 @@ const Navbar = () => {
           }
         </Link>
       </div>
-    </div>
+    </div></>
   )
 }
 

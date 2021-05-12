@@ -95,6 +95,7 @@ p {
   overflow: hidden;
 }
 
+
 // navbar
 .navbar {
   padding: 0 1rem;
@@ -160,10 +161,11 @@ p {
       color: white !important;
     }
   }
-  .menu-link {
+  .menu-link, .side-menu-link {
     cursor: pointer;
     text-decoration: none;
     white-space: nowrap;
+
   }
   .social-links {
     display: flex;
@@ -197,6 +199,29 @@ p {
   }
   @media (min-width: 768px) {
     padding: 0;
+  }
+}
+
+// side-nav
+.side-nav {
+  background-color: $blake-dark-grey;
+  .logo-wrapper {
+    height: 65px !important;
+    .Ripple-parent {
+      height: 65px !important;
+       img {
+         height: 75px !important;
+         margin: -.3rem 0 0 0;
+         padding-left: 10px;
+         vertical-align: middle;
+       }
+    }
+  }
+  &.wide {
+    width: 12rem;
+    .collapsible-body a {
+      padding-left: 10px;
+    }
   }
 }
 
