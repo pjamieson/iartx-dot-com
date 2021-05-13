@@ -150,7 +150,7 @@ const CheckoutComponent = () => {
     // Need to get sales tax rate if NY shipping address and not already retreived
     // (So correct charge total can be submitted when getting Stript Payment Intent)
     let taxRate = salesTaxRate
-    if (region === "CA" && salesTaxRate === 0.00) {
+    if (region === "xxx" && salesTaxRate === 0.00) {
       taxRate = await getSalesTaxRate(zip)
       await setSalesTaxRate(taxRate)
       //console.log("checkout getPaymentIntent taxRate", taxRate)
