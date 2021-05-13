@@ -104,7 +104,7 @@ const PaintingPage = ({
   //console.log("painting.js seo_description", seo_description)
 
   // Schema.org calculated values
-  const productUrl = `https://iartx.com/gallery/${slug}`
+  const productUrl = `https://iartx.com/gallery/${slug}/`
   //const productUrl = `localhost:8000/gallery/${subgenre.slug}/${slug}`
   //console.log("painting.js productUrl", productUrl)
 
@@ -162,7 +162,7 @@ const PaintingPage = ({
 
               { (qtyAvail > 0) &&
                 <div className="back-btn">
-                  <Link to={`/artists/${artist.slug}`} className="btn-floating btn-action btn-primary">
+                  <Link to={`/artists/${artist.slug}/`} className="btn-floating btn-action btn-primary">
                     <i className="fas fa-chevron-left"></i>
                   </Link>
                 </div>

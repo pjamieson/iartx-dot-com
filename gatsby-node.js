@@ -35,7 +35,7 @@ exports.createPages = async ({ graphql, actions }) => {
   // Create painting detail pages.
   paintings.forEach((painting) => {
     createPage({
-      path: `/gallery/${painting.slug}`,
+      path: `/gallery/${painting.slug}/`,
       component: path.resolve(`./src/templates/painting.js`),
       context: {
         slug: painting.slug,
@@ -46,7 +46,7 @@ exports.createPages = async ({ graphql, actions }) => {
   // Create artist pages.
   artists.forEach((artist) => {
     createPage({
-      path: `/artists/${artist.slug}`,
+      path: `/artists/${artist.slug}/`,
       component: path.resolve(`./src/templates/artist.js`),
       context: {
         slug: artist.slug,
