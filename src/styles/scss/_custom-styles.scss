@@ -2,16 +2,16 @@
 @font-face {
   font-family: "Boston";
   src: local(Boston Bold Regular),
-    url("../font/boston/BostonBold.otf");
-  src: url("../font/boston/BostonBold.otf") format("opentype");
+    url("/styles/font/boston/BostonBold.otf");
+  src: url("/styles/font/boston/BostonBold.otf") format("opentype");
   font-weight: 700;
 }
 
 @font-face {
   font-family: "Boston";
   src: local(Boston Light Regular),
-    url("../font/boston/BostonLight.otf");
-  src: url("../font/boston/BostonLight.otf") format("opentype");
+    url("/src/styles/font/boston/BostonLight.otf");
+  src: url("/src/styles/font/boston/BostonLight.otf") format("opentype");
   font-weight: 300;
 }
 

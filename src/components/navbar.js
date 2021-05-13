@@ -100,7 +100,7 @@ const Navbar = () => {
                     </ul>
                   </li>
                   <li className="dropdown-submenu">
-                    <a className="dropdown-item" tabindex="-1" href="#">Artists F - L</a>
+                    <a className="dropdown-item" tabindex="-1" href="#">Artists F - K</a>
                     <ul className="dropdown-menu">
 <MDBDropdownItem>
   <Link className="menu-link" to="/artists/francois-roger">François, Roger</Link>
@@ -138,8 +138,11 @@ const Navbar = () => {
                     </ul>
                   </li>
                   <li className="dropdown-submenu">
-                    <a className="dropdown-item" tabindex="-1" href="#">Artists M - Z</a>
+                    <a className="dropdown-item" tabindex="-1" href="#">Artists L - Z</a>
                     <ul className="dropdown-menu">
+<MDBDropdownItem>
+  <Link className="menu-link" to="/artists/louis-wilfrid">Louis, Wilfrid</Link>
+</MDBDropdownItem>
 <MDBDropdownItem>
   <Link className="menu-link" to="/artists/maurice-a-m">Maurice, A.M.</Link>
 </MDBDropdownItem>

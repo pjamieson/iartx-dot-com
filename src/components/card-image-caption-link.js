@@ -20,7 +20,7 @@ const CardImageCaptionLink = ({ item, caption_format }) => {
     line2 = `by ${getCreatorFullName(item.artist)}`
   }
 
-  const link = `/gallery/${item.slug}`
+  const link = `/gallery/${item.slug}/`
 
   return (
     <div className="card" key={item.id}>
