@@ -147,15 +147,15 @@ const CheckoutComponent = () => {
 
   const getPaymentIntent = async () => {
     //console.log("getPaymentIntent cart", cart)
-    // Need to get sales tax rate if NY shipping address and not already retreived
+    // Need to get sales tax rate if CA shipping address and not already retreived
     // (So correct charge total can be submitted when getting Stript Payment Intent)
     let taxRate = salesTaxRate
-    if (region === "xxx" && salesTaxRate === 0.00) {
+    if (region === "CA" && salesTaxRate === 0.00) {
       taxRate = await getSalesTaxRate(zip)
       await setSalesTaxRate(taxRate)
       //console.log("checkout getPaymentIntent taxRate", taxRate)
     }
-    //console.log("getPaymentIntent taxRate", taxRate)
+    console.log("getPaymentIntent taxRate", taxRate)
     try {
       const response = await fetch(`${process.env.GATSBY_STRAPI_API_URL}/orders/payment`, {
         method: "POST",
@@ -168,7 +168,7 @@ const CheckoutComponent = () => {
         })
       })
       const data = await response.json()
-      //console.log("checkout getPaymentIntent data", data)
+      console.log("checkout getPaymentIntent data", data)
       setClientSecret(data.client_secret)
     } catch (err) {
       console.log('checkout getPaymentIntent err', err)
