@@ -13,6 +13,7 @@ import { getCreatorAlphaName, getCreatorFullName } from "../../utils/creator"
 const CardArtistsPage = ({ location, data }) => {
   const {
     allStrapiArtist: { nodes: artists },
+    allStrapiTradingcard: { nodes: cards },
     allStrapiPainting: { nodes: paintings },
   } = data
 
@@ -20,7 +21,7 @@ const CardArtistsPage = ({ location, data }) => {
   const [ndx, setNdx] = useState(location.state && location.state.artist ?
     artists.findIndex(a => a.lastname === location.state.artist.lastname && a.firstname === location.state.artist.firstname) : 0)
 
-  const seo_description = "Lists the artists represented on iArtX.com, including biographical details and paintings offered for sale."
+  const seo_description = "Lists the card artists represented in The Jamieson Collection, including biographical details and the selection of cards and paintings offered for sale."
 
   return (
     <Layout>
@@ -59,7 +60,23 @@ const CardArtistsPage = ({ location, data }) => {
                 { artists[ndx].biocredit && <em><p className="bio-credit">{artists[ndx].biocredit}</p></em> }
               </div>
 
-              <h3>Available Works:</h3>
+              { (cards.length > 0) && <>
+                <h3>Available Cards:</h3>
+
+                <div className="uk-grid-small uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid="masonry: true">
+                  {cards.map((card) => {
+                    return (
+                      card.artist && card.artist.lastname === artists[ndx].lastname ?
+                       <div key={card.id}>
+                        {card.images && <CardImageCaptionLink item={card} caption_format="Series" /> }
+                      </div>
+                      : null
+                    )
+                  })}
+                </div></>
+              }
+
+              <h3>Available Art Works:</h3>
 
               <div className="uk-grid-small uk-child-width-1-1@s uk-child-width-1-2@m" uk-grid="masonry: true">
                 {paintings.map((painting) => {
@@ -113,6 +130,36 @@ export const query = graphql`
           name
         }
         publications
+      }
+    },
+    allStrapiTradingcard(
+      sort: { fields: player___name, order: ASC }
+    ) {
+      nodes {
+        id: strapiId
+        sku
+        artist {
+          firstname
+          lastname
+        }
+        cardseries {
+          name
+        }
+        title
+        subtitle
+        images {
+          url
+          localFile {
+            childImageSharp {
+              gatsbyImageData(
+                placeholder: BLURRED
+                formats: [AUTO, WEBP]
+              )
+            }
+          }
+        }
+        price
+        slug
       }
     },
     allStrapiPainting(

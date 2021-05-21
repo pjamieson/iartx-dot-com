@@ -467,6 +467,7 @@ p {
       }
       .card-subtitle {
         padding-bottom: .4rem;
+        line-height: 1.2;
         color: $secondary-color;
       }
     }
@@ -660,6 +661,9 @@ p {
     .active-btn:hover {
       color: $primary-color;
     }
+  }
+  .series-btn-container {
+    margin-bottom: 2rem;
   }
   .content-container {
     display: block;

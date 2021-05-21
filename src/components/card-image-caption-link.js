@@ -13,14 +13,21 @@ const CardImageCaptionLink = ({ item, caption_format }) => {
   //const image = getImage(item.images[0].localFile.childImageSharp.gatsbyImageData)
 
   let line2 = ""
+  let link = ""
 
   if (caption_format === "Artist" || caption_format === "Author") {
     line2 = item.subtitle && item.subtitle.length > 0 ? item.subtitle : "An Original Painting"
+    link = `/gallery/${item.slug}/`
   } else if (caption_format === "Gallery") {
     line2 = `by ${getCreatorFullName(item.artist)}`
+    link = `/gallery/${item.slug}/`
+  } else if (caption_format === "Card") {
+    line2 = item.subtitle && item.subtitle.length > 0 ? item.subtitle : "A Sports Art Card"
+    link = `/cards/${item.slug}/`
+  } else if (caption_format === "Series") {
+    line2 = item.cardseries.name
+    link = `/cards/${item.slug}/`
   }
-
-  const link = `/gallery/${item.slug}/`
 
   return (
     <div className="card" key={item.id}>

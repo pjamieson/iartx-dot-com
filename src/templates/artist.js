@@ -14,7 +14,8 @@ import { getCreatorFullName } from "../utils/creator"
 const ArtistPage = ({data}) => {
   const {
     strapiArtist: artist,
-    allStrapiPainting: { nodes: paintings }
+    allStrapiPainting: { nodes: paintings },
+    allStrapiTradingcard: { nodes: cards }
   } = data
   //console.log("artist.js data", data)
 
@@ -52,7 +53,7 @@ const ArtistPage = ({data}) => {
                 { artist.biocredit && <em><p className="bio-credit">{artist.biocredit}</p></em> }
               </div>
 
-              <h3>Available Works:</h3>
+              <h3>Available Art Works:</h3>
 
               <div className="uk-grid-small uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid="masonry: true">
                 {paintings.map((painting) => {
@@ -63,6 +64,20 @@ const ArtistPage = ({data}) => {
                   )
                 })}
               </div>
+
+              { (cards.length > 0) && <>
+                <h3>Available Cards:</h3>
+
+                <div className="uk-grid-small uk-child-width-1-3@s uk-child-width-1-4@m" uk-grid="masonry: true">
+                  {cards.map((card) => {
+                    return (
+                       <div key={card.id}>
+                        {card.images && <CardImageCaptionLink item={card} caption_format="Series" /> }
+                      </div>
+                    )
+                  })}
+                </div></>
+              }
 
               { artist.publications &&
                 <>
@@ -115,6 +130,40 @@ query GetArtistAndWorks($slug: String) {
       artist {
         firstname
         lastname
+      }
+      title
+      subtitle
+      images {
+        url
+        localFile {
+          childImageSharp {
+            gatsbyImageData(
+              placeholder: BLURRED
+              formats: [AUTO, WEBP]
+            )
+          }
+        }
+      }
+      price
+      slug
+    }
+  },
+  allStrapiTradingcard(
+    filter: {
+      artist: {slug: {eq: $slug}},
+      qty: {gt: 0}
+    },
+    sort: { fields: player___name, order: ASC }
+  ) {
+    nodes {
+      id: strapiId
+      sku
+      artist {
+        firstname
+        lastname
+      }
+      cardseries {
+        name
       }
       title
       subtitle

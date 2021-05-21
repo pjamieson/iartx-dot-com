@@ -62,6 +62,7 @@ module.exports = {
           "artist",
           "author",
           "book",
+          "cardseries",
           "country",
           "email",
           "order",

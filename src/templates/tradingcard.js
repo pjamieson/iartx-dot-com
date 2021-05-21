@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react"
+import React, { useContext, useState, useEffect } from "react"
 import { Helmet } from "react-helmet"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Link, graphql } from "gatsby"
@@ -12,35 +12,31 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import ImageSet from "../components/image-set"
 
-//import { getGatsbyImage } from "../utils/image"
 import { getCreatorFullName } from "../utils/creator"
 import { formatPrice } from "../utils/format"
-import { getPaintingQtyAvailable } from "../utils/inventory"
+import { getCardQtyAvailable } from "../utils/inventory"
 
-const PaintingPage = ({
+const Tradingcard = ({
   data: {
-    painting: {
+    tradingcard: {
       id,
       sku,
+      slug,
+      artist = {},
+      cardseries = {},
+      player = {},
       title,
       subtitle = {},
-      artist = {},
       images,
-      subgenres = {},
-      date = {},
-      size = {},
-      medium = {},
+      limitation = {},
       description = {},
-      price,
+      details = {},
       qty: qtyAvail,
-      slug,
-      archive,
-      form,
+      price,
     },
   },
 }) => {
   const { isInCart, addToCart } = useContext(CartContext)
-  //console.log("painting.js images", images)
 
   let imageset = []
   let key = 0
@@ -53,15 +49,11 @@ const PaintingPage = ({
     })
     key = key + 1
   })
-  // Remove the primary (first) image. It does not appear in the optional images set.
-  const image0 = imageset.shift()
-  //console.log("painting.js imageset", imageset)
 
   //console.log("painting.js artist", artist)
   const artistname = getCreatorFullName(artist)
 
-  const itemType = "painting"
-  const subt = subtitle ? subtitle : `An original ${form}`
+  const itemType = "tradingcard"
   const qty = 1 //initialize with 1 of item
   const cartItem = {
     itemType,
@@ -70,9 +62,9 @@ const PaintingPage = ({
     slug,
     creator: artistname,
     title,
-    subtitle: subt,
-    image: image0,
-    url: image0.url,
+    subtitle,
+    image: images[0],
+    url: images[0].url,
     qty,
     qtyAvail,
     price
@@ -80,12 +72,12 @@ const PaintingPage = ({
   const [inCart, setInCart] = useState(isInCart(cartItem))
   const [processing, setProcessing] = useState(false)
 
-  // On loading page, confirm painting is still available
+  // On loading page, confirm card is still available
   const [qtyAvailNow, setQtyAvailNow] = useState(1) // one available by default
   useEffect(() => {
     const fetchData = async () => {
       setProcessing(true)
-      setQtyAvailNow(await getPaintingQtyAvailable(id))
+      setQtyAvailNow(await getCardQtyAvailable(id))
       setProcessing(false)
     }
     fetchData()
@@ -97,25 +89,22 @@ const PaintingPage = ({
     setInCart(false)
   }
 
-  //console.log("painting.js subgenres", subgenres)
-  const prof = subgenres[0].name === "Haitian Art" ? "Haitian artist" : "artist"
+  // Schema.org calculated values
+  const productTitle = `${title} - ${cardseries.name}`
 
-  const seo_description = `Images of and details about the original ${form} “${title}” by the ${prof} ${artistname}.`
+  const seo_description = `Images of and details about the ${cardseries.name} trading card ${title} by ${artistname}.`
   //console.log("painting.js seo_description", seo_description)
 
-  // Schema.org calculated values
-  const productUrl = `https://iartx.com/gallery/${slug}/`
-  //const productUrl = `localhost:8000/gallery/${subgenre.slug}/${slug}`
-  //console.log("painting.js productUrl", productUrl)
+  const productUrl = `https://iartx.com/cards/${slug}/`
 
-  const productImageUrl = image0.url
-  //console.log("painting.js productImageUrl", productImageUrl)
+  const productImageUrl = images[0].url
+  //console.log("tradingcard.js productImageUrl", productImageUrl)
 
   const productAvailability = qtyAvailNow > 0 ? "http://schema.org/InStock" : "http://schema.org/OutOfStock"
 
   return (
     <Layout>
-      <Seo title={title} description={seo_description} />
+      <Seo title={productTitle} description={seo_description} />
 
       <Helmet>
         <script type="application/ld+json">
@@ -124,8 +113,8 @@ const PaintingPage = ({
             "@context": "https://schema.org",
             "@type": "Product",
             "productID": "${sku}",
-            "category": "Home & Garden > Decor > Artwork",
-            "name": "${title}",
+            "category": "Arts & Entertainment > Hobbies & Creative Arts > Collectibles > Collectible Trading Cards",
+            "name": "${productTitle}",
             "description": "${subtitle}",
             "url": "${productUrl}",
             "image": "${productImageUrl}",
@@ -146,14 +135,14 @@ const PaintingPage = ({
       </Helmet>
 
       <div className="container page-container">
-        <article className="painting-details">
-          <h1>{title}</h1>
+        <article className="p2020-card-details">
+          <h1>{productTitle}</h1>
           <div className="uk-grid-small uk-child-width-1-2@s" uk-grid="masonry: true">
 
             <div>
-              <div className="overlay">
+              {/*<div className="overlay">
                 <GatsbyImage className="card card-img-top" image={image0.gatsbyImage} alt={title} />
-              </div>
+              </div>*/}
 
               { (imageset && imageset.length > 0) &&
                 <ImageSet imageset={imageset} />
@@ -161,14 +150,7 @@ const PaintingPage = ({
 
               { (qtyAvail > 0) &&
                 <div className="back-btn">
-                  <Link to={`/artists/${artist.slug}/`} className="btn-floating btn-action btn-primary">
-                    <i className="fas fa-chevron-left"></i>
-                  </Link>
-                </div>
-              }
-              { (qtyAvail <= 0) &&
-                <div className="back-btn">
-                  <Link to={`/archive/`} className="btn-floating btn-action btn-primary">
+                  <Link to="/cards/card-artists/" state={{ artist: artist }} className="btn-floating btn-action btn-primary">
                     <i className="fas fa-chevron-left"></i>
                   </Link>
                 </div>
@@ -177,33 +159,22 @@ const PaintingPage = ({
 
             <div className="buy-or-inquire">
               <div className="card-description">
-                <h2>An original {form}<br />by {artistname}</h2>
-                { (subtitle && subtitle.length) &&
-                  <h3 className="subtitle">{subtitle}</h3>
-                }
+                <h2>{subtitle ? subtitle : `Artist: ${artistname}`}</h2>
 
-                { (date && size) && <p>{date} - {size}</p> }
-                { (!(date && size) && date) && <p>{date}</p> }
-                { (!(date && size) && size) && <p>{size}</p> }
+                { subtitle && <p><strong>Artist:</strong> {artistname}</p> }
 
-                { medium && <p>{medium}</p> }
+                { limitation && <p><strong>Limitation:</strong> {limitation}</p> }
 
                 { description && <ReactMarkdown source={description} /> }
 
-                { (qty > 0 && processing) &&
-                  <h3>Confirming availability...</h3>
-                }
+                { processing && <h3>Confirming availability...</h3> }
 
                 <div className="detail-btns">
-                  { (qtyAvail > 0 && qtyAvailNow <= 0) &&
-                    <h3>Sorry, this piece is no longer available.</h3>
+                  { (qtyAvailNow === 0) &&
+                    <h3>Sorry, this card is no longer available.</h3>
                   }
 
-                  { (archive && qtyAvail === 0 && qtyAvailNow <= 0) &&
-                    <h3>This piece has been sold or is Not for Sale.</h3>
-                  }
-
-                  { (price > 10 && qtyAvailNow > 0) &&
+                  { (qtyAvailNow > 0 && price > 10) &&
                     <div className="add-to-cart">
                       <h3 className="price">{formatPrice(price)}</h3>
                       {!inCart &&
@@ -217,20 +188,20 @@ const PaintingPage = ({
                     </div>
                   }
 
-                  { (price <= 10 && qtyAvailNow > 0) &&
-                    <div className="inquire">
-                      <button type="button" className="btn btn-inquire btn-primary btn-rounded">Inquire</button>
-                    </div>
-                  }
-
-                  { (inCart && qtyAvailNow > 0) &&
+                  { (qtyAvailNow > 0 && inCart) &&
                     <MDBBadge color="secondary">Added to Cart</MDBBadge>
                   }
-                </div>
 
+                  { (qtyAvailNow > 0 && price <= 10) &&
+                    <div className="inquire">
+                      <button type="button" className="btn btn-inquire btn-secondary btn-rounded">
+                        Inquire
+                      </button>
+                    </div>
+                  }
+                </div>
               </div>
             </div>
-
           </div>
         </article>
       </div>
@@ -238,44 +209,44 @@ const PaintingPage = ({
   )
 }
 
-export default PaintingPage
+export default Tradingcard
 
 export const query = graphql`
-  query GetSinglePainting($slug: String) {
-    painting: strapiPainting(slug: {eq: $slug}) {
-      id: strapiId
-      sku
-      artist {
-        firstname
-        lastname
-        aka
-        slug
-      }
-      title
-      subtitle
-      images {
-        url
-        localFile {
-          childImageSharp {
-            gatsbyImageData(
-              placeholder: BLURRED
-              formats: [AUTO, WEBP]
-            )
-          }
+query GetSingleTradingcard($slug: String) {
+  tradingcard: strapiTradingcard(
+    slug: {eq: $slug}) {
+    id: strapiId
+    sku
+    slug
+    artist {
+      lastname
+      firstname
+      slug
+    }
+    cardseries {
+      name
+    }
+    player {
+      name
+    }
+    title
+    subtitle
+    images {
+      url
+      localFile {
+        childImageSharp {
+          gatsbyImageData(
+            placeholder: BLURRED
+            formats: [AUTO, WEBP]
+          )
         }
       }
-      subgenres {
-        name
-      }
-      date
-      size
-      medium
-      description
-      price
-      qty
-      slug
-      archive
-      form
     }
+    limitation
+    description
+    details
+    qty
+    price
   }
+}
 `

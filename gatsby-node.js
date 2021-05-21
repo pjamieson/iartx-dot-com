@@ -3,6 +3,11 @@ exports.createPages = async ({ graphql, actions }) => {
   const result = await graphql(
     `
     query GetAvailableItems {
+      artists: allStrapiArtist {
+        nodes {
+          slug
+        }
+      },
       paintings: allStrapiPainting {
         nodes {
           artist {
@@ -15,8 +20,12 @@ exports.createPages = async ({ graphql, actions }) => {
           slug
         }
       },
-      artists: allStrapiArtist {
+      tradingcards: allStrapiTradingcard {
         nodes {
+          artist {
+            slug
+          }
+          qty
           slug
         }
       }
@@ -29,8 +38,20 @@ exports.createPages = async ({ graphql, actions }) => {
   }
 
   const path = require('path')
-  const paintings = result.data.paintings.nodes;
   const artists = result.data.artists.nodes;
+  const paintings = result.data.paintings.nodes;
+  const tradingcards = result.data.tradingcards.nodes;
+
+  // Create artist pages.
+  artists.forEach((artist) => {
+    createPage({
+      path: `/artists/${artist.slug}/`,
+      component: path.resolve(`./src/templates/artist.js`),
+      context: {
+        slug: artist.slug,
+      },
+    })
+  })
 
   // Create painting detail pages.
   paintings.forEach((painting) => {
@@ -43,13 +64,13 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
-  // Create artist pages.
-  artists.forEach((artist) => {
+  // Create tradingcard detail pages.
+  tradingcards.forEach((tradingcard) => {
     createPage({
-      path: `/artists/${artist.slug}/`,
-      component: path.resolve(`./src/templates/artist.js`),
+      path: `/cards/${tradingcard.slug}/`,
+      component: path.resolve(`./src/templates/tradingcard.js`),
       context: {
-        slug: artist.slug,
+        slug: tradingcard.slug,
       },
     })
   })
