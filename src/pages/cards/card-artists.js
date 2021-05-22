@@ -60,7 +60,7 @@ const CardArtistsPage = ({ location, data }) => {
                 { artists[ndx].biocredit && <em><p className="bio-credit">{artists[ndx].biocredit}</p></em> }
               </div>
 
-              { (cards.length > 0) && <>
+              { (artists[ndx].tradingcards && artists[ndx].tradingcards.length > 0) && <>
                 <h3>Available Cards:</h3>
 
                 <div className="uk-grid-small uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid="masonry: true">
@@ -76,19 +76,21 @@ const CardArtistsPage = ({ location, data }) => {
                 </div></>
               }
 
-              <h3>Available Art Works:</h3>
+              { (artists[ndx].paintings && artists[ndx].paintings.length > 0) && <>
+                <h3>Available Art Works:</h3>
 
-              <div className="uk-grid-small uk-child-width-1-1@s uk-child-width-1-2@m" uk-grid="masonry: true">
-                {paintings.map((painting) => {
-                  return (
-                    painting.artist && painting.artist.lastname === artists[ndx].lastname ?
-                     <div key={painting.id}>
-                      {painting.images && <CardImageCaptionLink item={painting} caption_format="Artist" /> }
-                    </div>
-                    : null
-                  )
-                })}
-              </div>
+                <div className="uk-grid-small uk-child-width-1-1@s uk-child-width-1-2@m" uk-grid="masonry: true">
+                  {paintings.map((painting) => {
+                    return (
+                      painting.artist && painting.artist.lastname === artists[ndx].lastname ?
+                       <div key={painting.id}>
+                        {painting.images && <CardImageCaptionLink item={painting} caption_format="Artist" /> }
+                      </div>
+                      : null
+                    )
+                  })}
+                </div></>
+              }
 
               { artists[ndx].publications &&
                 <>
@@ -128,6 +130,12 @@ export const query = graphql`
         biocredit
         country {
           name
+        }
+        paintings {
+          title
+        }
+        tradingcards{
+          title
         }
         publications
       }
