@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react"
 import { Helmet } from "react-helmet"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { getImage } from "gatsby-plugin-image"
 import { Link, graphql } from "gatsby"
 import ReactMarkdown from "react-markdown";
 
