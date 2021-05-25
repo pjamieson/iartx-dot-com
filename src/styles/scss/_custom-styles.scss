@@ -1162,3 +1162,15 @@ footer.blake-footer {
     max-width: 260px !important;
   }
 }
+
+.img-hover-zoom {
+  transition: transform .25s ease;
+  margin: 2px;
+  a {
+    padding: 0;
+    margin: -2px -2px -8px -2px;
+  }
+  &:hover {
+    transform: scale(1.05);
+  }
+}

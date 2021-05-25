@@ -31,7 +31,7 @@
     "gatsby-plugin-sharp": "^3.4.0",
     "gatsby-plugin-sitemap": "^4.0.0",
     "gatsby-source-filesystem": "^3.4.0",
-    "gatsby-source-strapi": "^1.0.0-alpha.1",
+    "gatsby-source-strapi": "^1.0.0",
     "gatsby-transformer-sharp": "^3.4.0",
     "mdbreact": "git+https://oauth2:yayBkZHbysdtkJvvF5sK@git.mdbootstrap.com/mdb/react/re-pro.git",
     "react": "^17.0.2",

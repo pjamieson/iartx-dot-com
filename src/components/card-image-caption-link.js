@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "gatsby"
-//import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { MDBCardImage, MDBMask, MDBView } from "mdbreact";
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import { getCreatorFullName } from "../utils/creator"
 import { formatPrice } from "../utils/format"
@@ -9,8 +8,8 @@ import { formatPrice } from "../utils/format"
 const CardImageCaptionLink = ({ item, caption_format }) => {
   //console.log("CardImageLinkTitle item", item)
 
-  // The primary image is the first of the images set
-  //const image = getImage(item.images[0].localFile.childImageSharp.gatsbyImageData)
+  // Use the primary image, the first of the images set
+  const image = getImage(item.images[0].localFile.childImageSharp.gatsbyImageData)
 
   let line2 = ""
   let link = ""
@@ -32,13 +31,11 @@ const CardImageCaptionLink = ({ item, caption_format }) => {
   return (
     <div className="card" key={item.id}>
 
-      <MDBView hover zoom rounded>
-        {/*<GatsbyImage className="img-fluid w-100" image={image} alt={item.title} />*/}
-        <MDBCardImage src={item.images[0].url} className="img-fluid" />
-        <a href={link}>
-          <MDBMask overlay="white-slight" />
+      <div className="card img-hover-zoom">
+        <a href={link} className="ripple">
+          <GatsbyImage className="img-fluid rounded" image={image} alt={item.title} />
         </a>
-      </MDBView>
+      </div>
 
       <div>
         <Link to={link} className="btn-floating btn-action btn-primary">

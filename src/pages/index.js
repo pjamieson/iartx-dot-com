@@ -79,10 +79,10 @@ export const query = graphql`
           slug
         }
         images {
-          url
           localFile {
             childImageSharp {
               gatsbyImageData(
+                width: 500
                 placeholder: BLURRED
                 formats: [AUTO, WEBP]
               )

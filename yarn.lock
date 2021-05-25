@@ -6303,14 +6303,6 @@ gatsby-page-utils@^1.4.0:
     lodash "^4.17.21"
     micromatch "^4.0.2"
 
-gatsby-plugin-google-analytics@^3.4.0:
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-3.4.0.tgz#4630d0d8f2f37806be50de9bb3e120f4045150d1"
-  integrity sha512-dH/ZHPo8fzQq5DoFVR6oMd1n3xnsmvvy+CTzzaWCNxF5DGikTJFuIvUm3nLchBuRkfIlj2UbDkJfuPGwmfkTqw==
-  dependencies:
-    "@babel/runtime" "^7.12.5"
-    minimatch "3.0.4"
-
 gatsby-plugin-google-gtag@^3.5.0:
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-3.5.0.tgz#db5dacf58a01f56109c19fb3cf9ceefed684c45f"
@@ -6557,16 +6549,16 @@ gatsby-source-filesystem@^3.4.0:
     valid-url "^1.0.9"
     xstate "^4.14.0"
 
-gatsby-source-strapi@^1.0.0-alpha.1:
-  version "1.0.0-alpha.1"
-  resolved "https://registry.yarnpkg.com/gatsby-source-strapi/-/gatsby-source-strapi-1.0.0-alpha.1.tgz#5044bb1a7531f9807828d06ba60ea0a402088d74"
-  integrity sha512-Y8S7pvFl6yE1/KN89gOYIxyfVMjJY0wScvP8rya+EcjU5SVDvTFxmSVIL2ebVPjxo/mXKnZUToZ4v/DBFPhd7Q==
+gatsby-source-strapi@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-source-strapi/-/gatsby-source-strapi-1.0.0.tgz#e11ca42990f3c837e1e4c943c268464a504dc468"
+  integrity sha512-N+N2cONfKcSpNhjwr7+62NubKKNDIItNuG6SeOwHoVpcIYv+B30G3J7BGsV4J1bYS4q2j+XEmuZD+7CcL6OYRw==
   dependencies:
     "@babel/plugin-transform-runtime" "7.12.1"
     axios "0.21.1"
     gatsby-node-helpers "^0.3.0"
     gatsby-source-filesystem "^3.3.0"
-    lodash "4.17.20"
+    lodash "4.17.21"
     pluralize "8.0.0"
 
 gatsby-telemetry@^2.4.0:
@@ -8848,12 +8840,7 @@ lodash.without@^4.4.0:
   resolved "https://registry.yarnpkg.com/lodash.without/-/lodash.without-4.4.0.tgz#3cd4574a00b67bae373a94b748772640507b7aac"
   integrity sha1-PNRXSgC2e643OpS3SHcmQFB7eqw=
 
-lodash@4.17.20:
-  version "4.17.20"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
-  integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
-
-lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.21, lodash@^4.17.4:
+lodash@4.17.21, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.21, lodash@^4.17.4:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==

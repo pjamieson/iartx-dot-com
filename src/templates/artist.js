@@ -134,10 +134,10 @@ query GetArtistAndWorks($slug: String) {
       title
       subtitle
       images {
-        url
         localFile {
           childImageSharp {
             gatsbyImageData(
+              width: 500
               placeholder: BLURRED
               formats: [AUTO, WEBP]
             )
@@ -168,10 +168,10 @@ query GetArtistAndWorks($slug: String) {
       title
       subtitle
       images {
-        url
         localFile {
           childImageSharp {
             gatsbyImageData(
+              width: 400
               placeholder: BLURRED
               formats: [AUTO, WEBP]
             )

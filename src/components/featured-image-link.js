@@ -1,23 +1,20 @@
 import React from 'react';
-//import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { MDBCardImage, MDBMask, MDBView } from "mdbreact";
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-const FeaturedImagelink = ({ location, item }) => {
+const FeaturedImagelink = ({ item }) => {
   //console.log("FeaturedImagelink item", item)
 
-  // The primary image is the first of the images set
-  //const image = getImage(item.images[0].localFile.childImageSharp.gatsbyImageData)
+  // Use the primary image, the first of the images set
+  const image = getImage(item.images[0].localFile.childImageSharp.gatsbyImageData)
 
   const link = `/gallery/${item.slug}/`
 
   return (
-    <MDBView hover zoom rounded>
-      {/*<GatsbyImage className="img-fluid w-100" image={image} alt={item.title} />*/}
-      <MDBCardImage src={item.images[0].url} className="img-fluid" waves />
-      <a href={link}>
-        <MDBMask overlay="white-slight" />
+    <div className="img-hover-zoom">
+      <a href={link} className="ripple">
+        <GatsbyImage className="img-fluid rounded" image={image} alt={item.title} />
       </a>
-    </MDBView>
+    </div>
   )
 }
 

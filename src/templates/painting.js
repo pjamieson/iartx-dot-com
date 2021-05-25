@@ -151,8 +151,8 @@ const PaintingPage = ({
           <div className="uk-grid-small uk-child-width-1-2@s" uk-grid="masonry: true">
 
             <div>
-              <div className="overlay">
-                <GatsbyImage className="card card-img-top" image={image0.gatsbyImage} alt={title} />
+              <div className="">
+                <GatsbyImage className="img-fluid rounded" image={image0.gatsbyImage} alt={title} />
               </div>
 
               { (imageset && imageset.length > 0) &&
@@ -254,10 +254,10 @@ export const query = graphql`
       title
       subtitle
       images {
-        url
         localFile {
           childImageSharp {
             gatsbyImageData(
+              width: 600
               placeholder: BLURRED
               formats: [AUTO, WEBP]
             )
