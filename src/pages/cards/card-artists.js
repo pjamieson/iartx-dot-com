@@ -149,6 +149,7 @@ export const query = graphql`
         artist {
           firstname
           lastname
+          aka
         }
         cardseries {
           name

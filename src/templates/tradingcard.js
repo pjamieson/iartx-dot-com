@@ -221,6 +221,7 @@ query GetSingleTradingcard($slug: String) {
     artist {
       lastname
       firstname
+      aka
       slug
     }
     cardseries {

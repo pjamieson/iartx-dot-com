@@ -86,6 +86,11 @@ export const query = graphql`
       nodes {
         id: strapiId
         sku
+        artist {
+          firstname
+          lastname
+          aka
+        }
         cardseries {
           name
         }
