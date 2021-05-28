@@ -10,15 +10,11 @@ Having worked with both Angular and React, I personally prefer React. Especially
 
 In Gatsby 3, the biggest change from Gatsby 2 is the recommended migration from gatsby-image to gatsby-plugin-image.
 
-The latest version of the gatsby-source-filesystem package (3.1.0) is unable to create localFile nodes (in gatsby-node.js) for multiple image media types, as needs to be done for those images when pulled from Strapi v3.5.x. So, I have reverted to version 2.11.0 of that package, and that works as expected. I suspect the cause is a bug in the newer version (the same error was seen in earlier versions of v2), and I will test newer versions as they are released.
+**Strapi 3.6.2:**
 
-Dynamic GatsbyImage elements from the latest gatsby-plugin-image (v1.2.0-next.0) are not playing well with hover effects and masks where I use them, essentially, to create image buttons. Until that issue is resolved, I am employing the basic HTML img element to achieve the desired functionality and look.
+Developing the Strapi CMS backend can be challenging, with inconsistent documentation and uncertainty about how committed they are to supporting an evolving Gatsby frontend. However, I like that Strapi is Open Source, and that I can develop and maintain my own server on an AWS EC2 instance. In addition to providing content, I have it also serving as the secure backend for credit card processing through Stripe, and shipping labels through Shippo.
 
-**Strapi 3.5.3:**
-
-Developing the Strapi CMS backend can be challenging, with inconsistent documentation and uncertainty about how committed they are to supporting an evolving Gatsby frontend. Their gatsby-source-strapi package (v0.0.12) has not been updated since April 2020.
-
-However, I like that Strapi is Open Source, and that I can develop and maintain my own server on an AWS EC2 instance. I have it working fine on the blake.art site--including serving as the secure backend for credit card processing through Stripe, and shipping labels through Shippo--and I need no additional backend functionality for this site at this time.
+In late May 2021, Strapi finally updated their gatsby-source-strapi plugin package to support the Gatsby 3 update and multiple image content types, so it now looks good going forward.
 
 **Bootstrap 4 and MDBBootstrap 5 (from 4):**
 
