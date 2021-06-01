@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback, useContext } from 'react';
 import { Link, navigate } from "gatsby"
-//import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import { CartContext } from "../context/cart-context"
 
@@ -11,15 +11,12 @@ import {
   MDBBtn,
   MDBCard,
   MDBCardBody,
-  MDBCardImage,
   MDBContainer,
   MDBIcon,
-  MDBMask,
   MDBRow,
   MDBTable,
   MDBTableBody,
-  MDBTableHead,
-  MDBView
+  MDBTableHead
 } from 'mdbreact';
 
 import {
@@ -112,12 +109,11 @@ const CartPage = () => {
                       {cart.map(item => {
                         return <tr key={item.sku}>
                           <td className="img-cell">
-                            <MDBView hover zoom>
-                              <MDBCardImage src={item.url} className="img-fluid cart-image" alt={item.title}/>
+                            <div className="img-hover-zoom">
                               <a href={`/gallery/${item.slug}/`}>
-                                <MDBMask overlay="white-slight" />
+                                <GatsbyImage className="img-fluid rounded" image={item.image.localFile.childImageSharp.gatsbyImageData} alt={item.title} />
                               </a>
-                            </MDBView>
+                            </div>
                           </td>
                           <td className="item-cell">
                             <div className="cart-item">

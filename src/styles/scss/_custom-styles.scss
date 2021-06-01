@@ -202,29 +202,6 @@ p {
   }
 }
 
-// side-nav
-.side-nav {
-  background-color: $blake-dark-grey;
-  .logo-wrapper {
-    height: 65px !important;
-    .Ripple-parent {
-      height: 65px !important;
-       img {
-         height: 75px !important;
-         margin: -.3rem 0 0 0;
-         padding-left: 10px;
-         vertical-align: middle;
-       }
-    }
-  }
-  &.wide {
-    width: 12rem;
-    .collapsible-body a {
-      padding-left: 10px;
-    }
-  }
-}
-
 .cart-link {
   position: absolute;
   top: .8rem;
@@ -465,9 +442,11 @@ p {
         font-style: italic;
         font-weight: 500;
       }
-      .card-subtitle {
+      .card-title, .card-subtitle {
         padding-bottom: .4rem;
         line-height: 1.2;
+      }
+      .card-subtitle {
         color: $secondary-color;
       }
     }

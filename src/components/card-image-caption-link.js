@@ -44,7 +44,7 @@ const CardImageCaptionLink = ({ item, caption_format }) => {
       </div>
 
       <div className="card-body">
-        <h4>{item.title}</h4>
+        <h4 className="card-title">{item.title}</h4>
         <h5 className="card-subtitle">{line2}</h5>
         <h5>{formatPrice(item.price)}</h5>
       </div>
