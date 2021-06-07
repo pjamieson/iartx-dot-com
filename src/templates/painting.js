@@ -126,6 +126,7 @@ const PaintingPage = ({
             "@context": "https://schema.org",
             "@type": "Product",
             "productID": "${sku}",
+            "sku": "${sku}",
             "category": "Home & Garden > Decor > Artwork",
             "name": "${title}",
             "description": "${productDescription}",
@@ -136,6 +137,7 @@ const PaintingPage = ({
             "offers": [
               {
                 "@type": "Offer",
+                "url": "${productUrl}",
                 "price": "${price}",
                 "priceCurrency": "USD",
                 "itemCondition": "https://schema.org/NewCondition",

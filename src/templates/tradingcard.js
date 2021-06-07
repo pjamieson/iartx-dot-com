@@ -113,6 +113,7 @@ const Tradingcard = ({
             "@context": "https://schema.org",
             "@type": "Product",
             "productID": "${sku}",
+            "sku": "${sku}",
             "category": "Arts & Entertainment > Hobbies & Creative Arts > Collectibles > Collectible Trading Cards",
             "name": "${productTitle}",
             "description": "${subtitle}",
@@ -123,6 +124,7 @@ const Tradingcard = ({
             "offers": [
               {
                 "@type": "Offer",
+                "url": "${productUrl}",
                 "price": "${price}",
                 "priceCurrency": "USD",
                 "itemCondition": "https://schema.org/NewCondition",
