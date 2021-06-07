@@ -12,7 +12,6 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import ImageSet from "../components/image-set"
 
-//import { getGatsbyImage } from "../utils/image"
 import { getCreatorFullName } from "../utils/creator"
 import { formatPrice } from "../utils/format"
 import { getPaintingQtyAvailable } from "../utils/inventory"
@@ -48,7 +47,7 @@ const PaintingPage = ({
     imageset.push({
       key,
       title,
-      "url": image.url,
+      "url": image.localFile.url,
       "gatsbyImage": getImage(image.localFile.childImageSharp.gatsbyImageData)
     })
     key = key + 1
@@ -104,6 +103,9 @@ const PaintingPage = ({
   //console.log("painting.js seo_description", seo_description)
 
   // Schema.org calculated values
+  const productDescription = subtitle ? subtitle : `An original ${form} by ${artistname}`
+  //console.log("painting.js productDescription", productDescription)
+
   const productUrl = `https://iartx.com/gallery/${slug}/`
   //const productUrl = `localhost:8000/gallery/${subgenre.slug}/${slug}`
   //console.log("painting.js productUrl", productUrl)
@@ -126,7 +128,7 @@ const PaintingPage = ({
             "productID": "${sku}",
             "category": "Home & Garden > Decor > Artwork",
             "name": "${title}",
-            "description": "${subtitle}",
+            "description": "${productDescription}",
             "url": "${productUrl}",
             "image": "${productImageUrl}",
             "brand":"The Jamieson Collection",
@@ -262,6 +264,7 @@ export const query = graphql`
               formats: [AUTO, WEBP]
             )
           }
+          url
         }
       }
       subgenres {

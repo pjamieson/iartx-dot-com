@@ -44,7 +44,7 @@ const Tradingcard = ({
     imageset.push({
       key,
       title,
-      "url": image.url,
+      "url": image.localFile.url,
       "gatsbyImage": getImage(image.localFile.childImageSharp.gatsbyImageData)
     })
     key = key + 1
@@ -97,7 +97,7 @@ const Tradingcard = ({
 
   const productUrl = `https://iartx.com/cards/${slug}/`
 
-  const productImageUrl = images[0].url
+  const productImageUrl = images[0].localFile.url
   //console.log("tradingcard.js productImageUrl", productImageUrl)
 
   const productAvailability = qtyAvailNow > 0 ? "http://schema.org/InStock" : "http://schema.org/OutOfStock"
@@ -241,6 +241,7 @@ query GetSingleTradingcard($slug: String) {
             formats: [AUTO, WEBP]
           )
         }
+        url
       }
     }
     limitation
