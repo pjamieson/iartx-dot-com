@@ -50,20 +50,20 @@ export const setCardQtyAvailable = async (id, qty) => {
     }
 }
 
-export const getProductQtyAvailable = async (id) => {
+export const getBookQtyAvailable = async (id) => {
   try {
-    const response = await fetch(`${process.env.GATSBY_STRAPI_API_URL}/products/${id}`)
+    const response = await fetch(`${process.env.GATSBY_STRAPI_API_URL}/books/${id}`)
     const data = await response.json()
     return (data.qty)
   } catch (err) {
-    console.log('getProductQtyAvailable err', err)
+    console.log('getBookQtyAvailable err', err)
   }
   return 0
 }
 
-export const setProductQtyAvailable = async (id, qty) => {
+export const setBookQtyAvailable = async (id, qty) => {
     try {
-      await fetch(`${process.env.GATSBY_STRAPI_API_URL}/products/${id}`, {
+      await fetch(`${process.env.GATSBY_STRAPI_API_URL}/books/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json"
@@ -71,6 +71,6 @@ export const setProductQtyAvailable = async (id, qty) => {
         body: `{"qty":${qty}}`
       })
     } catch (err) {
-      console.log("inventory setProductQtyAvailable err", err)
+      console.log("inventory setBookQtyAvailable err", err)
     }
 }

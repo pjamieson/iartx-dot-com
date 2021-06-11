@@ -22,7 +22,7 @@ import {
 import {
   getPaintingQtyAvailable,
   getCardQtyAvailable,
-  getProductQtyAvailable
+  getBookQtyAvailable
 } from "../utils/inventory"
 import { cartSubtotal } from "../utils/cart"
 import { formatPrice } from "../utils/format"
@@ -62,8 +62,8 @@ const CartPage = () => {
 
           return qtyNowAvailable // forces block to complete before continuing
         }
-        if (item.itemType === "product") {
-          const qtyNowAvailable = await getProductQtyAvailable(item.id)
+        if (item.itemType === "book") {
+          const qtyNowAvailable = await getBookQtyAvailable(item.id)
           if (item.qty > qtyNowAvailable) {
             setCartChanged(true)
             addToCart(item, (qtyNowAvailable - item.qty)) // remove unavailable from cart
@@ -110,9 +110,17 @@ const CartPage = () => {
                         return <tr key={item.sku}>
                           <td className="img-cell">
                             <div className="img-hover-zoom">
-                              <a href={`/gallery/${item.slug}/`}>
-                                <GatsbyImage className="img-fluid rounded" image={item.image.localFile.childImageSharp.gatsbyImageData} alt={item.title} />
-                              </a>
+                              { (item.itemType === "book") &&
+                                <a href={`/books/${item.slug}/`}>
+                                  <GatsbyImage className="img-fluid rounded" image={item.image.localFile.childImageSharp.gatsbyImageData} alt={item.title} />
+                                </a>
+                              }
+                              {(item.itemType !== "book") &&
+                                <a href={`/gallery/${item.slug}/`}>
+                                  <GatsbyImage className="img-fluid rounded" image={item.image.localFile.childImageSharp.gatsbyImageData} alt={item.title} />
+                                </a>
+                              }
+
                             </div>
                           </td>
                           <td className="item-cell">

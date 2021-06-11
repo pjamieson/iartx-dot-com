@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react"
+import React, { useState, useContext, useEffect } from "react"
 import { Helmet } from "react-helmet"
 import { getImage } from "gatsby-plugin-image"
 import { Link, graphql } from "gatsby"
@@ -14,25 +14,33 @@ import ImageSet from "../components/image-set"
 
 import { getCreatorFullName } from "../utils/creator"
 import { formatPrice } from "../utils/format"
-import { getCardQtyAvailable } from "../utils/inventory"
+import { getBookQtyAvailable } from "../utils/inventory"
 
-const Tradingcard = ({
+const BookPage = ({
   data: {
-    tradingcard: {
+    book: {
       id,
       sku,
       slug,
-      artist = {},
-      cardseries = {},
-      player = {},
+      isbn = {},
       title,
       subtitle = {},
+      authors,
       images,
-      limitation = {},
+      subgenres = {},
+      publisher = {},
+      pubplace = {},
+      pubyear = {},
+      pubstring = {},
+      edition = {},
+      binding = {},
       description = {},
-      details = {},
-      qty: qtyAvail,
+      condition = {},
       price,
+      qty: qtyAvail,
+      isAsNew,
+      size,
+      pagecount,
     },
   },
 }) => {
@@ -50,17 +58,19 @@ const Tradingcard = ({
     key = key + 1
   })
 
-  //console.log("painting.js artist", artist)
-  const artistname = getCreatorFullName(artist)
+  const author = authors[0]
 
-  const itemType = "tradingcard"
+  //console.log("book.js author", author)
+  const authorname = getCreatorFullName(author)
+
+  const itemType = "book"
   const qty = 1 //initialize with 1 of item
   const cartItem = {
     itemType,
     id,
     sku,
     slug,
-    creator: artistname,
+    creator: authorname,
     title,
     subtitle,
     image: images[0],
@@ -72,12 +82,12 @@ const Tradingcard = ({
   const [inCart, setInCart] = useState(isInCart(cartItem))
   const [processing, setProcessing] = useState(false)
 
-  // On loading page, confirm card is still available
+  // On loading page, confirm book is still available
   const [qtyAvailNow, setQtyAvailNow] = useState(1) // one available by default
   useEffect(() => {
     const fetchData = async () => {
       setProcessing(true)
-      setQtyAvailNow(await getCardQtyAvailable(id))
+      setQtyAvailNow(await getBookQtyAvailable(id))
       setProcessing(false)
     }
     fetchData()
@@ -89,22 +99,25 @@ const Tradingcard = ({
     setInCart(false)
   }
 
+  const seo_description = `Images of and details about the book “${title}” by ${authorname}.`
+  //console.log("book.js seo_description", seo_description)
+
   // Schema.org calculated values
-  const productTitle = `${title} - ${cardseries.name}`
+  const productDescription = subtitle ? subtitle : `A ${binding} book by ${authorname}`
+  //console.log("book.js productDescription", productDescription)
 
-  const seo_description = `Images of and details about the ${cardseries.name} trading card ${title} by ${artistname}.`
-  //console.log("painting.js seo_description", seo_description)
-
-  const productUrl = `https://iartx.com/cards/${slug}/`
+  const productUrl = `https://iartx.com/books/${slug}/`
 
   const productImageUrl = images[0].localFile.url
-  //console.log("tradingcard.js productImageUrl", productImageUrl)
+  //console.log("book.js productImageUrl", productImageUrl)
+
+  const productCondition = isAsNew ? "https://schema.org/NewCondition" : "http://schema.org/UsedCondition"
 
   const productAvailability = qtyAvailNow > 0 ? "http://schema.org/InStock" : "http://schema.org/OutOfStock"
 
   return (
     <Layout>
-      <Seo title={productTitle} description={seo_description} />
+      <Seo title={title} description={seo_description} />
 
       <Helmet>
         <script type="application/ld+json">
@@ -114,12 +127,13 @@ const Tradingcard = ({
             "@type": "Product",
             "productID": "${sku}",
             "sku": "${sku}",
-            "category": "Arts & Entertainment > Hobbies & Creative Arts > Collectibles > Collectible Trading Cards",
-            "name": "${productTitle}",
-            "description": "${subtitle}",
+            "isbn": "${isbn}",
+            "category": "Media > Books > Print Books",
+            "name": "${title}",
+            "description": "${productDescription}",
             "url": "${productUrl}",
             "image": "${productImageUrl}",
-            "brand":"The Jamieson Collection",
+            "brand": "${publisher}",
             "logo": "https://iartx.com/icons/icon-72x72.png",
             "offers": [
               {
@@ -127,7 +141,7 @@ const Tradingcard = ({
                 "url": "${productUrl}",
                 "price": "${price}",
                 "priceCurrency": "USD",
-                "itemCondition": "https://schema.org/NewCondition",
+                "itemCondition": "${productCondition}",
                 "availability": "${productAvailability}"
               }
             ]
@@ -137,8 +151,8 @@ const Tradingcard = ({
       </Helmet>
 
       <div className="container page-container">
-        <article className="p2020-card-details">
-          <h1>{productTitle}</h1>
+        <article className="painting-details">
+          <h1>{title}</h1>
           <div className="uk-grid-small uk-child-width-1-2@s" uk-grid="masonry: true">
 
             <div>
@@ -148,7 +162,7 @@ const Tradingcard = ({
               }
 
               <div className="back-btn">
-                <Link to="/cards/card-artists/" state={{ artist: artist }} className="btn-floating btn-action btn-primary">
+                <Link to={`/authors/${author.slug}/`} className="btn-floating btn-action btn-primary">
                   <i className="fas fa-chevron-left"></i>
                 </Link>
               </div>
@@ -157,22 +171,29 @@ const Tradingcard = ({
 
             <div className="buy-or-inquire">
               <div className="card-description">
-                <h2>{subtitle ? subtitle : `Artist: ${artistname}`}</h2>
+                <h2>A book by {authorname}</h2>
+                { (subtitle && subtitle.length) &&
+                  <h3 className="subtitle">{subtitle}</h3>
+                }
 
-                { subtitle && <p><strong>Artist:</strong> {artistname}</p> }
-
-                { limitation && <p><strong>Limitation:</strong> {limitation}</p> }
+                { pubstring && <p>{pubstring}.</p> }
+                { (edition && binding) && <p>{edition}. {binding}.</p> }
+                { (size && pagecount) && <p>{size} - {pagecount} pages.</p> }
 
                 { description && <ReactMarkdown source={description} /> }
 
-                { processing && <h3>Confirming availability...</h3> }
+                { condition && <p><strong>Condition:</strong> {condition}</p> }
+
+                { (qty > 0 && processing) &&
+                  <h3>Confirming availability...</h3>
+                }
 
                 <div className="detail-btns">
                   { (qtyAvailNow <= 0) &&
-                    <h3>Sorry, this card is no longer available.</h3>
+                    <h3>Sorry, this book is no longer available.</h3>
                   }
 
-                  { (qtyAvailNow > 0 && price > 10) &&
+                  { (price > 10 && qtyAvailNow > 0) &&
                     <div className="add-to-cart">
                       <h3 className="price">{formatPrice(price)}</h3>
                       {!inCart &&
@@ -186,20 +207,20 @@ const Tradingcard = ({
                     </div>
                   }
 
-                  { (qtyAvailNow > 0 && inCart) &&
-                    <MDBBadge color="secondary">Added to Cart</MDBBadge>
-                  }
-
-                  { (qtyAvailNow > 0 && price <= 10) &&
+                  { (price <= 10 && qtyAvailNow > 0) &&
                     <div className="inquire">
-                      <button type="button" className="btn btn-inquire btn-secondary btn-rounded">
-                        Inquire
-                      </button>
+                      <button type="button" className="btn btn-inquire btn-primary btn-rounded">Inquire</button>
                     </div>
                   }
+
+                  { (inCart && qtyAvailNow > 0) &&
+                    <MDBBadge color="secondary">Added to Cart</MDBBadge>
+                  }
                 </div>
+
               </div>
             </div>
+
           </div>
         </article>
       </div>
@@ -207,46 +228,50 @@ const Tradingcard = ({
   )
 }
 
-export default Tradingcard
+export default BookPage
 
 export const query = graphql`
-query GetSingleTradingcard($slug: String) {
-  tradingcard: strapiTradingcard(
-    slug: {eq: $slug}) {
-    id: strapiId
-    sku
-    slug
-    artist {
-      lastname
-      firstname
-      aka
-      slug
-    }
-    cardseries {
-      name
-    }
-    player {
-      name
-    }
-    title
-    subtitle
-    images {
-      localFile {
-        childImageSharp {
-          gatsbyImageData(
-            width: 300
-            placeholder: BLURRED
-            formats: [AUTO, WEBP]
-          )
-        }
-        url
+  query GetSingleBook($slug: String) {
+    book: strapiBook(slug: {eq: $slug}) {
+      id: strapiId
+      sku
+      isbn
+      authors {
+        firstname
+        lastname
+        slug
       }
+      title
+      subtitle
+      images {
+        localFile {
+          childImageSharp {
+            gatsbyImageData(
+              width: 600
+              placeholder: BLURRED
+              formats: [AUTO, WEBP]
+            )
+          }
+          url
+        }
+      }
+      subgenres {
+        name
+      }
+      publisher
+      pubplace
+      pubyear
+      pubstring
+      edition
+      binding
+      description
+      condition
+      price
+      qty
+      slug
+      isAsNew
+      size
+      pagecount
     }
-    limitation
-    description
-    details
-    qty
-    price
   }
-}
 `

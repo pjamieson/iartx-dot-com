@@ -23,8 +23,8 @@ import {
   setPaintingQtyAvailable,
   getCardQtyAvailable,
   setCardQtyAvailable,
-  getProductQtyAvailable,
-  setProductQtyAvailable
+  getBookQtyAvailable,
+  setBookQtyAvailable
 } from "../utils/inventory"
 import { getSalesTaxRate } from "../utils/salestax"
 
@@ -123,8 +123,8 @@ const CheckoutComponent = () => {
 
           return qtyNowAvailable // forces block to complete before continuing
         }
-        if (item.itemType === "product") {
-          const qtyNowAvailable = await getProductQtyAvailable(item.id)
+        if (item.itemType === "book") {
+          const qtyNowAvailable = await getBookQtyAvailable(item.id)
           if (item.qty > qtyNowAvailable) {
             setCartChanged(true)
             addToCart(item, (qtyNowAvailable - item.qty)) // remove unavailable from cart
@@ -264,8 +264,8 @@ const CheckoutComponent = () => {
 
           return qtyNowAvailable // forces block to complete before continuing
         }
-        if (item.itemType === "product") {
-          const qtyNowAvailable = await getProductQtyAvailable(item.id)
+        if (item.itemType === "book") {
+          const qtyNowAvailable = await getBookQtyAvailable(item.id)
           if (item.qty > qtyNowAvailable) {
             processPayment = false
             setCartChanged(true)
@@ -340,8 +340,8 @@ const CheckoutComponent = () => {
                 if (item.itemType === "tradingcard") {
                   setCardQtyAvailable(item.id, (item.qtyAvail - item.qty))
                 }
-                if (item.itemType === "product") {
-                  setProductQtyAvailable(item.id, (item.qtyAvail - item.qty))
+                if (item.itemType === "book") {
+                  setBookQtyAvailable(item.id, (item.qtyAvail - item.qty))
                 }
               })
             }

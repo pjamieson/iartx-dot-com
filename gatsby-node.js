@@ -8,12 +8,14 @@ exports.createPages = async ({ graphql, actions }) => {
           slug
         }
       },
+      authors: allStrapiAuthor {
+        nodes {
+          slug
+        }
+      },
       paintings: allStrapiPainting {
         nodes {
           artist {
-            slug
-          }
-          subgenres {
             slug
           }
           qty
@@ -23,6 +25,15 @@ exports.createPages = async ({ graphql, actions }) => {
       tradingcards: allStrapiTradingcard {
         nodes {
           artist {
+            slug
+          }
+          qty
+          slug
+        }
+      },
+      books: allStrapiBook {
+        nodes {
+          authors {
             slug
           }
           qty
@@ -39,8 +50,10 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const path = require('path')
   const artists = result.data.artists.nodes;
+  const authors = result.data.authors.nodes;
   const paintings = result.data.paintings.nodes;
   const tradingcards = result.data.tradingcards.nodes;
+  const books = result.data.books.nodes;
 
   // Create artist pages.
   artists.forEach((artist) => {
@@ -49,6 +62,17 @@ exports.createPages = async ({ graphql, actions }) => {
       component: path.resolve(`./src/templates/artist.js`),
       context: {
         slug: artist.slug,
+      },
+    })
+  })
+
+  // Create author pages.
+  authors.forEach((author) => {
+    createPage({
+      path: `/authors/${author.slug}/`,
+      component: path.resolve(`./src/templates/author.js`),
+      context: {
+        slug: author.slug,
       },
     })
   })
@@ -75,44 +99,15 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
+  // Create book detail pages.
+  books.forEach((book) => {
+    createPage({
+      path: `/books/${book.slug}/`,
+      component: path.resolve(`./src/templates/book.js`),
+      context: {
+        slug: book.slug,
+      },
+    })
+  })
+
 }
-/*
-// Need to create a localFile___NODE for content types with multiple images
-// See: https://stackoverflow.com/questions/62745591/how-to-query-multiple-images-in-gatsby-from-strapi-using-graphql
-const { createRemoteFileNode } = require(`gatsby-source-filesystem`);
-
-exports.onCreateNode = async ({
-  node,
-  actions,
-  store,
-  cache,
-  createNodeId,
- }) => {
-   const { createNode } = actions;
-
-   let itemImages = node.images
-
-   if (node.internal.type !== null && (node.internal.type === "StrapiPainting")) {
-     if (itemImages.length > 0) {
-       // itemImages.forEach(el => console.log(el))
-       const images = await Promise.all(
-         itemImages.map(el =>
-           createRemoteFileNode({
-             url: (el.provider === "local" ? `${process.env.GATSBY_STRAPI_API_URL}${el.url}` : `${el.url}`),
-             parentNodeId: node.id,
-             store,
-             cache,
-             createNode,
-             createNodeId,
-           })
-         )
-       )
-
-      itemImages.forEach((image, i) => {
-        image.localFile___NODE = images[i].id
-      })
-
-    }
-  }
-};
-*/

@@ -14,12 +14,18 @@ const CardImageCaptionLink = ({ item, caption_format }) => {
   let line2 = ""
   let link = ""
 
-  if (caption_format === "Artist" || caption_format === "Author") {
+  if (caption_format === "Artist") {
     line2 = item.subtitle && item.subtitle.length > 0 ? item.subtitle : "An Original Painting"
     link = `/gallery/${item.slug}/`
+  } else if (caption_format === "Author") {
+      line2 = item.subtitle && item.subtitle.length > 0 ? item.subtitle : "A Collectable Book"
+      link = `/books/${item.slug}/`
   } else if (caption_format === "Gallery") {
     line2 = `by ${getCreatorFullName(item.artist)}`
     link = `/gallery/${item.slug}/`
+  } else if (caption_format === "Books") {
+    line2 = `by ${getCreatorFullName(item.authors[0])}`
+    link = `/books/${item.slug}/`
   } else if (caption_format === "Card") {
     line2 = item.subtitle && item.subtitle.length > 0 ? item.subtitle : "A Sports Art Card"
     link = `/cards/${item.slug}/`
