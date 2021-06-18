@@ -90,6 +90,7 @@ query GetAuthorAndWorks($slug: String) {
   },
   allStrapiBook(
     filter: {
+      authors: {elemMatch: {slug: {eq: $slug}}},
       qty: {gt: 0}
     },
     sort: { fields: pubyear, order: ASC }

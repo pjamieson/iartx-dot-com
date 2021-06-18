@@ -93,7 +93,7 @@ const CheckoutComponent = () => {
     }
   }
 
-  const countryList = ["AU", "BS", "BE", "CA", "DK", "FI", "FR", "DE", "IE", "IT", "JP", "KR", "LU", "MX", "NL", "NZ", "NO", "PT", "PR", "ES", "SE", "CH", "GB", "US", "UM", "UT", "VG", "VI"]
+  const countryList = ["AU", "BS", "BB", "BE", "VG", "CA", "DK", "FI", "FR", "DE", "IE", "IT", "MX", "NL", "NZ", "NO", "PT", "PR", "ES", "SE", "CH", "GB", "US", "UM", "VI"]
   const priorityList = ["US", "CA"]
 
   // On loading page, confirm cart items still available
@@ -147,6 +147,7 @@ const CheckoutComponent = () => {
 
   const getPaymentIntent = async () => {
     //console.log("getPaymentIntent cart", cart)
+
     // Need to get sales tax rate if CA shipping address and not already retreived
     // (So correct charge total can be submitted when getting Stript Payment Intent)
     let taxRate = salesTaxRate
@@ -156,6 +157,7 @@ const CheckoutComponent = () => {
       //console.log("checkout getPaymentIntent taxRate", taxRate)
     }
     //console.log("getPaymentIntent taxRate", taxRate)
+
     try {
       const response = await fetch(`${process.env.GATSBY_STRAPI_API_URL}/orders/payment`, {
         method: "POST",
@@ -164,6 +166,7 @@ const CheckoutComponent = () => {
         },
         body: JSON.stringify({
           salesTaxRate: taxRate,
+          country,
           cart
         })
       })
@@ -385,7 +388,7 @@ const CheckoutComponent = () => {
 
           // Also POST order & shipping address to Shippo
           const orderSubtotal = cartSubtotal(cart)
-          const orderShipping = cartShipping(cart)
+          const orderShipping = cartShipping(cart, country)
           const orderSalesTax = cartSalesTax(cart, salesTaxRate)
           const orderTotal = cartTotal(cart, salesTaxRate)
           const fullname = `${firstname} ${lastname}`
@@ -687,12 +690,12 @@ const CheckoutComponent = () => {
                         </div>
                         <div className="summary-totals">
                           <p>Shipping:</p>
-                          <p>{cartShipping(cart) > 0 ? formatPrice(cartShipping(cart)) : `Free`}</p>
+                          <p>{cartShipping(cart, country) > 0 ? formatPrice(cartShipping(cart, country)) : `Free`}</p>
                         </div>
                         <hr />
                         <div className="summary-totals">
                           <p>Total:</p>
-                          <p><strong>{formatPrice(cartTotal(cart, salesTaxRate))}</strong></p>
+                          <p><strong>{formatPrice(cartTotal(cart, salesTaxRate, country))}</strong></p>
                         </div>
                       </div>
                     }

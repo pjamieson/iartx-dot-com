@@ -203,13 +203,20 @@ const Navbar = () => {
                   <p>BOOKS</p>
                 </div>
               </MDBDropdownToggle>
-                <MDBDropdownMenu>
-                  {/*<MDBDropdownItem>
-                    <Link className="menu-link" to="/books/authors/">Authors</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link className="menu-link" to="/books/countries/">Countries</Link>
-                  </MDBDropdownItem>*/}
+              <MDBDropdownMenu>
+                <li className="dropdown-submenu">
+                  <a className="dropdown-item" tabindex="-1" href="#">Authors</a>
+                  <ul className="dropdown-menu">
+<MDBDropdownItem>
+<Link className="menu-link" to="/authors/lefteri-christy/">Christy Lefteri</Link>
+</MDBDropdownItem>
+<MDBDropdownItem>
+<Link className="menu-link" to="/authors/mittelholzer-edgar/">Mittelholzer, Edgar</Link>
+</MDBDropdownItem>
+                  </ul>
+                </li>
+
+
                   <MDBDropdownItem>
                     <Link className="menu-link" to="/books/art-books/">Art Books</Link>
                   </MDBDropdownItem>

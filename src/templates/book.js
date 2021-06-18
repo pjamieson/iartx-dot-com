@@ -41,6 +41,7 @@ const BookPage = ({
       isAsNew,
       size,
       pagecount,
+      ozweight,
     },
   },
 }) => {
@@ -77,7 +78,8 @@ const BookPage = ({
     url: images[0].localFile.url,
     qty,
     qtyAvail,
-    price
+    price,
+    ozweight
   }
   const [inCart, setInCart] = useState(isInCart(cartItem))
   const [processing, setProcessing] = useState(false)
@@ -272,6 +274,7 @@ export const query = graphql`
       isAsNew
       size
       pagecount
+      ozweight
     }
   }
 `
