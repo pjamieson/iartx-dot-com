@@ -70,8 +70,8 @@ const PaintingPage = ({
     creator: artistname,
     title,
     subtitle: subt,
-    image: image0,
-    url: image0.url,
+    image: images[0],
+    url: images[0].localFile.url,
     qty,
     qtyAvail,
     price
