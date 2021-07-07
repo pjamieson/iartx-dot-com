@@ -160,16 +160,17 @@ const ContactPage = () => {
               <div className="btn-floating">
                 <MDBIcon icon="map-marker-alt" />
               </div>
+              <p className="contact-info-street">1848 Indian Valley Rd</p>
               <p className="contact-info">Novato, CA, USA</p>
             </li>
-            {/*
+            {
             <li>
               <div className="btn-floating">
                 <MDBIcon icon="phone" />
               </div>
-              <p className="contact-info">+ 01 234 567 89</p>
+              <p className="contact-info">1.415.897.8145</p>
             </li>
-            */}
+            }
             <li>
               <div className="btn-floating">
                 <MDBIcon icon="envelope" />
