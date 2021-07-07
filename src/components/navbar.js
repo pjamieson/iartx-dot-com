@@ -115,6 +115,9 @@ const Navbar = () => {
   <Link className="menu-link" to="/artists/hung-pham-quoc/">Hùng, Phạm Quốc</Link>
 </MDBDropdownItem>
 <MDBDropdownItem>
+  <Link className="menu-link" to="/artists/arijac-jacques-harry/">Jacques, Harry “Arijac”</Link>
+</MDBDropdownItem>
+<MDBDropdownItem>
   <Link className="menu-link" to="/artists/jamieson-blake/">Jamieson, Blake</Link>
 </MDBDropdownItem>
 <MDBDropdownItem>
@@ -277,14 +280,14 @@ const Navbar = () => {
                   <MDBDropdownItem>
                     <Link className="menu-link" to="/about/tech/">Tech Notes</Link>
                   </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/about/contact/">Contact</Link>
+                  </MDBDropdownItem>
                   {/*<MDBDropdownItem>
                     <Link className="menu-link" to="/about/team/">#TeamBlake</Link>
                   </MDBDropdownItem>
                   <MDBDropdownItem>
                     <Link className="menu-link" to="/about/press/">Press</Link>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <Link className="menu-link" to="/about/contact/">Contact</Link>
                   </MDBDropdownItem>
                   <MDBDropdownItem>
                     <Link className="menu-link" to="/subscribe/">Mailing List</Link>
