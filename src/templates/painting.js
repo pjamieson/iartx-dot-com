@@ -140,7 +140,7 @@ const PaintingPage = ({
                 "url": "${productUrl}",
                 "price": "${price}",
                 "priceCurrency": "USD",
-                "itemCondition": "https://schema.org/NewCondition",
+                "itemCondition": "https://schema.org/UsedCondition",
                 "availability": "${productAvailability}"
               }
             ]
