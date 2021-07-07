@@ -10,7 +10,7 @@ const TechNotesPage = () => {
   return (
     <Layout>
       <Seo title="Tech Notes" />
-      <div className="container page-container">
+      <div className="container page-container contact">
         <h1>Tech Notes</h1>
         <MDBCard>
           <MDBCardBody>

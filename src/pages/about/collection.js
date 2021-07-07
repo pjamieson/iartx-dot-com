@@ -10,7 +10,7 @@ const CollectionNotesPage = () => {
   return (
     <Layout>
       <Seo title="Collection Notes" />
-      <div className="container page-container">
+      <div className="container page-container contact">
         <h1>Collection Notes</h1>
         <MDBCard>
           <MDBCardBody>
