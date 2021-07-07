@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from "react"
 import { Helmet } from "react-helmet"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { Link, graphql } from "gatsby"
+import { Link, navigate, graphql } from "gatsby"
 import ReactMarkdown from "react-markdown";
 
 import { MDBBadge } from "mdbreact"
@@ -223,7 +223,15 @@ const PaintingPage = ({
 
                   { (price <= 10 && qtyAvailNow > 0) &&
                     <div className="inquire">
-                      <button type="button" className="btn btn-inquire btn-primary btn-rounded">Inquire</button>
+                      <button type="button" className="btn btn-inquire btn-primary btn-rounded" onClick={() => {
+                        navigate('/inquire/', {
+                          state: {
+                            title,
+                            sku,
+                            image: image0.gatsbyImage
+                          }
+                        })
+                      }}>Inquire</button>
                     </div>
                   }
 

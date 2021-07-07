@@ -52,7 +52,7 @@ const CardImageCaptionLink = ({ item, caption_format }) => {
       <div className="card-body">
         <h4 className="card-title">{item.title}</h4>
         <h5 className="card-subtitle">{line2}</h5>
-        <h5>{formatPrice(item.price)}</h5>
+        <h5>{item.price > 0 ? formatPrice(item.price) : `Inquire`}</h5>
       </div>
     </div>
   )
