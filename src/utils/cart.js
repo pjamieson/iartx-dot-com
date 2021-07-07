@@ -88,7 +88,6 @@ export const cartShipping = (cart, country) => {
       return 0.00; // Free domestic shipping
     case 'CA': // Canada
       return uspsFirstClassPackageInternationalRate(21.25, 33.50, 44.75, weightoz)
-      break;
     case 'MX': // Mexico
       return uspsFirstClassPackageInternationalRate(21.75, 33.00, 45.25, weightoz)
     case 'FR': // France
