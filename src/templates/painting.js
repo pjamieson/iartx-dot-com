@@ -221,23 +221,22 @@ const PaintingPage = ({
                     </div>
                   }
 
-                  { (price <= 10 && qtyAvailNow > 0) &&
-                    <div className="inquire">
-                      <button type="button" className="btn btn-inquire btn-primary btn-rounded" onClick={() => {
-                        navigate('/inquire/', {
-                          state: {
-                            title,
-                            sku,
-                            image: image0.gatsbyImage
-                          }
-                        })
-                      }}>Inquire</button>
-                    </div>
-                  }
-
                   { (inCart && qtyAvailNow > 0) &&
                     <MDBBadge color="secondary">Added to Cart</MDBBadge>
                   }
+
+                  <div className="inquire">
+                    <button type="button" className="btn btn-inquire btn-primary btn-rounded" onClick={() => {
+                      navigate('/inquire/', {
+                        state: {
+                          title,
+                          sku,
+                          image: image0.gatsbyImage
+                        }
+                      })
+                    }}>Inquire</button>
+                  </div>
+
                 </div>
 
               </div>
