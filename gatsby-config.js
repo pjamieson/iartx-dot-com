@@ -12,6 +12,7 @@ module.exports = {
     siteUrl: "https://iartx.com"
   },
   plugins: [
+    "gatsby-plugin-advanced-sitemap",
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
