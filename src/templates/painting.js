@@ -127,7 +127,7 @@ const PaintingPage = ({
             "@type": "Product",
             "productID": "${sku}",
             "sku": "${sku}",
-            "category": "Home & Garden > Decor > Artwork",
+            "category": "Home & Garden > Decor > Artwork > Posters, Prints, & Visual Artwork",
             "name": "${title}",
             "description": "${productDescription}",
             "url": "${productUrl}",

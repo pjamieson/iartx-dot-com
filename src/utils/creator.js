@@ -9,7 +9,8 @@ export const getCreatorFullName = (creator) => {
   if (creator.firstname && creator.firstname.length > 0) {
     name = creator.firstname
     if (creator.aka && creator.aka.length > 0) {
-      name = `${name} “${creator.aka}”`
+      // Google Search not liking “ ” - Replaced with '' by PAJ 7/15/21
+      name = `${name} '${creator.aka}'`
     }
     if (creator.lastname && creator.lastname.length > 0) {
       name = `${name} ${creator.lastname}`
@@ -31,7 +32,7 @@ export const getCreatorAlphaName = (creator) => {
       name = `${creator.lastname}, ${creator.firstname}`
     }
     if (creator.aka && creator.aka.length > 0) {
-      name = `${name} “${creator.aka}”`
+      name = `${name} '${creator.aka}'`
     }
   }
 
