@@ -21,7 +21,7 @@ const ShippingPage = () => {
 
               <h2>Paintings</h2>
 
-              <p>Packing and FedEx or USPS ground shipping of paintings is FREE to any address within the United States, including the Territories.</p>
+              <p>Packing and FedEx or USPS economy shipping of paintings is FREE to any address within the United States, including the Territories.</p>
 
               <p>Expedited shipping and shipping to locations outside the United States will be invoiced at our cost as soon as the painting is packed, as we need the package dimensions and weight to determine that cost. The invoice will be sent via email, and will include a link to facilitate payment.</p>
 
@@ -39,7 +39,7 @@ const ShippingPage = () => {
 
               <p>Packing and USPS First Class Mail shipping of trading cards is FREE to any address within the United States, including the Territories.</p>
 
-              <p>The cost/charge for USPS First Class International Mail to locations outside the United States will be calculated and added to the order total during checkout, based on the ship-to address.</p>
+              <p>The cost/charge for USPS First Class International Mail to locations outside the United States will be automatically calculated and added to the order total during checkout, based on the ship-to address.</p>
 
             </MDBCardBody>
           </MDBCard>
