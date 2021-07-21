@@ -86,9 +86,6 @@ const Navbar = () => {
   <Link className="menu-link" to="/artists/casimir-laurent/">Casimir, Laurent</Link>
 </MDBDropdownItem>
 <MDBDropdownItem>
-  <Link className="menu-link" to="/artists/chery-jacques-richard/">Chéry, Jacques-Richard</Link>
-</MDBDropdownItem>
-<MDBDropdownItem>
   <Link className="menu-link" to="/artists/desrosiers-m/">Desrosiers, M.</Link>
 </MDBDropdownItem>
 <MDBDropdownItem>
