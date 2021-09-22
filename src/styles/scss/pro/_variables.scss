@@ -1,4 +1,6 @@
 // Variables Pro
+@use "sass:math";
+
 $border-radius-rounded: 10em !default;
 
 // Accordion
@@ -31,9 +33,9 @@ $btn-floating-height:                  $btn-floating-width !default;
 $btn-floating-icon-size:               1.25rem !default;
 $btn-floating-line-height:             $btn-floating-width !default;
 
-$btn-floating-width-sm:                $btn-floating-width / 1.3 !default;
+$btn-floating-width-sm:                math.div($btn-floating-width, 1.3) !default;
 $btn-floating-height-sm:               $btn-floating-width-sm !default;
-$btn-floating-icon-size-sm:            $btn-floating-icon-size / 1.3 !default;
+$btn-floating-icon-size-sm:            math.div($btn-floating-icon-size, 1.3) !default;
 $btn-floating-line-height-sm:          $btn-floating-width-sm !default;
 
 $btn-floating-width-lg:                $btn-floating-width * 1.3 !default;
