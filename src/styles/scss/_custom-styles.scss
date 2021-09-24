@@ -329,7 +329,7 @@ p {
     h3 {
       margin: 0 0 2.5rem 0;
       color: $secondary-color !important;
-      filter: brightness(0.50); // Lighthouse report says needs more contrast w/bg
+      filter: brightness(0.65); // Lighthouse report says needs more contrast w/bg
       line-height: 1.2;
       font-weight: 500;
     }
