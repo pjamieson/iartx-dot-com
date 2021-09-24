@@ -1,0 +1,551 @@
+[{
+    "fromPath": "/aladin-agathe.html",
+    "toPath": "/artists/aladin-agathe/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/aladin-agathe-1.html",
+    "toPath": "/gallery/aladin-agathe-seaside-highway/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/auguste-toussaint.html",
+    "toPath": "/artists/auguste-toussaint/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/auguste-toussaint-1.html",
+    "toPath": "/gallery/auguste-toussaint-lost-lamb/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/bien-aime-gabriel.html",
+    "toPath": "/artists/bien-aime-gabriel/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/bien-aime-gabriel-1.html",
+    "toPath": "/gallery/bien-aime-gabriel-woman-with-loa/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/bigaud-wilson.html",
+    "toPath": "/artists/bigaud-wilson/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/bigaud-wilson-1.html",
+    "toPath": "/gallery/bigaud-wilson-lasiren/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/bigaud-wilson-2.html",
+    "toPath": "/gallery/bigaud-wilson-radio/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/bigaud-wilson-3.html",
+    "toPath": "/gallery/bigaud-wilson-river/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/bigaud-wilson-4.html",
+    "toPath": "/gallery/bigaud-wilson-interior/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/bottex-s-e.html",
+    "toPath": "/artists/bottex-seymour-e/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/bottex-s-e-2.html",
+    "toPath": "/gallery/bottex-seymour-e-crucifixion/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/casimir-laurent.html",
+    "toPath": "/artists/casimir-laurent/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/casimir-laurent-1.html",
+    "toPath": "/gallery/casimir-laurent-combat-de-coqs/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/casimir-laurent-2.html",
+    "toPath": "/gallery/casimir-laurent-market/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/chery-jacques-richard.html",
+    "toPath": "/art/haitian-art/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/chery-jacques-richard-1.html",
+    "toPath": "/art/haitian-art/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/desrosiers-m.html",
+    "toPath": "/artists/desrosiers-m/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/desrosiers-m-1.html",
+    "toPath": "/gallery/desrosiers-m-village-scene/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/domond-wilmino.html",
+    "toPath": "/artists/domond-wilmino/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/domond-wilmino-1.html",
+    "toPath": "/gallery/domond-wilmino-marchandes/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/dreux-nicolas.html",
+    "toPath": "/art/haitian-art/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/dreux-nicolas-1.html",
+    "toPath": "/art/haitian-art/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/dreux-nicolas-2.html",
+    "toPath": "/art/haitian-art/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/dreux-nicolas-3.html",
+    "toPath": "/art/haitian-art/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/dreux-nicolas-4.html",
+    "toPath": "/art/haitian-art/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/francois-roger.html",
+    "toPath": "/artists/francois-roger/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/hector-voltaire.html",
+    "toPath": "/artists/hector-jean-voltaire/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/hector-voltaire-1.html",
+    "toPath": "/gallery/hector-jn-v-liberation/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/jean-ulrick.html",
+    "toPath": "/artists/jean-ulrick/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/jean-ulrick-1.html",
+    "toPath": "/gallery/jean-ulrick-village-scene/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/jean-jacques-carlo.html",
+    "toPath": "/artists/jean-jacques-carlo/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/jean-jacques-carlo-1.html",
+    "toPath": "/artists/jean-jacques-carlo/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/jean-jacques-carlo-2.html",
+    "toPath": "/artists/jean-jacques-carlo/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/jean-jacques-carlo-3.html",
+    "toPath": "/gallery/jean-jacques-carlo-mother/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/jean-jacques-carlo-4.html",
+    "toPath": "/gallery/jean-jacques-carlo-bathing/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/jose-hilome.html",
+    "toPath": "/artists/jose-hilome/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/jose-hilome-1.html",
+    "toPath": "/gallery/jose-hilome-trois-femmes/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/joseph-reynald.html",
+    "toPath": "/artists/joseph-reynald/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/joseph-reynald-1.html",
+    "toPath": "/artists/joseph-reynald/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/joseph-reynald-2.html",
+    "toPath": "/artists/joseph-reynald/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/joseph-reynald-3.html",
+    "toPath": "/artists/joseph-reynald/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/joseph-reynald-4.html",
+    "toPath": "/artists/joseph-reynald/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/joseph-reynald-5.html",
+    "toPath": "/artists/joseph-reynald/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/joseph-reynald-6.html",
+    "toPath": "/artists/joseph-reynald/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/joseph-reynald-7.html",
+    "toPath": "/artists/joseph-reynald/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/joseph-reynald-8.html",
+    "toPath": "/gallery/joseph-reynald-girls-game/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/joseph-reynald-9.html",
+    "toPath": "/gallery/joseph-reynald-carrying-water/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/louis-wilfrid.html",
+    "toPath": "/artists/louis-wilfrid/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/louis-wilfrid-1.html",
+    "toPath": "/gallery/louis-wilfrid-street-scene/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/maurice-a-m.html",
+    "toPath": "/artists/maurice-a-m/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/maurice-a-m-1.html",
+    "toPath": "/artists/maurice-a-m/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/maurice-a-m-2.html",
+    "toPath": "/gallery/maurice-a-m-marriage-ceremony/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/maurice-a-m-3.html",
+    "toPath": "/gallery/maurice-a-m-haiti-crucifiee/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/obin-philome.html",
+    "toPath": "/artists/obin-philome/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/obin-philome-1.html",
+    "toPath": "/gallery/obin-philome-sur-la-route/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/pierre-andre.html",
+    "toPath": "/artists/pierre-andre/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/pierre-andre-1.html",
+    "toPath": "/gallery/pierre-andre-dambala-wedo/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/pierre-andre-2.html",
+    "toPath": "/gallery/pierre-andre-annual-offering/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/profil-jonas.html",
+    "toPath": "/artists/profil-jonas/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/profil-jonas-1.html",
+    "toPath": "/gallery/profil-jonas-escape/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/st-fleur-michelle.html",
+    "toPath": "/artists/st-fleur-michelle/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/st-fleur-michelle-1.html",
+    "toPath": "/gallery/st-fleur-michelle-village-scene/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/stephane-micius.html",
+    "toPath": "/artists/stephane-micius/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/stephane-micius-1.html",
+    "toPath": "/gallery/stephane-micius-posing/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/zephirin-frantz.html",
+    "toPath": "/artists/zephirin-frantz/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/zephirin-frantz-1.html",
+    "toPath": "/gallery/zephirin-frantz-aristide/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/zephirin-frantz-2.html",
+    "toPath": "/gallery/zephirin-frantz-baron-samedi/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/benjamin-john.html",
+    "toPath": "/artists/benjamin-john/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/khanh-kao-van.html",
+    "toPath": "/artists/khanh-kao-van/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/khanh-kao-van-1.html",
+    "toPath": "/gallery/khanh-kao-van-women/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/kuhlman-walter.html",
+    "toPath": "/artists/kuhlman-walter/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/kuhlman-walter-1.html",
+    "toPath": "/artists/kuhlman-walter/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/kuhlman-walter-2.html",
+    "toPath": "/gallery/kuhlman-walter-alors/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/kuhlman-walter-3.html",
+    "toPath": "/gallery/kuhlman-walter-johannes-brahms/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/rodriguez-maria-dolores.html",
+    "toPath": "/artists/rodriguez-maria-dolores/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/taylor-j.html",
+    "toPath": "/artists/taylor-j/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/taylor-j-1.html",
+    "toPath": "/gallery/taylor-j-bus-to-ocho-rios/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/thomas-kingsley.html",
+    "toPath": "/artists/thomas-kingsley/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/thomas-kingsley-1.html",
+    "toPath": "/gallery/thomas-kingsley-modelling/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/aladin-theard.html",
+    "toPath": "/art/haitian-art/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/alphonse-fritzner.html",
+    "toPath": "/art/haitian-art/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/armand-gesner.html",
+    "toPath": "/art/haitian-art/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/domond-ezene.html",
+    "toPath": "/art/haitian-art/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/domond-ezene-1.html",
+    "toPath": "/art/haitian-art/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/domond-ezene-2.html",
+    "toPath": "/art/haitian-art/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/dupoux-raoul.html",
+    "toPath": "/art/haitian-art/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/etienne-gregoire.html",
+    "toPath": "/art/haitian-art/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/ismael-saincilus.html",
+    "toPath": "/art/haitian-art/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/jacques-harry.html",
+    "toPath": "/artists/arijac-jacques-harry/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/jean-jean-baptiste.html",
+    "toPath": "/art/haitian-art/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/jean-marie-carmel.html",
+    "toPath": "/art/haitian-art/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/joseph-jasmin.html",
+    "toPath": "/art/haitian-art/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/louissaint-jacques.html",
+    "toPath": "/art/haitian-art/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/louizor-ernst.html",
+    "toPath": "/art/haitian-art/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/martinez-florence.html",
+    "toPath": "/art/haitian-art/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/obin-fritzner.html",
+    "toPath": "/art/haitian-art/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/obin-othon.html",
+    "toPath": "/art/haitian-art/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/obin-othon.html",
+    "toPath": "/art/haitian-art/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/rameau-cameau.html",
+    "toPath": "/art/haitian-art/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/robuste-jean-claude.html",
+    "toPath": "/art/haitian-art/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/valcin-pierre-joseph.html",
+    "toPath": "/art/haitian-art/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/valery-julien.html",
+    "toPath": "/art/haitian-art/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/zephirin-jr-frantzy.html",
+    "toPath": "/art/haitian-art/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/dodson-ann.html",
+    "toPath": "/art/caribbean-art/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/contact.html",
+    "toPath": "/about/contact/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/martinez-florence-1.html",
+    "toPath": "/art/haitian-art/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/martinez-florence-2.html",
+    "toPath": "/art/haitian-art/",
+    "isPermanent": true
+  },
+  {
+    "fromPath": "/*",
+    "toPath": "/index.html",
+    "statusCode": 404
+  }
+]

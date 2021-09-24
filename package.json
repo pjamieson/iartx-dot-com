@@ -23,6 +23,7 @@
     "bootstrap": "5.0.2",
     "gatsby": "^3.14.0",
     "gatsby-plugin-advanced-sitemap": "^2.0.0",
+    "gatsby-plugin-gatsby-cloud": "^3.2.0",
     "gatsby-plugin-google-gtag": "^3.14.0",
     "gatsby-plugin-image": "^1.14.0",
     "gatsby-plugin-manifest": "^3.14.0",
