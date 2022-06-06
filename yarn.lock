@@ -9369,8 +9369,13 @@ mdast-util-to-string@^2.0.0:
   resolved "https://registry.yarnpkg.com/mdast-util-to-string/-/mdast-util-to-string-2.0.0.tgz#b8cfe6a713e1091cb5b728fc48885a4767f8b97b"
   integrity sha512-AW4DRS3QbBayY/jJmD8437V1Gombjf8RSOUCMFBuo5iHi58AGEgVCKQ+ezHkZZDpAQS75hcBMpLqjpJTjtUL7w==
 
+"mdb-react-multi-carousel@file:./lib/multi-carousel.tgz":
+  version "1.0.0"
+  resolved "file:./lib/multi-carousel.tgz#42e56eb4cb073c82ec2f1ca65aad6cce267b9043"
+
 "mdb-react-multi-carousel@file:./multi-carousel.tgz":
   version "1.0.0"
+  uid "42e56eb4cb073c82ec2f1ca65aad6cce267b9043"
   resolved "file:./multi-carousel.tgz#42e56eb4cb073c82ec2f1ca65aad6cce267b9043"
 
 "mdb-react-ui-kit@file:./mdb-react-ui-kit-3.0.0.tgz":
