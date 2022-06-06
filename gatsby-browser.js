@@ -5,15 +5,11 @@
  */
 
 // Global style files for Bootstrap and MDBReact
-import "@fortawesome/fontawesome-free/css/all.min.css"
-import "bootstrap-css-only/css/bootstrap.min.css"
-//import "bootstrap/dist/css/bootstrap.min.css"
-//import "bootstrap/dist/js/bootstrap.min.js";
-//import "@popperjs/core/dist/umd/popper.min.js";
-import "mdbreact/dist/css/mdb.css"
-import "./src/styles/scss/mdb-pro.scss"
+import "./src/styles/fontawesome/css/all.min.css"
+//import "bootstrap/dist/css/bootstrap.min.css" // apparently included by mdb
+import "mdb-react-ui-kit/dist/css/mdb.min.css"
 
-//import "@stripe/stripe-js"
+import "./src/styles/scss/mdb-pro.scss"
 
 import React from "react"
 import CartContextProvider from "./src/context/cart-context"

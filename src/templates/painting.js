@@ -4,13 +4,13 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Link, navigate, graphql } from "gatsby"
 import ReactMarkdown from "react-markdown";
 
-import { MDBBadge } from "mdbreact"
+import { MDBBadge, MDBLightbox } from "mdb-react-ui-kit"
+import { MDBMultiCarousel, MDBMultiCarouselItem } from "mdb-react-multi-carousel";
 
 import { CartContext } from "../context/cart-context"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import ImageSet from "../components/image-set"
 
 import { getCreatorFullName } from "../utils/creator"
 import { formatPrice } from "../utils/format"
@@ -39,7 +39,6 @@ const PaintingPage = ({
   },
 }) => {
   const { isInCart, addToCart } = useContext(CartContext)
-  //console.log("painting.js images", images)
 
   let imageset = []
   let key = 0
@@ -47,16 +46,14 @@ const PaintingPage = ({
     imageset.push({
       key,
       title,
+      "height": image.height,
+      "width": image.width,
       "url": image.localFile.url,
       "gatsbyImage": getImage(image.localFile.childImageSharp.gatsbyImageData)
     })
     key = key + 1
   })
-  // Remove the primary (first) image. It does not appear in the optional images set.
-  const image0 = imageset.shift()
-  //console.log("painting.js imageset", imageset)
 
-  //console.log("painting.js artist", artist)
   const artistname = getCreatorFullName(artist)
 
   const itemType = "painting"
@@ -96,29 +93,21 @@ const PaintingPage = ({
     setInCart(false)
   }
 
-  //console.log("painting.js subgenres", subgenres)
   const prof = subgenres[0].name === "Haitian Art" ? "Haitian artist" : "artist"
 
-  const seo_description = `Images of and details about the original ${form} “${title}” by the ${prof} ${artistname}.`
-  //console.log("painting.js seo_description", seo_description)
+  // Check for first of multiple images being vertical
+  const two_up = (imageset.length > 1 && imageset[0].height > imageset[0].width )
 
   // Schema.org calculated values
+  const seo_description = `Images of and details about the original ${form} “${title}” by the ${prof} ${artistname}.`
   const productDescription = subtitle ? subtitle : `An original ${form} by ${artistname}`
-  //console.log("painting.js productDescription", productDescription)
-
   const productUrl = `https://iartx.com/gallery/${slug}/`
-  //const productUrl = `localhost:8000/gallery/${subgenre.slug}/${slug}`
-  //console.log("painting.js productUrl", productUrl)
-
-  const productImageUrl = image0.url
-  //console.log("painting.js productImageUrl", productImageUrl)
-
+  const productImageUrl = images[0].url
   const productAvailability = qtyAvailNow > 0 ? "http://schema.org/InStock" : "http://schema.org/OutOfStock"
 
   return (
     <Layout>
       <Seo title={title} description={seo_description} />
-
       <Helmet>
         <script type="application/ld+json">
         {`
@@ -148,19 +137,25 @@ const PaintingPage = ({
         `}
         </script>
       </Helmet>
-
-      <div className="container page-container">
-        <article className="painting-details">
+      <div className="page-container">
+        <article className="item-details">
           <h1>{title}</h1>
-          <div className="uk-grid-small uk-child-width-1-2@s" uk-grid="masonry: true">
-
-            <div>
-              <div className="">
-                <GatsbyImage className="img-fluid rounded" image={image0.gatsbyImage} alt={title} />
+          <div className="details-container">
+            <div className="item-gallery">
+              <div className="gallery-image-container">
+                <GatsbyImage className="img-fluid rounded" image={imageset[0].gatsbyImage} alt={title} />
+                { two_up && <GatsbyImage className="img-fluid rounded" image={imageset[1].gatsbyImage} alt={title} />
+                }
               </div>
-
-              { (imageset && imageset.length > 0) &&
-                <ImageSet imageset={imageset} />
+              { imageset.length > 2 &&
+                <MDBLightbox>
+                  <MDBMultiCarousel className="mt-2 ms-5 me-5" items={imageset.length > 3 ? 4 : 3} breakpoint={false} lightbox>
+                  { imageset.map(image => {
+                      return <MDBMultiCarouselItem key={image.key} className="" src={image.url} alt={image.title} />
+                    })
+                  }
+                  </MDBMultiCarousel>
+                </MDBLightbox>
               }
 
               { (qtyAvail > 0) &&
@@ -177,10 +172,9 @@ const PaintingPage = ({
                   </Link>
                 </div>
               }
-            </div>
-
-            <div className="buy-or-inquire">
-              <div className="card-description">
+            </div> {/* item-gallery */}
+            <div className="item-description">
+              <div className="details">
                 <h2>An original {form}<br />by {artistname}</h2>
                 { (subtitle && subtitle.length) &&
                   <h3 className="subtitle">{subtitle}</h3>
@@ -197,8 +191,7 @@ const PaintingPage = ({
                 { (qty > 0 && processing) &&
                   <h3>Confirming availability...</h3>
                 }
-
-                <div className="detail-btns">
+                <div className="inventory-msg">
                   { (qtyAvail > 0 && qtyAvailNow <= 0) &&
                     <h3>Sorry, this piece is no longer available.</h3>
                   }
@@ -206,45 +199,41 @@ const PaintingPage = ({
                   { (archive && qtyAvail === 0 && qtyAvailNow <= 0) &&
                     <h3>This piece has been sold or is Not for Sale.</h3>
                   }
-
-                  { (price > 10 && qtyAvailNow > 0) &&
-                    <div className="add-to-cart">
-                      <h3 className="price">{formatPrice(price)}</h3>
-                      {!inCart &&
-                        <button type="button" className="btn btn-add-to-cart btn-primary btn-rounded" onClick={() => {
-                          addToCart(cartItem, qty)
-                          setInCart(true)
-                        }}>
-                          <i className="fas fa-cart-plus"></i>Add to Cart
-                        </button>
-                      }
-                    </div>
+                </div>
+              </div> {/* details */}
+              <div className="price-action">
+                <h3 className="price">{formatPrice(price)}</h3>
+                <div>
+                  { (price > 10 && qtyAvailNow > 0 && !inCart) &&
+                    <button type="button" className="btn btn-add-to-cart btn-primary btn-rounded" onClick={() => {
+                      addToCart(cartItem, qty)
+                      setInCart(true)
+                    }}>
+                      <i className="fas fa-cart-plus"></i>Add to Cart
+                    </button>
                   }
-
                   { (inCart && qtyAvailNow > 0) &&
                     <MDBBadge color="secondary">Added to Cart</MDBBadge>
                   }
-
-                  <div className="inquire">
+                </div>
+                { !inCart &&
+                  <div className="btn-inquire">
                     <button type="button" className="btn btn-inquire btn-primary btn-rounded" onClick={() => {
                       navigate('/inquire/', {
                         state: {
                           title,
                           sku,
-                          image: image0.gatsbyImage
+                          gatsbyImage: imageset[0].gatsbyImage
                         }
                       })
                     }}>Inquire</button>
                   </div>
-
-                </div>
-
-              </div>
-            </div>
-
-          </div>
-        </article>
-      </div>
+                }
+              </div> {/* price-action */}
+            </div> {/* item-description */}
+          </div> {/* details-container */}
+        </article> {/* item-details */}
+      </div> {/* page-container */}
     </Layout>
   )
 }
@@ -265,10 +254,12 @@ export const query = graphql`
       title
       subtitle
       images {
+        height
+        width
         localFile {
           childImageSharp {
             gatsbyImageData(
-              width: 600
+              width: 900
               placeholder: BLURRED
               formats: [AUTO, WEBP]
             )

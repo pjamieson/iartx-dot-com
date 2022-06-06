@@ -1,16 +1,16 @@
 import React, { useState, useContext, useEffect } from "react"
 import { Helmet } from "react-helmet"
-import { getImage } from "gatsby-plugin-image"
-import { Link, graphql } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { Link, navigate, graphql } from "gatsby"
 import ReactMarkdown from "react-markdown";
 
-import { MDBBadge } from "mdbreact"
+import { MDBBadge, MDBLightbox } from "mdb-react-ui-kit"
+import { MDBMultiCarousel, MDBMultiCarouselItem } from "mdb-react-multi-carousel";
 
 import { CartContext } from "../context/cart-context"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import ImageSet from "../components/image-set"
 
 import { getCreatorFullName } from "../utils/creator"
 import { formatPrice } from "../utils/format"
@@ -53,6 +53,8 @@ const BookPage = ({
     imageset.push({
       key,
       title,
+      "height": image.height,
+      "width": image.width,
       "url": image.localFile.url,
       "gatsbyImage": getImage(image.localFile.childImageSharp.gatsbyImageData)
     })
@@ -60,8 +62,6 @@ const BookPage = ({
   })
 
   const author = authors[0]
-
-  //console.log("book.js author", author)
   const authorname = getCreatorFullName(author)
 
   const itemType = "book"
@@ -101,26 +101,20 @@ const BookPage = ({
     setInCart(false)
   }
 
-  const seo_description = `Images of and details about the book “${title}” by ${authorname}.`
-  //console.log("book.js seo_description", seo_description)
+  // Check for first of multiple images being vertical
+  const two_up = (imageset.length > 1 && imageset[0].height > imageset[0].width )
 
   // Schema.org calculated values
+  const seo_description = `Images of and details about the book “${title}” by ${authorname}.`
   const productDescription = subtitle ? subtitle : `A ${binding} book by ${authorname}`
-  //console.log("book.js productDescription", productDescription)
-
   const productUrl = `https://iartx.com/books/${slug}/`
-
   const productImageUrl = images[0].localFile.url
-  //console.log("book.js productImageUrl", productImageUrl)
-
   const productCondition = isAsNew ? "https://schema.org/NewCondition" : "http://schema.org/UsedCondition"
-
   const productAvailability = qtyAvailNow > 0 ? "http://schema.org/InStock" : "http://schema.org/OutOfStock"
 
   return (
     <Layout>
       <Seo title={title} description={seo_description} />
-
       <Helmet>
         <script type="application/ld+json">
         {`
@@ -151,16 +145,25 @@ const BookPage = ({
         `}
         </script>
       </Helmet>
-
-      <div className="container page-container">
-        <article className="painting-details">
+      <div className="page-container">
+        <article className="item-details">
           <h1>{title}</h1>
-          <div className="uk-grid-small uk-child-width-1-2@s" uk-grid="masonry: true">
-
-            <div>
-
-              { (imageset && imageset.length > 0) &&
-                <ImageSet imageset={imageset} />
+          <div className="details-container">
+            <div className="item-gallery">
+              <div className="gallery-image-container">
+                <GatsbyImage className="img-fluid rounded" image={imageset[0].gatsbyImage} alt={title} />
+                { two_up && <GatsbyImage className="img-fluid rounded" image={imageset[1].gatsbyImage} alt={title} />
+                }
+              </div>
+              { imageset.length > 2 &&
+                <MDBLightbox>
+                  <MDBMultiCarousel className="mt-2 ms-5 me-5" items={imageset.length > 3 ? 4 : 3} breakpoint={false} lightbox>
+                  { imageset.map(image => {
+                      return <MDBMultiCarouselItem key={image.key} className="" src={image.url} alt={image.title} />
+                    })
+                  }
+                  </MDBMultiCarousel>
+                </MDBLightbox>
               }
 
               <div className="back-btn">
@@ -168,11 +171,9 @@ const BookPage = ({
                   <i className="fas fa-chevron-left"></i>
                 </Link>
               </div>
-
-            </div>
-
-            <div className="buy-or-inquire">
-              <div className="card-description">
+            </div> {/* item-gallery */}
+            <div className="item-description">
+              <div className="details">
                 <h2>A book by {authorname}</h2>
                 { (subtitle && subtitle.length) &&
                   <h3 className="subtitle">{subtitle}</h3>
@@ -189,43 +190,45 @@ const BookPage = ({
                 { (qty > 0 && processing) &&
                   <h3>Confirming availability...</h3>
                 }
-
-                <div className="detail-btns">
-                  { (qtyAvailNow <= 0) &&
-                    <h3>Sorry, this book is no longer available.</h3>
+                <div className="inventory-msg">
+                { (qtyAvailNow <= 0) &&
+                  <h3>Sorry, this book is no longer available.</h3>
+                }
+                </div>
+              </div> {/* details */}
+              <div className="price-action">
+                <h3 className="price">{formatPrice(price)}</h3>
+                <div>
+                  { (price > 10 && qtyAvailNow > 0 && !inCart) &&
+                    <button type="button" className="btn btn-add-to-cart btn-primary btn-rounded" onClick={() => {
+                      addToCart(cartItem, qty)
+                      setInCart(true)
+                    }}>
+                      <i className="fas fa-cart-plus"></i>Add to Cart
+                    </button>
                   }
-
-                  { (price > 10 && qtyAvailNow > 0) &&
-                    <div className="add-to-cart">
-                      <h3 className="price">{formatPrice(price)}</h3>
-                      {!inCart &&
-                        <button type="button" className="btn btn-add-to-cart btn-primary btn-rounded" onClick={() => {
-                          addToCart(cartItem, qty)
-                          setInCart(true)
-                        }}>
-                          <i className="fas fa-cart-plus"></i>Add to Cart
-                        </button>
-                      }
-                    </div>
-                  }
-
-                  { (price <= 10 && qtyAvailNow > 0) &&
-                    <div className="inquire">
-                      <button type="button" className="btn btn-inquire btn-primary btn-rounded">Inquire</button>
-                    </div>
-                  }
-
                   { (inCart && qtyAvailNow > 0) &&
                     <MDBBadge color="secondary">Added to Cart</MDBBadge>
                   }
                 </div>
-
-              </div>
-            </div>
-
-          </div>
-        </article>
-      </div>
+                { !inCart &&
+                  <div className="btn-inquire">
+                    <button type="button" className="btn btn-inquire btn-primary btn-rounded" onClick={() => {
+                      navigate('/inquire/', {
+                        state: {
+                          title,
+                          sku,
+                          gatsbyImage: imageset[0].gatsbyImage
+                        }
+                      })
+                    }}>Inquire</button>
+                  </div>
+                }
+              </div> {/* price-action */}
+            </div> {/* item-description */}
+          </div> {/* details-container */}
+        </article> {/* item-details */}
+      </div> {/* page-container */}
     </Layout>
   )
 }
@@ -246,6 +249,8 @@ export const query = graphql`
       title
       subtitle
       images {
+        height
+        width
         localFile {
           childImageSharp {
             gatsbyImageData(

@@ -1,6 +1,6 @@
 import React from "react"
 
-import { MDBCard, MDBCardBody } from "mdbreact"
+import { MDBCard, MDBCardBody } from "mdb-react-ui-kit"
 
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
@@ -10,7 +10,7 @@ const CollectionNotesPage = () => {
   return (
     <Layout>
       <Seo title="Collection Notes" />
-      <div className="container page-container contact">
+      <div className="container page-container notes">
         <h1>Collection Notes</h1>
         <MDBCard>
           <MDBCardBody>

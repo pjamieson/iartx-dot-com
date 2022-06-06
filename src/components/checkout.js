@@ -7,12 +7,17 @@ import {
   MDBBtn,
   MDBCard,
   MDBCardBody,
+  MDBCheckbox,
   MDBCol,
+  MDBIcon,
   MDBInput,
   MDBRow,
-  MDBStep,
-  MDBStepper
-} from 'mdbreact'
+  MDBStepper,
+  MDBStepperContent,
+  MDBStepperForm,
+  MDBStepperHead,
+  MDBStepperStep,
+  MDBValidation} from "mdb-react-ui-kit"
 
 import { CartContext } from "../context/cart-context"
 
@@ -62,35 +67,44 @@ const CheckoutComponent = () => {
   const [, updateState] = useState()
   const forceUpdate = useCallback(() => updateState({}), [])
 
-  const [activePanel, setActivePanel] = useState(1)
+  const [btnStepper, setBtnStepper] = useState(1);
+  const [prevBtnStepper, setPrevBtnStepper] = useState(0);
 
-  const [bfirstname, setBFirstname] = useState('')
-  const [blastname, setBLastname] = useState('')
-  const [baddress, setBAddress] = useState('')
-  const [baddress2, setBAddress2] = useState('')
-  const [bcity, setBCity] = useState('')
-  const [bcountry, setBCountry] = useState('US')
-  const [bregion, setBRegion] = useState('')
-  const [bzip, setBZip] = useState('')
-  const [sameaddr, setSameaddr] = useState(false)
   const [firstname, setFirstname] = useState('')
   const [lastname, setLastname] = useState('')
   const [address, setAddress] = useState('')
   const [address2, setAddress2] = useState('')
   const [city, setCity] = useState('')
-  const [country, setCountry] = useState('US')
   const [region, setRegion] = useState('')
   const [zip, setZip] = useState('')
+  const [country, setCountry] = useState('US')
   const [email, setEmail] = useState('')
   const [newsletter, setNewsletter] = useState(false)
+  const [sameaddr, setSameaddr] = useState(false)
+  const [bfirstname, setBFirstname] = useState('')
+  const [blastname, setBLastname] = useState('')
+  const [baddress, setBAddress] = useState('')
+  const [baddress2, setBAddress2] = useState('')
+  const [bcity, setBCity] = useState('')
+  const [bregion, setBRegion] = useState('')
+  const [bzip, setBZip] = useState('')
+  const [bcountry, setBCountry] = useState('US')
+
   const [salesTaxRate, setSalesTaxRate] = useState(0.00)
 
-  const valid = () => {
-    if (bfirstname && blastname && baddress && bcity && bcountry && bregion && bzip && firstname && lastname && address && city && country && region && zip && email) {
+  const shipping_valid = () => {
+    if (firstname.length > 0 && lastname.length > 0 && address.length > 0 && city.length > 1 && region.length > 1 && region.length < 7 && zip.length > 3 && country.length == 2 && email.length > 6) {
       return true
-    } else {
-      return false
-    }
+    } else { return false }
+  }
+  // Note: Australia, Netherlands postal codes are 4 digits - making that the min length
+  const billing_valid = () => {
+    if (bfirstname.length > 0 && blastname.length > 0 && baddress.length > 0 && bcity.length > 1 && bregion.length > 1 && bregion.length < 7 && bzip.length > 3 && bcountry.length == 2) {
+      if (clientSecret === '') {
+        getPaymentIntent()
+      }
+      return true
+    } else { return false }
   }
 
   const countryList = ["AU", "BS", "BB", "BE", "VG", "CA", "DK", "FI", "FR", "DE", "IE", "IT", "MX", "NL", "NZ", "NO", "PT", "PR", "ES", "SE", "CH", "GB", "US", "UM", "VI"]
@@ -145,6 +159,22 @@ const CheckoutComponent = () => {
     navigate('/cart-changed/')
   }
 
+  const handleSameAddressClick = (newValue) => {
+    let makeSame = newValue
+
+    setBFirstname(makeSame ? firstname : '')
+    setBLastname(makeSame ? lastname : '')
+    setBAddress(makeSame ? address : '')
+    setBAddress2(makeSame ? address2 : '')
+    setBCity(makeSame ? city : '')
+    setBRegion(makeSame ? region : '')
+    setBCountry(makeSame ? country : 'United States')
+    setBZip(makeSame ? zip : '')
+
+    setSameaddr(newValue)
+    forceUpdate()
+  }
+
   const getPaymentIntent = async () => {
     //console.log("getPaymentIntent cart", cart)
 
@@ -176,27 +206,6 @@ const CheckoutComponent = () => {
     } catch (err) {
       console.log('checkout getPaymentIntent err', err)
     }
-  }
-
-  const handleTabChange = (selected) => {
-    setActivePanel(selected)
-    if (activePanel === 2 && clientSecret === '') {
-      getPaymentIntent()
-      //console.log("handleTabChange clientSecret", clientSecret)
-    }
-  }
-
-  const handleSameAddressClick = () => {
-    setFirstname(sameaddr ? '' : bfirstname)
-    setLastname(sameaddr ? '' : blastname)
-    setAddress(sameaddr ? '' : baddress)
-    setAddress2(sameaddr ? '' : baddress2)
-    setCity(sameaddr ? '' : bcity)
-    setRegion(sameaddr ? '' : bregion)
-    setCountry(sameaddr ? 'United States' : bcountry)
-    setZip(sameaddr ? '' : bzip)
-    setSameaddr(!sameaddr)
-    forceUpdate()
   }
 
   const handleCardChange = async (event) => {
@@ -470,14 +479,6 @@ const CheckoutComponent = () => {
   }
 
   return (
-    <MDBCard className='w-100'>
-      <MDBCardBody>
-        <MDBRow>
-          <MDBCol lg='8' className='mb-4'>
-
-            <MDBStepper form>
-              <MDBStep form>
-                <a href="#formstep1" onClick={() => handleTabChange(1)}>
                   <MDBBtn color={activePanel === 1 ? "primary" : "default"} circle>
                     1
                   </MDBBtn>
@@ -497,218 +498,389 @@ const CheckoutComponent = () => {
                 <h4 className={activePanel === 2 ?
                   "mb-4 mt-0 font-weight-bold" :
                   "mb-4 mt-0 font-weight-bold text-muted"}>
-                  Shipping Address
-                </h4>
-              </MDBStep>
-              <MDBStep form>
-                <a href="#formstep3" onClick={() => handleTabChange(3)}>
-                  <MDBBtn color={activePanel === 3 ? "primary" : "default"} circle>
-                    3
-                  </MDBBtn>
-                </a>
-                <h4 className={activePanel === 3 ?
-                  "mb-4 mt-0 font-weight-bold" :
-                  "mb-4 mt-0 font-weight-bold text-muted"}>
-                  Email & Payment
-                </h4>
-              </MDBStep>
-            </MDBStepper>
-
-            <form className="needs-validation" onSubmit={(e) => handleSubmit(e)} noValidate>
-              <MDBRow>
-                {activePanel === 1 && (
-                  <MDBCol md='12'>
-                    <MDBRow>
-                      <MDBCol md="6">
-                        <MDBInput type="text" id="bfirst" name="bfirst" label="First Name*" value={bfirstname} className="mt-4" required onChange={(event) => setBFirstname(event.target.value)} />
-                      </MDBCol>
-                      <MDBCol md="6">
-                        <MDBInput type="text" id="blast" name="blast" label="Last Name*"  value={blastname} className="mt-4" required onChange={(e) => setBLastname(e.target.value)} />
-                      </MDBCol>
-                      <MDBCol md="6">
-                        <MDBInput type="text" id="baddress" name="baddress" label="Address*" value={baddress} className="mt-0" required onChange={(e) => setBAddress(e.target.value)} />
-                      </MDBCol>
-                      <MDBCol md="6">
-                        <MDBInput type="text" id="baddress2" name="baddress2" label="Address 2 (optional)" value={baddress2} onChange={(e) => setBAddress2(e.target.value)} />
-                      </MDBCol>
-                      <MDBCol md="12">
-                        <MDBInput type="text" id="bcity" name="bcity" label="City*" required value={bcity} onChange={(e) => setBCity(e.target.value)} />
-                      </MDBCol>
-                    </MDBRow>
-                    <MDBRow className="country-region-zip">
-                      <MDBCol lg='4' md='12' className='mb-4'>
-                        <label htmlFor="bcountry" className="input-label mt-0">Country*</label>
-                        <CountryDropdown id="bcountry" valueType="short" whitelist={countryList} priorityOptions={priorityList} className="form-control" required value={bcountry} onChange={(val) => setBCountry(val)} />
-                      </MDBCol>
-                      <MDBCol lg='4' md='6' className='mb-4'>
-                        <label htmlFor="bregion" className="input-label mt-0">State/Province*</label>
-                        <RegionDropdown id="bregion" valueType="short" className="form-control" required country={bcountry} countryValueType="short" value={bregion} onChange={(val) => setBRegion(val)}>
-                          Country
-                        </RegionDropdown>
-                      </MDBCol>
-                      <MDBCol lg='4' md='6' className='mt-2 mb-4'>
-                        <MDBInput type="text" id="bzip" name="bzip" label="Zip/Postal Code*" value={bzip} className='' required onChange={(e) => setBZip(e.target.value)} />
-                      </MDBCol>
-                    </MDBRow>
-
-                    <MDBBtn color='primary' rounded className='float-right'
-                      onClick={() => handleTabChange(2)}>
-                      Next
-                    </MDBBtn>
-                  </MDBCol>
-                )}
-                {activePanel === 2 && (
-                  <MDBCol md='12'>
-                    <MDBRow>
-                      <MDBCol md="12" className="same-addr">
-                        <MDBInput type="checkbox" id="sameaddr" name="sameaddr" label="Same as Billing Address" onChange={() => handleSameAddressClick()} />
-                      </MDBCol>
-                      <MDBCol md="6">
-                        <MDBInput type="text" id="bfirst" name="bfirst" label="First Name*" value={firstname} className="mt-4" required onChange={(e) => setFirstname(e.target.value)} />
-                      </MDBCol>
-                      <MDBCol md="6">
-                        <MDBInput type="text" id="blast" name="blast" label="Last Name*"  value={lastname} className="mt-4" required onChange={(e) => setLastname(e.target.value)} />
-                      </MDBCol>
-                      <MDBCol md="6">
-                        <MDBInput type="text" id="address" name="address" label="Address*" value={address} className="mt-0" required onChange={(e) => setAddress(e.target.value)} />
-                      </MDBCol>
-                      <MDBCol md="6">
-                        <MDBInput type="text" id="address2" name="address2" label="Address 2 (optional)" value={address2} onChange={(e) => setAddress2(e.target.value)} />
-                      </MDBCol>
-                      <MDBCol md="12">
-                        <MDBInput type="text" id="city" name="city" label="City*" required value={city} onChange={(e) => setCity(e.target.value)} />
-                      </MDBCol>
-                    </MDBRow>
-                    <MDBRow className="country-region-zip">
-                      <MDBCol lg='4' md='12'>
-                        <label htmlFor="country" className="input-label mt-0">Country*</label>
-                        <CountryDropdown id="country" valueType="short" whitelist={countryList} priorityOptions={priorityList} className="form-control" required value={country} onChange={(val) => setCountry(val)} />
-                      </MDBCol>
-                      <MDBCol lg='4' md='6'>
-                        <label htmlFor="region" className="input-label mt-0">State/Province*</label>
-                        <RegionDropdown id="region" valueType="short" className="form-control" required country={country} countryValueType="short" value={region} onChange={(val) => setRegion(val)}>
-                          Country
-                        </RegionDropdown>
-                      </MDBCol>
-                      <MDBCol lg='4' md='6' className="mt-2">
-                        <MDBInput type="text" id="zip" name="zip" label="Zip/Postal Code*" value={zip} className='zip mt-2' required onChange={(e) => setZip(e.target.value)} />
-                      </MDBCol>
-                    </MDBRow>
-                    <MDBBtn color='primary' rounded className='float-left'
-                      onClick={() => handleTabChange(1)}>
-                      Prev
-                    </MDBBtn>
-                    <MDBBtn color='primary' rounded className='float-right'
-                      onClick={() => handleTabChange(3)}>
-                      Next
-                    </MDBBtn>
-                  </MDBCol>
-                )}
-                {activePanel === 3 && (
-                  <MDBCol md='12' className="payment-panel">
-                    <MDBRow>
-                      <MDBCol md="12">
-                        <MDBInput type="email" id="email" name="email" label="Email* (required)" required className="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                        <small className='email-note text-muted'>
-                          Your email is required for communication about this order
-                        </small>
-                      </MDBCol>
-                    </MDBRow>
-                    <MDBRow>
-                      <MDBCol md="12">
-                        <MDBInput type="checkbox" id="newsletter" name="newsletter" label="Subscribe to occasional (infrequent) email" onChange={() => setNewsletter(!newsletter)} />
-                      </MDBCol>
-                    </MDBRow>
-                    <hr className='mb-4' />
-                    <MDBRow>
-                      <MDBCol md='12' className='mb-3'>
-                        <label className="input-label mt-0">
-                          Credit card details*
-                        </label>
-                        <CardElement options={CARD_ELEMENT_OPTIONS} onChange={(event) => handleCardChange(event)} />
-                      </MDBCol>
-                    </MDBRow>
-                    <MDBBtn className='float-left' color='primary' rounded onClick={() => handleTabChange(2)}>
-                      Prev
-                    </MDBBtn>
-                    <MDBBtn type="submit" id="submit" className="float-right" color='primary' rounded disabled={!stripe || !valid() || processing || disabled || succeeded}>
-                      <span id="button-text">
-                        {processing ? (<span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>)
-                         : ("Submit")}
-                      </span>
-                    </MDBBtn>
-                    {/* Show any error that happens when processing the payment */}
-                    {error && (
-                      <div className="card-error float-right" role="alert">
-                        {error}
-                      </div>
-                    )}
-                  </MDBCol>
-                )}
-              </MDBRow>
-            </form>
-          </MDBCol>
-
-          <MDBCol lg='4' className='mb-4'>
-            <MDBCard>
-              <MDBCardBody>
-                <h4 className='mb-4 mt-1 h5 text-center font-weight-bold'>
-                  Order Summary
-                </h4>
-                <hr />
-                <div>
-                  {(cart && cart.length > 0) &&
-                      cart.map(item => {
-                        return <div key={item.sku}>
-                          <MDBRow sm="12">
-                            <MDBCol className="item">
-                              <p key={item.sku}>
-                                {item.qty > 1 ? (item.qty + " - ") : null}
-                                {item.title} - <span className='text-muted'>{item.subtitle}</span>
-                                {item.qty > 1 ? <span className='text-muted'> (@ ${item.price} each)</span> : null}
-                              </p>
-                            </MDBCol>
-                          </MDBRow>
-                          <MDBRow>
-                            <MDBCol className="price mb-2">
-                              {formatPrice(item.price * item.qty)}
-                            </MDBCol>
-                          </MDBRow>
-                        </div>
-                      }
-                    )}
-                    {(cart && cart.length > 0) &&
-                      <div>
-                        <hr />
-                        <div className="summary-totals">
-                          <p>Subtotal:</p>
-                          <p>{formatPrice(cartSubtotal(cart))}</p>
-                        </div>
-                        <div className="summary-totals">
-                          <p>Sales tax:</p>
-                          <p>{formatPrice(cartSalesTax(cart, salesTaxRate))}</p>
-                        </div>
-                        <div className="summary-totals">
-                          <p>Shipping:</p>
-                          <p>{cartShipping(cart, country) > 0 ? formatPrice(cartShipping(cart, country)) : `Free`}</p>
-                        </div>
-                        <hr />
-                        <div className="summary-totals">
-                          <p>Total:</p>
-                          <p><strong>{formatPrice(cartTotal(cart, salesTaxRate, country))}</strong></p>
-                        </div>
-                      </div>
-                    }
-                    {(cart && cart.length === 0) &&
-                      <h3>Order processed</h3>
-                    }
+    <MDBCard className="checkout-card">
+      <MDBCardBody className="checkout-card-body">
+        <div className="checkout-input-panel">
+          <MDBStepper linear
+            outerState={btnStepper}
+            setOuterState={setBtnStepper}
+            prevOuterState={prevBtnStepper}
+            setPrevOuterState={setPrevBtnStepper}
+            tag="div">
+            <MDBStepperForm>
+              <MDBStepperStep itemId={1} tag="div">
+                <MDBStepperHead icon="1" text="Shipping" />
+                <MDBStepperContent className="ship-content" tag="div">
+                  <div className="multi-input-line">
+                    <MDBInput
+                      type="text"
+                      name="firstname"
+                      id="firstname"
+                      wrapperClass="mb-3 me-1"
+                      value={firstname}
+                      onChange={(e) => setFirstname(e.target.value)}
+                      label="First Name*"
+                      validation="invalid"
+                      invalid
+                      required
+                    />
+                    <MDBInput
+                      type="text"
+                      name="lastname"
+                      id="lastname"
+                      wrapperClass="mb-3"
+                      value={lastname}
+                      onChange={(e) => setLastname(e.target.value)}
+                      label="Last Name*"
+                      validation="invalid"
+                      invalid
+                      required
+                    />
                   </div>
-                </MDBCardBody>
-              </MDBCard>
-            </MDBCol>
-          </MDBRow>
-        </MDBCardBody>
-      </MDBCard>
+                  <div className="multi-input-line address">
+                    <MDBInput
+                      type="text"
+                      name="address"
+                      id="address"
+                      wrapperClass="mb-3 me-1"
+                      value={address}
+                      onChange={(e) => setAddress(e.target.value)}
+                      label="Address*"
+                      validation="invalid"
+                      invalid
+                      required
+                    />
+                    <MDBInput
+                      type="text"
+                      name="address2"
+                      id="address2"
+                      wrapperClass="mb-3"
+                      value={address2}
+                      onChange={(e) => setAddress2(e.target.value)}
+                      label="Address 2 (optional)"
+                    />
+                  </div>
+                  <div className="multi-input-line">
+                    <MDBInput
+                      type="text"
+                      name="city"
+                      id="city"
+                      wrapperClass="mb-3 me-1"
+                      value={city}
+                      onChange={(e) => setCity(e.target.value)}
+                      label="City*"
+                      validation="invalid"
+                      invalid
+                      required
+                    />
+                    <RegionDropdown
+                      id="region"
+                      valueType="short"
+                      className="form-control mb-3"
+                      defaultOptionLabel="State/Province"
+                      country={country}
+                      countryValueType="short"
+                      value={region}
+                      onChange={(val) => setRegion(val)}
+                      required>
+                      State/Province
+                    </RegionDropdown>
+                  </div>
+                  <div className="multi-input-line">
+                    <CountryDropdown
+                      id="country"
+                      valueType="short"
+                      defaultOptionLabel="Country"
+                      whitelist={countryList}
+                      priorityOptions={priorityList}
+                      className="form-control me-1"
+                      required
+                      value={country}
+                      onChange={(val) => setCountry(val)}
+                    />
+                    <MDBInput
+                      type="text"
+                      name="zip"
+                      id="zip"
+                      wrapperClass="mb-2"
+                      value={zip}
+                      onChange={(e) => setZip(e.target.value)}
+                      label="Zip/Postal Code*"
+                      validation="invalid"
+                      invalid
+                      required
+                    />
+                  </div>
+                  <div className="order-email">
+                    <MDBInput
+                      type="email"
+                      name="email"
+                      id="email"
+                      wrapperClass="mt-3 mb-1"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      label="Email*"
+                      validation="invalid"
+                      invalid
+                      required
+                    />
+                    <small className='email-note text-muted mb-4'>
+                      Your email is required for communication about this order
+                    </small>
+                  </div>
+                  <MDBCheckbox
+                    name="newsletter"
+                    id="newsletter"
+                    label="Subscribe to occasional (infrequent) email"
+                    value={newsletter}
+                    checked={newsletter}
+                    onChange={() => setNewsletter(!newsletter)}
+                  />
+                </MDBStepperContent>
+              </MDBStepperStep>
+
+              <MDBStepperStep itemId={2} tag="div">
+                <MDBStepperHead icon="2" text="Billing" />
+                <MDBStepperContent className="bill-content" tag="div">
+                  <div className="same-addr">
+                    <MDBCheckbox
+                      name="sameaddr"
+                      id="sameaddr"
+                      label="Same as Shipping Address"
+                      value={sameaddr}
+                      checked={sameaddr}
+                      onChange={() => handleSameAddressClick(!sameaddr)}
+                    />
+                  </div>
+                  <div className="multi-input-line">
+                    <MDBInput
+                      type="text"
+                      name="bfirstname"
+                      id="bfirstname"
+                      wrapperClass="mb-3 me-1"
+                      value={bfirstname}
+                      onChange={(e) => setBFirstname(e.target.value)}
+                      label="First Name*"
+                      validation="invalid"
+                      invalid
+                      required
+                    />
+                    <MDBInput
+                      type="text"
+                      name="blastname"
+                      id="blastname"
+                      wrapperClass="mb-3"
+                      value={blastname}
+                      onChange={(e) => setBLastname(e.target.value)}
+                      label="Last Name*"
+                      validation="invalid"
+                      invalid
+                      required
+                    />
+                  </div>
+                  <div className="multi-input-line address">
+                    <MDBInput
+                      type="text"
+                      name="baddress"
+                      id="baddress"
+                      wrapperClass="mb-3 me-1"
+                      value={baddress}
+                      onChange={(e) => setBAddress(e.target.value)}
+                      label="Address*"
+                      validation="invalid"
+                      invalid
+                      required
+                    />
+                    <MDBInput
+                      type="text"
+                      name="baddress2"
+                      id="baddress2"
+                      wrapperClass="mb-3"
+                      value={baddress2}
+                      onChange={(e) => setBAddress2(e.target.value)}
+                      label="Address 2 (optional)"
+                    />
+                  </div>
+                  <div className="multi-input-line">
+                    <MDBInput
+                      type="text"
+                      name="bcity"
+                      id="bcity"
+                      wrapperClass="mb-3 me-1"
+                      value={bcity}
+                      onChange={(e) => setBCity(e.target.value)}
+                      label="City*"
+                      validation="invalid"
+                      invalid
+                      required
+                    />
+                    <RegionDropdown
+                      id="region"
+                      valueType="short"
+                      className="form-control mb-3"
+                      defaultOptionLabel="State/Province"
+                      country={bcountry}
+                      countryValueType="short"
+                      labelType="short"
+                      value={bregion}
+                      onChange={(val) => setBRegion(val)}
+                      required>
+                      State/Province
+                    </RegionDropdown>
+                  </div>
+                  <div className="multi-input-line">
+                    <CountryDropdown
+                      id="country"
+                      valueType="short"
+                      defaultOptionLabel="Country"
+                      whitelist={countryList}
+                      priorityOptions={priorityList}
+                      className="form-control me-1"
+                      required
+                      value={bcountry}
+                      onChange={(val) => setBCountry(val)}
+                    />
+                    <MDBInput
+                      type="text"
+                      name="bzip"
+                      id="bzip"
+                      wrapperClass="mb-2"
+                      value={bzip}
+                      onChange={(e) => setBZip(e.target.value)}
+                      label="Zip/Postal Code*"
+                      validation="invalid"
+                      invalid
+                      required
+                    />
+                  </div>
+                </MDBStepperContent>
+              </MDBStepperStep>
+
+              <MDBStepperStep itemId={3} tag="div">
+                <MDBStepperHead icon="3" text="Payment" />
+                <MDBStepperContent className="pay-content" tag="div">
+                  <div className="payment-panel">
+
+                    <label className="input-label mt-0">
+                      Credit card details*
+                    </label>
+
+                    <CardElement options={CARD_ELEMENT_OPTIONS} onChange={(event) => handleCardChange(event)} />
+
+                  </div>
+                </MDBStepperContent>
+              </MDBStepperStep>
+            </MDBStepperForm>
+          </MDBStepper>
+          <div className="nav-btn-container">
+            { (btnStepper === 1) && (
+              <MDBBtn color='primary' rounded disabled={!shipping_valid()}
+                onClick={() => {
+                  btnStepper !== 3 && setPrevBtnStepper(btnStepper);
+                  btnStepper <= 2 && setBtnStepper(btnStepper + 1);
+                }}
+              >
+                Next
+              </MDBBtn>
+            )}
+            { (btnStepper === 2) && (
+              <>
+              <MDBBtn color='primary' rounded
+                onClick={() => {
+                  btnStepper !== 1 && setPrevBtnStepper(btnStepper);
+                  btnStepper >= 2 && setBtnStepper(btnStepper - 1);                }}
+              >
+                Prev
+              </MDBBtn>
+              <MDBBtn color='primary' rounded disabled={!billing_valid()}
+                onClick={() => {
+                  btnStepper !== 3 && setPrevBtnStepper(btnStepper);
+                  btnStepper <= 2 && setBtnStepper(btnStepper + 1);
+                }}
+              >
+                Next
+              </MDBBtn>
+              </>
+            )}
+            { (btnStepper === 3) && (
+              <>
+              <MDBBtn color='primary' rounded
+                onClick={() => {
+                  btnStepper !== 1 && setPrevBtnStepper(btnStepper);
+                  btnStepper >= 2 && setBtnStepper(btnStepper - 1);                }}
+              >
+                Prev
+              </MDBBtn>
+              <MDBBtn type="submit" id="submit" color='primary' rounded disabled={!stripe ||  !shipping_valid() || !billing_valid() || processing || disabled || succeeded} onClick={(event) => handleSubmit(event)}>
+                <span id="button-text">
+                  {processing ? (<span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>)
+                   : ("Submit")}
+                </span>
+              </MDBBtn>
+              </>
+            )}
+          </div>
+          {/* Show any error that happens when processing the payment */}
+          {error && (
+            <div className="card-error float-right" role="alert">
+              {error}
+            </div>
+          )}
+        </div> {/* input-panel */}
+
+        <MDBCard className="checkout-order-summary">
+          <MDBCardBody className="summary-card">
+            <h4 className='mt-1 mb-4 h5 text-center font-weight-bold'>
+              Order Summary
+            </h4>
+            <div>
+              {(cart && cart.length > 0) &&
+                  cart.map(item => {
+                    return <div key={item.sku} className="item">
+                      <div className="item-name">
+                        <p key={item.sku}>
+                          {item.qty > 1 ? (item.qty + " - ") : null}
+                          {item.title} - <span className='text-muted'>{item.subtitle}</span>
+                          {item.qty > 1 ? <span className='text-muted'> (@ ${item.price} each)</span> : null}
+                        </p>
+                      </div>
+                      <div className="item-price">
+                        {formatPrice(item.price * item.qty)}
+                      </div>
+                    </div>
+                  }
+                )}
+                {(cart && cart.length > 0) &&
+                  <div>
+                    <hr />
+                    <div className="summary-totals">
+                      <p>Subtotal:</p>
+                      <p>{formatPrice(cartSubtotal(cart))}</p>
+                    </div>
+                    <div className="summary-totals">
+                      <p>Sales tax:</p>
+                      <p>{formatPrice(cartSalesTax(cart, salesTaxRate))}</p>
+                    </div>
+                    <div className="summary-totals">
+                      <p>Shipping:</p>
+                      <p>{cartShipping(cart, country) > 0 ? formatPrice(cartShipping(cart, country)) : `Free`}</p>
+                    </div>
+                    <hr />
+                    <div className="summary-totals">
+                      <p>Total:</p>
+                      <p><strong>{formatPrice(cartTotal(cart, salesTaxRate, country))}</strong></p>
+                    </div>
+                  </div>
+                }
+                {(cart && cart.length === 0) &&
+                  <h3>Order processed</h3>
+                }
+            </div>
+          </MDBCardBody>
+        </MDBCard>
+
+      </MDBCardBody>
+    </MDBCard>
   )
 }
 

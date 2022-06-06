@@ -17,7 +17,7 @@ import {
   MDBTable,
   MDBTableBody,
   MDBTableHead
-} from 'mdbreact';
+} from "mdb-react-ui-kit";
 
 import {
   getPaintingQtyAvailable,
@@ -88,16 +88,16 @@ const CartPage = () => {
       <Seo title="Cart" />
       <div className="container page-container">
         <MDBContainer className="cart">
-          <h1 className="page-head">Cart</h1>
+          <h1>Cart</h1>
           <MDBRow center>
             <MDBCard className='w-100'>
               <MDBCardBody>
                 <div className="table-responsive">
                   {(cart && cart.length > 0) &&
-                  <MDBTable className='product-table'>
+                  <MDBTable className="product-table">
                     <MDBTableHead>
                       <tr>
-                        <th scope="col"> </th>
+                        <th scope="col"></th>
                         <th scope="col" className="text-left">Item</th>
                         <th scope="col" className="text-right">Price</th>
                         <th scope="col"className="text-center">Quantity</th>
@@ -115,7 +115,12 @@ const CartPage = () => {
                                   <GatsbyImage className="img-fluid rounded" image={item.image.localFile.childImageSharp.gatsbyImageData} alt={item.title} />
                                 </a>
                               }
-                              {(item.itemType !== "book") &&
+                              { (item.itemType === "tradingcard") &&
+                                <a href={`/cards/${item.slug}/`}>
+                                  <GatsbyImage className="img-fluid rounded" image={item.image.localFile.childImageSharp.gatsbyImageData} alt={item.title} />
+                                </a>
+                              }
+                              {(item.itemType === "painting") &&
                                 <a href={`/gallery/${item.slug}/`}>
                                   <GatsbyImage className="img-fluid rounded" image={item.image.localFile.childImageSharp.gatsbyImageData} alt={item.title} />
                                 </a>
@@ -175,8 +180,8 @@ const CartPage = () => {
                         <td> </td>
                         <td> </td>
                         <td> </td>
-                        <td className="item-price text-right">Subtotal:</td>
-                        <td className="item-price text-right">
+                        <td className="subtotal-label">Subtotal:</td>
+                        <td className="subtotal item-price">
                           {formatPrice(cartSubtotal(cart))}
                         </td>
                         <td> </td>
@@ -189,7 +194,7 @@ const CartPage = () => {
               </MDBCardBody>
             </MDBCard>
 
-            <div className="checkout-open">
+            <div className="open-checkout-btn">
               {(cart && cart.length > 0) &&
                 <Link to="/checkout/" className="btn btn-primary btn-rounded">
                   Checkout<i className="fas fa-chevron-right"></i>

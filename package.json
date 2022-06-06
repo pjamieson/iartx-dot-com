@@ -1,26 +1,18 @@
 {
   "name": "iartx-dot-com",
-  "version": "1.0.1",
+  "version": "2.0.1",
   "private": true,
   "description": "A Gallery website built with Gatsby",
   "author": "Patrick Jamieson <patrick@patrickjamieson.com>",
-  "keywords": [
-    "gatsby",
-    "strapi",
-    "stripe",
-    "shippo",
-    "material-design",
-    "material-design-for-bootstrap",
-    "MDB",
-    "MDB React"
-  ],
   "dependencies": {
-    "@babel/core": "^7.15.5",
     "@popperjs/core": "^2.10.1",
     "@stripe/react-stripe-js": "1.4.1",
     "@stripe/stripe-js": "1.17.1",
-    "babel-preset-gatsby": "^1.14.0",
-    "bootstrap": "5.0.2",
+    "chart.js": "^3.1.1",
+    "chartjs-plugin-datalabels": "^2.0.0-rc.1",
+    "classnames": "^2.3.1",
+    "clsx": "1.1.1",
+    "deepmerge": "^4.2.2",
     "gatsby": "^3.14.0",
     "gatsby-plugin-advanced-sitemap": "^2.0.0",
     "gatsby-plugin-gatsby-cloud": "^3.2.0",
@@ -34,14 +26,45 @@
     "gatsby-source-filesystem": "^3.14.0",
     "gatsby-source-strapi": "^1.0.2",
     "gatsby-transformer-sharp": "^3.14.0",
-    "mdbreact": "git+https://oauth2:yayBkZHbysdtkJvvF5sK@git.mdbootstrap.com/mdb/react/re-pro.git",
+    "mdb-react-ui-kit": "./mdb-react-ui-kit-3.0.0.tgz",
+    "mdb-react-multi-carousel": "./multi-carousel.tgz",
+    "popper.js": "^1.16.1",
     "react": "^17.0.2",
-    "react-country-region-selector": "^2.1.0",
+    "react-chartjs-2": "^3.3.0",
+    "react-country-region-selector": "^3.4.0",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.2.0",
     "react-markdown": "^5.0.3",
-    "sass": "^1.34.0"
+    "react-perfect-scrollbar": "1.5.8",
+    "react-popper": "2.2.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/plugin-proposal-class-properties": "7.12.1",
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/preset-react": "^7.12.7",
+    "@babel/preset-typescript": "^7.12.7",
+    "@types/node": "^14.14.10",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "babel-loader": "^8.2.2",
+    "babel-preset-gatsby": "^1.14.0",
+    "file-loader": "6.2.0",
+    "html-loader": "^1.3.2",
+    "html-webpack-plugin": "4.5.0",
+    "prettier": "^2.2.1",
+    "prop-types": "^15.8.1",
+    "sass": "^1.34.0",
+    "style-loader": "2.0.0",
+    "ts-loader": "^8.0.11",
+    "typescript": "^4.1.3",
+    "url-loader": "4.1.1"
+  },
+  "peerDependencies": {
+    "babel-eslint": "^10.0.0",
+    "core-js": "^3.0.0"
   },
   "resolutions": {
     "graphql": "^15.4.0",
@@ -59,5 +82,19 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/pjamieson/iartx-dot-com.git"
-  }
+  },
+  "keywords": [
+    "javascript",
+    "react",
+    "gatsby",
+    "strapi",
+    "stripe",
+    "shippo",
+    "bootstrap",
+    "material-design",
+    "material-design-for-bootstrap",
+    "mdb",
+    "mdbootstrap",
+    "ui-kit"
+  ]
 }

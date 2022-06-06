@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { graphql } from "gatsby"
 import ReactMarkdown from "react-markdown";
-import { MDBContainer } from "mdbreact";
+import { MDBContainer } from "mdb-react-ui-kit";
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"

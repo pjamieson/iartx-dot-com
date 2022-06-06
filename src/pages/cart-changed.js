@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import { MDBCard, MDBCardBody } from "mdbreact"
+import { MDBCard, MDBCardBody } from "mdb-react-ui-kit"
 
 import { CartContext } from "../context/cart-context"
 

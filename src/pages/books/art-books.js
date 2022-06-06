@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import { MDBCard, MDBCardBody } from "mdbreact"
+import { MDBCard, MDBCardBody } from "mdb-react-ui-kit"
 
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"

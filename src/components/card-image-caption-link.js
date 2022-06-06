@@ -45,7 +45,7 @@ const CardImageCaptionLink = ({ item, caption_format }) => {
 
       <div>
         <Link to={link} className="btn-floating btn-action btn-primary">
-          <i className="fas fa-chevron-right pl-1"></i>
+          <i className="fas fa-chevron-right"></i>
         </Link>
       </div>
 

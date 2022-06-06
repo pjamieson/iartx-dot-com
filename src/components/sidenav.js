@@ -7,7 +7,7 @@ import {
   MDBSideNavNav,
   MDBSideNavCat,
   MDBSideNavItem
-} from "mdbreact";
+} from "mdb-react-ui-kit";
 
 import logo from "../images/icon.png"
 

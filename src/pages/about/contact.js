@@ -1,7 +1,16 @@
 import React, { useEffect, useState } from "react"
 import { navigate } from "gatsby"
 
-import { MDBCard, MDBContainer, MDBRow, MDBCol, MDBIcon, MDBBtn, MDBInput } from "mdbreact";
+import {
+  MDBBtn,
+  MDBCard,
+  MDBCol,
+  MDBContainer,
+  MDBRow,
+  MDBIcon,
+  MDBInput,
+  MDBTextArea
+} from "mdb-react-ui-kit";
 
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
@@ -119,12 +128,12 @@ const ContactPage = () => {
             <MDBRow>
               <MDBCol md="6">
                 <div className="md-form mb-0">
-                  <MDBInput type="text" id="contact-name" label="Your name" value={fullname} className="mt-4" required onChange={(event) => setFullname(event.target.value)} />
+                  <MDBInput type="text" id="contact-name" label="Your name*" value={fullname} className="mt-4" required onChange={(event) => setFullname(event.target.value)} />
                 </div>
               </MDBCol>
               <MDBCol md="6">
                 <div className="md-form mb-0">
-                  <MDBInput type="email" id="contact-email" label="Your email" value={email} className="mt-4" required onChange={(event) => setEmail(event.target.value)}
+                  <MDBInput type="email" id="contact-email" label="Your email*" value={email} className="mt-4" required onChange={(event) => setEmail(event.target.value)}
                   />
                 </div>
               </MDBCol>
@@ -132,14 +141,14 @@ const ContactPage = () => {
             <MDBRow>
               <MDBCol md="12">
                 <div className="md-form mb-0">
-                  <MDBInput type="text" id="contact-subject" label="Subject" value={subject} className="mt-4" required onChange={(event) => setSubject(event.target.value)} />
+                  <MDBInput type="text" id="contact-subject" label="Subject*" value={subject} className="mt-4" required onChange={(event) => setSubject(event.target.value)} />
                 </div>
               </MDBCol>
             </MDBRow>
             <MDBRow>
               <MDBCol md="12">
                 <div className="md-form mb-0">
-                  <MDBInput type="textarea" id="contact-message" label="Your message" value={message} className="mt-4" required onChange={(event) => setMessage(event.target.value)}
+                  <MDBTextArea id="contact-message" label="Your message*" value={message} className="mt-4" rows={4} required onChange={(event) => setMessage(event.target.value)}
                   />
                 </div>
               </MDBCol>

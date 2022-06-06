@@ -18,8 +18,8 @@ const CaribbeanArtPage = ({ data }) => {
       <div className="container page-container">
         <h1>Caribbean Art - Available Works</h1>
 
-        <section className="gallery">
-          <div className="uk-grid-small uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid="masonry: true">
+        <section className="gallery genre">
+        <div className="uk-grid-small uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid="masonry: true">
             {paintings.map(painting => {
               return <div key={painting.slug}>
                 {painting.images && <CardImageCaptionLink item={painting} caption_format="Gallery" />}

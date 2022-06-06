@@ -3,11 +3,13 @@ import React from "react"
 import { loadStripe } from "@stripe/stripe-js"
 import { Elements } from "@stripe/react-stripe-js"
 
+import stripe_badge from "../images/powered-by-stripe-blurple.svg"
+
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import CheckoutComponent from "../components/checkout"
 
-import { MDBContainer, MDBRow } from 'mdbreact'
+import { MDBContainer, MDBRow } from "mdb-react-ui-kit"
 
 // Make sure to call `loadStripe` outside of a component’s render
 //  to avoid recreating the `Stripe` object on every render.
@@ -18,9 +20,14 @@ const CheckoutPage = () => {
   return (
     <Layout>
       <Seo title="Checkout" />
-      <div className="container page-container checkout">
+      <div className="page-container checkout">
         <MDBContainer>
-          <h1 className="page-head">Checkout</h1>
+          <span className="checkout-header">
+            <h1>Checkout</h1>
+            <a href="https://stripe.com" target="_blank">
+              <img src={stripe_badge} className="stripe-badge" alt="Powered by Stripe"/>
+            </a>
+          </span>
           <MDBRow center>
             <Elements stripe={stripePromise}>
               <CheckoutComponent />

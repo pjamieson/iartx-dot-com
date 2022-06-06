@@ -18,7 +18,7 @@ const HaitianArtPage = ({ data }) => {
       <div className="container page-container">
         <h1>Haitian Art - Available Works</h1>
 
-        <section className="gallery">
+        <section className="gallery genre">
           <div className="uk-grid-small uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid="masonry: true">
             {paintings.map(painting => {
               return <div key={painting.slug}>
