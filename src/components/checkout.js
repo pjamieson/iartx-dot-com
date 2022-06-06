@@ -479,25 +479,6 @@ const CheckoutComponent = () => {
   }
 
   return (
-                  <MDBBtn color={activePanel === 1 ? "primary" : "default"} circle>
-                    1
-                  </MDBBtn>
-                </a>
-                <h4 className={activePanel === 1 ?
-                  "mb-4 mt-0 font-weight-bold" :
-                  "mb-4 mt-0 font-weight-bold text-muted"}>
-                  Billing Address
-                </h4>
-              </MDBStep>
-              <MDBStep form>
-                <a href="#formstep2" onClick={() => handleTabChange(2)}>
-                  <MDBBtn color={activePanel === 2 ? "primary" : "default"} circle>
-                    2
-                  </MDBBtn>
-                </a>
-                <h4 className={activePanel === 2 ?
-                  "mb-4 mt-0 font-weight-bold" :
-                  "mb-4 mt-0 font-weight-bold text-muted"}>
     <MDBCard className="checkout-card">
       <MDBCardBody className="checkout-card-body">
         <div className="checkout-input-panel">
@@ -878,7 +859,6 @@ const CheckoutComponent = () => {
             </div>
           </MDBCardBody>
         </MDBCard>
-
       </MDBCardBody>
     </MDBCard>
   )
