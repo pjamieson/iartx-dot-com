@@ -8,16 +8,13 @@ import {
   MDBCard,
   MDBCardBody,
   MDBCheckbox,
-  MDBCol,
-  MDBIcon,
   MDBInput,
-  MDBRow,
   MDBStepper,
   MDBStepperContent,
   MDBStepperForm,
   MDBStepperHead,
-  MDBStepperStep,
-  MDBValidation} from "mdb-react-ui-kit"
+  MDBStepperStep
+} from "mdb-react-ui-kit"
 
 import { CartContext } from "../context/cart-context"
 
@@ -93,13 +90,13 @@ const CheckoutComponent = () => {
   const [salesTaxRate, setSalesTaxRate] = useState(0.00)
 
   const shipping_valid = () => {
-    if (firstname.length > 0 && lastname.length > 0 && address.length > 0 && city.length > 1 && region.length > 1 && region.length < 7 && zip.length > 3 && country.length == 2 && email.length > 6) {
+    if (firstname.length > 0 && lastname.length > 0 && address.length > 0 && city.length > 1 && region.length > 1 && region.length < 7 && zip.length > 3 && country.length === 2 && email.length > 6) {
       return true
     } else { return false }
   }
   // Note: Australia, Netherlands postal codes are 4 digits - making that the min length
   const billing_valid = () => {
-    if (bfirstname.length > 0 && blastname.length > 0 && baddress.length > 0 && bcity.length > 1 && bregion.length > 1 && bregion.length < 7 && bzip.length > 3 && bcountry.length == 2) {
+    if (bfirstname.length > 0 && blastname.length > 0 && baddress.length > 0 && bcity.length > 1 && bregion.length > 1 && bregion.length < 7 && bzip.length > 3 && bcountry.length === 2) {
       if (clientSecret === '') {
         getPaymentIntent()
       }
@@ -742,11 +739,11 @@ const CheckoutComponent = () => {
                 <MDBStepperContent className="pay-content" tag="div">
                   <div className="payment-panel">
 
-                    <label className="input-label mt-0">
+                    <label className="input-label mt-0" htmlFor="cardElement">
                       Credit card details*
                     </label>
 
-                    <CardElement options={CARD_ELEMENT_OPTIONS} onChange={(event) => handleCardChange(event)} />
+                    <CardElement id="cardElement" options={CARD_ELEMENT_OPTIONS} onChange={(event) => handleCardChange(event)} />
 
                   </div>
                 </MDBStepperContent>

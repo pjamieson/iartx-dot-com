@@ -41,10 +41,11 @@ const links = data.map(link => {
 })
 
 // Above could be combined here, but this is easier to follow
-export default ({ styleClass }) => {
+const SocialLinks = ({ styleClass }) => {
   return (
     <ul className={`social-links ${styleClass ? styleClass : ""}`}>
       {links}
     </ul>
   )
 }
+export default SocialLinks;

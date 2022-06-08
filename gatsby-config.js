@@ -22,7 +22,6 @@ module.exports = {
       },
     },
     "gatsby-plugin-gatsby-cloud",
-    "gatsby-plugin-image",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
@@ -38,7 +37,6 @@ module.exports = {
     "gatsby-plugin-offline",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
-    "gatsby-plugin-sharp",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -76,6 +74,5 @@ module.exports = {
         queryLimit: 1000,
       },
     },
-    "gatsby-transformer-sharp",
   ],
 };

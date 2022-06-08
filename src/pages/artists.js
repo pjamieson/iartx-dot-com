@@ -132,15 +132,23 @@ export const query = graphql`
         title
         subtitle
         images {
-          url
-          localFile {
-            childImageSharp {
-              gatsbyImageData(
-                placeholder: BLURRED
-                formats: [AUTO, WEBP]
-              )
+          formats {
+            large {
+              url
+            }
+            medium {
+              url
+            }
+            small {
+              url
+            }
+            thumbnail {
+              url
             }
           }
+          height
+          width
+          url
         }
         price
         slug

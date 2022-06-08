@@ -640,6 +640,12 @@ p {
       padding-left: 0;
     }
   }
+  .img-hover-zoom {
+    border-radius: 6px;
+    img {
+      border-radius: 6px;
+    }
+  }
   .card {
     max-width: 400px;
     .btn-action {
@@ -734,12 +740,10 @@ p {
       }
       .gallery-image-container {
         display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
         align-items: flex-end;
-        justify-content: space-around;
-        column-gap: .25rem;
-        @media (min-width: 640px) { // UIkit grid breakpoint to 2 gallery columns
-          column-gap: .75rem;
-        }
+        width: 50%;
       }
       .carousel-control-prev,
       .carousel-control-next {

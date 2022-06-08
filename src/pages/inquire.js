@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react"
 import { navigate } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
 
 import { MDBBtn, MDBCard, MDBCol, MDBContainer, MDBInput, MDBRow, MDBTextArea } from "mdb-react-ui-kit";
 
@@ -12,11 +11,11 @@ const InquirePage = ({ location }) => {
 
   const subj = (location && location.state && location.state.title && location.state.sku) ? `${location.state.title} (${location.state.sku})` : ''
 
-  const gatsbyImage = (location && location.state && location.state.gatsbyImage) ? location.state.gatsbyImage : ''
+  const image_src = (location && location.state && location.state.image_src) ? location.state.image_src : ''
 
   const [fullname, setFullname] = useState('')
   const [email, setEmail] = useState('')
-  const [subject, setSubject] = useState(subj)
+  const subject = useState(subj) // will not be edited
   const [message, setMessage] = useState("Please tell me more about this item. Specifically, I'd like to know ")
 
   const valid = () => {
@@ -119,7 +118,7 @@ const InquirePage = ({ location }) => {
       <MDBRow>
         <MDBCol md="4" className="text-center">
           <MDBCard>
-            <GatsbyImage className="img-fluid rounded" image={gatsbyImage} alt={title} />
+            <img className="img-fluid rounded" src={image_src} alt={title} />
           </MDBCard>
         </MDBCol>
         <MDBCol md="8" className="md-0 mb-5">

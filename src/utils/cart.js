@@ -15,7 +15,7 @@ export const getCart = () => {
   return []
 }
 
-// Functions below replicated in blake-strapi/config/functions/cart.js
+// Functions below replicated in strapi/config/functions/cart.js
 // A private Node package that both projects use would be a better solution
 
 export const cartSubtotal = (cart) => {

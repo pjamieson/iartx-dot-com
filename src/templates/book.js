@@ -1,19 +1,20 @@
 import React, { useState, useContext, useEffect } from "react"
 import { Helmet } from "react-helmet"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+
 import { Link, navigate, graphql } from "gatsby"
 import ReactMarkdown from "react-markdown";
 
-import { MDBBadge, MDBLightbox } from "mdb-react-ui-kit"
-import { MDBMultiCarousel, MDBMultiCarouselItem } from "mdb-react-multi-carousel";
+import { MDBBadge } from "mdb-react-ui-kit"
 
 import { CartContext } from "../context/cart-context"
 
+import ImageSet from "../components/image-set"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 import { getCreatorFullName } from "../utils/creator"
 import { formatPrice } from "../utils/format"
+import { getImageUrl } from "../utils/image-url"
 import { getBookQtyAvailable } from "../utils/inventory"
 
 const BookPage = ({
@@ -47,22 +48,8 @@ const BookPage = ({
 }) => {
   const { isInCart, addToCart } = useContext(CartContext)
 
-  let imageset = []
-  let key = 0
-  images.forEach(image => {
-    imageset.push({
-      key,
-      title,
-      "height": image.height,
-      "width": image.width,
-      "url": image.localFile.url,
-      "gatsbyImage": getImage(image.localFile.childImageSharp.gatsbyImageData)
-    })
-    key = key + 1
-  })
-
   const author = authors[0]
-  const authorname = getCreatorFullName(author)
+  const creatorname = getCreatorFullName(author)
 
   const itemType = "book"
   const qty = 1 //initialize with 1 of item
@@ -71,11 +58,10 @@ const BookPage = ({
     id,
     sku,
     slug,
-    creator: authorname,
+    creator: creatorname,
     title,
     subtitle,
-    image: images[0],
-    url: images[0].localFile.url,
+    imageUrl: getImageUrl(images[0], "small"),
     qty,
     qtyAvail,
     price,
@@ -101,14 +87,11 @@ const BookPage = ({
     setInCart(false)
   }
 
-  // Check for first of multiple images being vertical
-  const two_up = (imageset.length > 1 && imageset[0].height > imageset[0].width )
-
   // Schema.org calculated values
-  const seo_description = `Images of and details about the book “${title}” by ${authorname}.`
-  const productDescription = subtitle ? subtitle : `A ${binding} book by ${authorname}`
+  const seo_description = `Images of and details about the book “${title}” by ${creatorname}.`
+  const productDescription = subtitle ? subtitle : `A ${binding} book by ${creatorname}`
   const productUrl = `https://iartx.com/books/${slug}/`
-  const productImageUrl = images[0].localFile.url
+  const productImageUrl = getImageUrl(images[0], "small")
   const productCondition = isAsNew ? "https://schema.org/NewCondition" : "http://schema.org/UsedCondition"
   const productAvailability = qtyAvailNow > 0 ? "http://schema.org/InStock" : "http://schema.org/OutOfStock"
 
@@ -150,21 +133,8 @@ const BookPage = ({
           <h1>{title}</h1>
           <div className="details-container">
             <div className="item-gallery">
-              <div className="gallery-image-container">
-                <GatsbyImage className="img-fluid rounded" image={imageset[0].gatsbyImage} alt={title} />
-                { two_up && <GatsbyImage className="img-fluid rounded" image={imageset[1].gatsbyImage} alt={title} />
-                }
-              </div>
-              { imageset.length > 2 &&
-                <MDBLightbox>
-                  <MDBMultiCarousel className="mt-2 ms-5 me-5" items={imageset.length > 3 ? 4 : 3} breakpoint={false} lightbox>
-                  { imageset.map(image => {
-                      return <MDBMultiCarouselItem key={image.key} className="" src={image.url} alt={image.title} />
-                    })
-                  }
-                  </MDBMultiCarousel>
-                </MDBLightbox>
-              }
+
+              <ImageSet creator={author} title={title} form="book" prof="author" images={images} />
 
               <div className="back-btn">
                 <Link to={`/authors/${author.slug}/`} className="btn-floating btn-action btn-primary">
@@ -174,7 +144,7 @@ const BookPage = ({
             </div> {/* item-gallery */}
             <div className="item-description">
               <div className="details">
-                <h2>A book by {authorname}</h2>
+                <h2>A book by {creatorname}</h2>
                 { (subtitle && subtitle.length) &&
                   <h3 className="subtitle">{subtitle}</h3>
                 }
@@ -218,7 +188,7 @@ const BookPage = ({
                         state: {
                           title,
                           sku,
-                          gatsbyImage: imageset[0].gatsbyImage
+                          image_src: images[0].formats.small.url
                         }
                       })
                     }}>Inquire</button>
@@ -249,18 +219,23 @@ export const query = graphql`
       title
       subtitle
       images {
+        formats {
+          large {
+            url
+          }
+          medium {
+            url
+          }
+          small {
+            url
+          }
+          thumbnail {
+            url
+          }
+        }
         height
         width
-        localFile {
-          childImageSharp {
-            gatsbyImageData(
-              width: 600
-              placeholder: BLURRED
-              formats: [AUTO, WEBP]
-            )
-          }
-          url
-        }
+        url
       }
       subgenres {
         name

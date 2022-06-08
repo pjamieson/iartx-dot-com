@@ -77,26 +77,31 @@ export const query = graphql`
     ) {
       nodes {
         artist {
-          slug
+          firstname
+          lastname
+          aka
         }
         images {
-          localFile {
-            childImageSharp {
-              gatsbyImageData(
-                width: 500
-                placeholder: BLURRED
-                formats: [AUTO, WEBP]
-              )
+          formats {
+            large {
+              url
+            }
+            medium {
+              url
+            }
+            small {
+              url
+            }
+            thumbnail {
+              url
             }
           }
+          height
+          width
+          url
         }
         slug
-        subgenres {
-          name
-          slug
-        }
         title
-        qty
       }
     }
   }
@@ -133,12 +138,24 @@ allStrapiTradingcard(
     project_70_player {
       name
     }
-    image {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+    images {
+      formats {
+        large {
+          url
+        }
+        medium {
+          url
+        }
+        small {
+          url
+        }
+        thumbnail {
+          url
         }
       }
+      height
+      width
+      url
     }
   }
 },
@@ -154,13 +171,23 @@ allStrapiProduct(
       slug
     }
     images {
-      localFile {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
+      formats {
+        large {
+          url
+        }
+        medium {
+          url
+        }
+        small {
+          url
+        }
+        thumbnail {
+          url
         }
       }
+      height
+      width
+      url
     }
   }
 },

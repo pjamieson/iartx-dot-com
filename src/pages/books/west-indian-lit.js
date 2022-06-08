@@ -1,6 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
 
+import { MDBCard, MDBCardBody } from "mdb-react-ui-kit"
+
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import CardImageCaptionLink from "../../components/card-image-caption-link"
@@ -18,15 +20,26 @@ const WestIndianLitPage = ({ data }) => {
       <div className="container page-container">
         <h1>West Indian Literature - Available Books</h1>
 
-        <section className="gallery">
-          <div className="uk-grid-small uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid="masonry: true">
-            {books.map(book => {
-              return <div key={book.slug}>
-                {book.images && <CardImageCaptionLink item={book} caption_format="Books" />}
+        { books.length === 0 &&
+          <MDBCard>
+            <MDBCardBody>
+              <div>
+                <h2 className='mt-1 text-center'>More titles coming soon...</h2>
               </div>
-            })}
-          </div>
-        </section>
+            </MDBCardBody>
+          </MDBCard>
+        }
+        { books.length > 0 &&
+          <section className="gallery">
+            <div className="uk-grid-small uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid="masonry: true">
+              {books.map(book => {
+                return <div key={book.slug}>
+                  {book.images && <CardImageCaptionLink item={book} caption_format="Books" />}
+                </div>
+              })}
+            </div>
+          </section>
+        }
 
       </div>
     </Layout>
@@ -55,15 +68,23 @@ export const query = graphql`
         subtitle
         price
         images {
-          url
-          localFile {
-            childImageSharp {
-              gatsbyImageData(
-                placeholder: BLURRED
-                formats: [AUTO, WEBP]
-              )
+          formats {
+            large {
+              url
+            }
+            medium {
+              url
+            }
+            small {
+              url
+            }
+            thumbnail {
+              url
             }
           }
+          height
+          width
+          url
         }
         slug
         qty

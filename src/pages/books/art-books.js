@@ -9,21 +9,38 @@ import CardImageCaptionLink from "../../components/card-image-caption-link"
 
 const ArtBooksPage = ({ data }) => {
   const {
-    allStrapiPainting: { nodes: paintings },
+    allStrapiBook: { nodes: books },
   } = data
+
+  const seo_description = "Images of first editions of art books offered for sale on iArtX.com, with links to details about each title."
 
   return (
     <Layout>
-      <Seo title="Art Books" />
+      <Seo title="Art Books - The Jamieson Collection" description={seo_description} />
       <div className="container page-container">
-        <h1>Art Books</h1>
-        <MDBCard>
-          <MDBCardBody>
-            <div>
-              <h2 className='mt-1 text-center'>Coming soon...</h2>
+      <h1>Art Books - Available Books</h1>
+
+        { books.length === 0 &&
+          <MDBCard>
+            <MDBCardBody>
+              <div>
+                <h2 className='mt-1 text-center'>More titles coming soon...</h2>
+              </div>
+            </MDBCardBody>
+          </MDBCard>
+        }
+        { books.length > 0 &&
+          <section className="gallery">
+            <div className="uk-grid-small uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid="masonry: true">
+              {books.map(book => {
+                return <div key={book.slug}>
+                  {book.images && <CardImageCaptionLink item={book} caption_format="Books" />}
+                </div>
+              })}
             </div>
-          </MDBCardBody>
-        </MDBCard>
+          </section>
+        }
+
       </div>
     </Layout>
   )
@@ -31,9 +48,10 @@ const ArtBooksPage = ({ data }) => {
 
 export const query = graphql`
   {
-    allStrapiPainting(
+    allStrapiBook(
       filter: {
-        qty: {gt: 10}
+        subgenres: {elemMatch: {slug: {eq: "art-books"}}},
+        qty: {gt: 0}
       },
       sort: {
         fields: order, order: ASC
@@ -42,7 +60,7 @@ export const query = graphql`
       nodes {
         id: strapiId
         sku
-        artist {
+        authors {
           firstname
           lastname
         }
@@ -50,15 +68,23 @@ export const query = graphql`
         subtitle
         price
         images {
-          url
-          localFile {
-            childImageSharp {
-              gatsbyImageData(
-                placeholder: BLURRED
-                formats: [AUTO, WEBP]
-              )
+          formats {
+            large {
+              url
+            }
+            medium {
+              url
+            }
+            small {
+              url
+            }
+            thumbnail {
+              url
             }
           }
+          height
+          width
+          url
         }
         slug
         qty

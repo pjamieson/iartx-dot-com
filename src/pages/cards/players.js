@@ -1,16 +1,16 @@
 import React from "react"
-import { graphql } from "gatsby"
+//import { graphql } from "gatsby"
 
 import { MDBCard, MDBCardBody } from "mdb-react-ui-kit"
 
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
-import CardImageCaptionLink from "../../components/card-image-caption-link"
+//import CardImageCaptionLink from "../../components/card-image-caption-link"
 
 const PlayersPage = ({ data }) => {
-  const {
+  /*const {
     allStrapiPainting: { nodes: paintings },
-  } = data
+  } = data*/
 
   return (
     <Layout>
@@ -28,7 +28,7 @@ const PlayersPage = ({ data }) => {
     </Layout>
   )
 }
-
+/*
 export const query = graphql`
   {
     allStrapiPainting(
@@ -50,15 +50,23 @@ export const query = graphql`
         subtitle
         price
         images {
-          url
-          localFile {
-            childImageSharp {
-              gatsbyImageData(
-                placeholder: BLURRED
-                formats: [AUTO, WEBP]
-              )
+          formats {
+            large {
+              url
+            }
+            medium {
+              url
+            }
+            small {
+              url
+            }
+            thumbnail {
+              url
             }
           }
+          height
+          width
+          url
         }
         slug
         qty
@@ -66,5 +74,5 @@ export const query = graphql`
     }
   }
 `
-
+*/
 export default PlayersPage

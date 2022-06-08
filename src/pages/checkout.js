@@ -24,7 +24,7 @@ const CheckoutPage = () => {
         <MDBContainer>
           <span className="checkout-header">
             <h1>Checkout</h1>
-            <a href="https://stripe.com" target="_blank">
+            <a href="https://stripe.com" target="_blank" rel="noreferrer">
               <img src={stripe_badge} className="stripe-badge" alt="Powered by Stripe"/>
             </a>
           </span>

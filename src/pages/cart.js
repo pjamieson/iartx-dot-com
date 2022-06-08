@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useCallback, useContext } from 'react';
 import { Link, navigate } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
 
 import { CartContext } from "../context/cart-context"
 
@@ -97,7 +96,7 @@ const CartPage = () => {
                   <MDBTable className="product-table">
                     <MDBTableHead>
                       <tr>
-                        <th scope="col"></th>
+                        <th scope="col"> </th>
                         <th scope="col" className="text-left">Item</th>
                         <th scope="col" className="text-right">Price</th>
                         <th scope="col"className="text-center">Quantity</th>
@@ -112,17 +111,17 @@ const CartPage = () => {
                             <div className="img-hover-zoom">
                               { (item.itemType === "book") &&
                                 <a href={`/books/${item.slug}/`}>
-                                  <GatsbyImage className="img-fluid rounded" image={item.image.localFile.childImageSharp.gatsbyImageData} alt={item.title} />
+                                  <img className="img-fluid rounded" src={item.imageUrl} alt={item.title} />
                                 </a>
                               }
                               { (item.itemType === "tradingcard") &&
                                 <a href={`/cards/${item.slug}/`}>
-                                  <GatsbyImage className="img-fluid rounded" image={item.image.localFile.childImageSharp.gatsbyImageData} alt={item.title} />
+                                  <img className="img-fluid rounded" src={item.imageUrl} alt={item.title} />
                                 </a>
                               }
                               {(item.itemType === "painting") &&
                                 <a href={`/gallery/${item.slug}/`}>
-                                  <GatsbyImage className="img-fluid rounded" image={item.image.localFile.childImageSharp.gatsbyImageData} alt={item.title} />
+                                  <img className="img-fluid rounded" src={item.imageUrl} alt={item.title} />
                                 </a>
                               }
 

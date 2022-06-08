@@ -215,7 +215,10 @@ const Navbar = () => {
                     <MDBDropdownToggle>Authors</MDBDropdownToggle>
                     <MDBDropdownMenu>
                       <MDBDropdownItem>
-                        <Link className="menu-link" to="/authors/lefteri-christy/">Christy Lefteri</Link>
+                        <Link className="menu-link" to="/authors/jonasson-ragnar/">Jónasson, Ragnar</Link>
+                      </MDBDropdownItem>
+                      <MDBDropdownItem>
+                        <Link className="menu-link" to="/authors/lefteri-christy/">Leferti, Christy</Link>
                       </MDBDropdownItem>
                       <MDBDropdownItem>
                         <Link className="menu-link" to="/authors/mittelholzer-edgar/">Mittelholzer, Edgar</Link>
