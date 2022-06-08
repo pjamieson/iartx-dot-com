@@ -1,7 +1,7 @@
 // Returns a valid image url or an empty string (prevents null value error)
 
 export const getImageUrl = ( image, preferred_size ) => {
-  console.log("getImageUrl image", image)
+  //console.log("getImageUrl image", image)
 
   let image_url = ""
   if ( image ) {

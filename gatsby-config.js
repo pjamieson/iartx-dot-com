@@ -21,7 +21,6 @@ module.exports = {
         ],
       },
     },
-    "gatsby-plugin-gatsby-cloud",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
