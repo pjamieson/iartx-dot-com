@@ -1,5 +1,5 @@
 import React from "react"
-import { MDBLightbox } from "mdb-react-ui-kit"
+import { MDBCard, MDBLightbox, MDBLightboxItem } from "mdb-react-ui-kit"
 import { MDBMultiCarousel, MDBMultiCarouselItem } from "mdb-react-multi-carousel";
 import { getCreatorFullName } from "../utils/creator"
 import { getImageUrl } from "../utils/image-url"
@@ -29,16 +29,28 @@ const ImageSet = ({ creator, title, form, prof, images }) => {
           <img src={getImageUrl(images[1], "medium")} className="img-fluid shadow-4" alt={alt_text} />
         </div>
       }
-      {/* images.length > 2 &&
-        <MDBLightbox>
+
+      { images.length > 2 &&
+        <MDBLightbox className="uk-grid-small uk-child-width-1-2@s uk-child-width-1-3@m uk-text-center" uk-grid="masonry: true">
+        { images.map(image => {
+          return <MDBCard>
+              <MDBLightboxItem
+              src={getImageUrl(image, "medium")}
+              fullscreenSrc={getImageUrl(image, "large")}
+              className="" />
+            </MDBCard>
+          })
+        }
+{/*
           <MDBMultiCarousel className="mt-2 ms-5 me-5" items={images.length > 3 ? 4 : 3} breakpoint={false} lightbox>
           { images.map(image => {
             return <MDBMultiCarouselItem key={++key} className="" src={getImageUrl(image, "large")} alt={alt_text} />
             })
           }
           </MDBMultiCarousel>
+*/}
         </MDBLightbox>
-      */}
+      }
     </section>
   )
 }

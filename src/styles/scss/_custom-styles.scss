@@ -738,6 +738,17 @@ p {
       @media (min-width: 640px) { // UIkit grid breakpoint to 2 gallery columns
         width: 50%;
       }
+      .lightbox {
+        margin: 1rem 0 0 -.5rem;
+        .card {
+          padding: 0;
+          margin: 0 0 .5rem .5rem;
+          width: calc(100% / 3 - .5rem);
+          img {
+            border-radius: 0.5rem;
+          }
+        }
+      }
       .gallery-image-container {
         display: flex;
         flex-direction: row;
