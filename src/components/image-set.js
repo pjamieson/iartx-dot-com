@@ -30,15 +30,13 @@ const ImageSet = ({ creator, title, form, prof, images }) => {
         </div>
       }
 
-      { images.length > 2 &&
+      { images.length > 2 && typeof document !== "undefined" &&
         <MDBLightbox className="uk-grid-small uk-child-width-1-2@s uk-child-width-1-3@m uk-text-center" uk-grid="masonry: true">
         { images.map(image => {
-          return <MDBCard>
-              <MDBLightboxItem
-              src={getImageUrl(image, "medium")}
-              fullscreenSrc={getImageUrl(image, "large")}
-              className="" />
-            </MDBCard>
+          return <MDBLightboxItem
+            src={getImageUrl(image, "medium")}
+            fullscreenSrc={getImageUrl(image, "large")}
+            className="card" />
           })
         }
 {/*
