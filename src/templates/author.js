@@ -20,7 +20,7 @@ const AuthorPage = ({data}) => {
 
   const authorname = getCreatorFullName(author)
 
-  const pageTitle = `Author - ${authorname}`
+  const pageTitle = `${authorname} - Author`
 
   const seo_description = `Images of and details about books by ${authorname} offered for sale on iArtX.com.`
   //console.log("author.js seo_description", seo_description)

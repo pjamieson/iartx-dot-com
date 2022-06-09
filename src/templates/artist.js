@@ -21,7 +21,7 @@ const ArtistPage = ({data}) => {
 
   const artistname = getCreatorFullName(artist)
 
-  const pageTitle = `Artist - ${artistname}`
+  const pageTitle = `${artistname} - Artist`
 
   const works = artist.country.name === "Haiti" ? "Haitian Art" : "paintings"
 
