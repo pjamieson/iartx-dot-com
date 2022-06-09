@@ -109,9 +109,9 @@ const Navbar = () => {
                   <MDBDropdown dropright>
                     <MDBDropdownToggle>Artists F - K</MDBDropdownToggle>
                     <MDBDropdownMenu>
-                      {/*<MDBDropdownItem>
+                      <MDBDropdownItem>
                         <Link className="menu-link" to="/artists/francois-roger/">François, Roger</Link>
-                      </MDBDropdownItem>*/}
+                      </MDBDropdownItem>
                       <MDBDropdownItem>
                         <Link className="menu-link" to="/artists/efdot-friedensohn-eric/">Friedensohn, Eric “Efdot”</Link>
                       </MDBDropdownItem>
