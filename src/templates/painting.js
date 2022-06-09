@@ -25,7 +25,7 @@ const PaintingPage = ({
       title,
       subtitle = {},
       artist = {},
-      images,
+      images = {},
       subgenres = {},
       date = {},
       size = {},
