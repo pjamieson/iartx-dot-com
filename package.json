@@ -17,7 +17,6 @@
     "gatsby-plugin-sass": "^4.14.0",
     "gatsby-source-filesystem": "^3.14.0",
     "gatsby-source-strapi": "^1.0.3",
-    "mdb-react-multi-carousel": "./multi-carousel.tgz",
     "mdb-react-ui-kit": "./mdb-react-ui-kit-3.0.0.tgz",
     "react": "^17.0.2",
     "react-country-region-selector": "^3.4.0",

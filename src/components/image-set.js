@@ -1,6 +1,5 @@
 import React from "react"
-import { MDBCard, MDBLightbox, MDBLightboxItem } from "mdb-react-ui-kit"
-import { MDBMultiCarousel, MDBMultiCarouselItem } from "mdb-react-multi-carousel";
+import { MDBLightbox, MDBLightboxItem } from "mdb-react-ui-kit"
 import { getCreatorFullName } from "../utils/creator"
 import { getImageUrl } from "../utils/image-url"
 
@@ -16,38 +15,31 @@ const ImageSet = ({ creator, title, form, prof, images }) => {
 
   const alt_text = `The ${form} ${title} by the ${prof} ${creatorname}`
 
-  let key = 0
-
   return (
     <section>
       { !two_up &&
-        <img src={getImageUrl(images[0], "medium")} className="img-fluid shadow-4" alt={alt_text} />
+        <img src={getImageUrl(images[0], "medium")} className="img-fluid card" alt={alt_text} />
       }
       { two_up &&
         <div className="gallery-image-container">
-          <img src={getImageUrl(images[0], "medium")} className="img-fluid shadow-4" alt={alt_text} />
-          <img src={getImageUrl(images[1], "medium")} className="img-fluid shadow-4" alt={alt_text} />
+          <img src={getImageUrl(images[0], "medium")} className="img-fluid card" alt={alt_text} />
+          <img src={getImageUrl(images[1], "medium")} className="img-fluid card" alt={alt_text} />
         </div>
       }
 
       { images.length > 2 && typeof document !== "undefined" &&
-        <MDBLightbox className="uk-grid-small uk-child-width-1-2@s uk-child-width-1-3@m uk-text-center" uk-grid="masonry: true">
-        { images.map(image => {
-          return <MDBLightboxItem
-            src={getImageUrl(image, "medium")}
-            fullscreenSrc={getImageUrl(image, "large")}
-            className="card" />
-          })
-        }
-{/*
-          <MDBMultiCarousel className="mt-2 ms-5 me-5" items={images.length > 3 ? 4 : 3} breakpoint={false} lightbox>
+        <div className="lightbox-container">
+          <p>Click on any image below to enlarge it</p>
+          <MDBLightbox className="uk-grid-small uk-child-width-1-2@s uk-child-width-1-3@m uk-text-center" uk-grid="masonry: true">
           { images.map(image => {
-            return <MDBMultiCarouselItem key={++key} className="" src={getImageUrl(image, "large")} alt={alt_text} />
+            return <MDBLightboxItem
+              src={getImageUrl(image, "medium")}
+              fullscreenSrc={getImageUrl(image, "large")}
+              className="card" />
             })
           }
-          </MDBMultiCarousel>
-*/}
-        </MDBLightbox>
+          </MDBLightbox>
+        </div>
       }
     </section>
   )
