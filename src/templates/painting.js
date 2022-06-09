@@ -125,9 +125,9 @@ const PaintingPage = ({
           <h1>{title}</h1>
           <div className="details-container">
             <div className="item-gallery">
-
+{/*
               <ImageSet creator={artist} title={title} form={form} prof="artist" images={images} />
-
+*/}
               { (qtyAvail > 0) &&
                 <div className="back-btn">
                   <Link to={`/artists/${artist.slug}/`} className="btn-floating btn-action btn-primary">
