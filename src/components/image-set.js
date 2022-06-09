@@ -29,7 +29,7 @@ const ImageSet = ({ creator, title, form, prof, images }) => {
           <img src={getImageUrl(images[1], "medium")} className="img-fluid shadow-4" alt={alt_text} />
         </div>
       }
-      { images.length > 2 &&
+      {/* images.length > 2 &&
         <MDBLightbox>
           <MDBMultiCarousel className="mt-2 ms-5 me-5" items={images.length > 3 ? 4 : 3} breakpoint={false} lightbox>
           { images.map(image => {
@@ -38,7 +38,7 @@ const ImageSet = ({ creator, title, form, prof, images }) => {
           }
           </MDBMultiCarousel>
         </MDBLightbox>
-      }
+      */}
     </section>
   )
 }
