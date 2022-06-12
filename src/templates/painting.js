@@ -104,7 +104,6 @@ const PaintingPage = ({
             "description": "${productDescription}",
             "url": "${productUrl}",
             "image": "${productImageUrl}",
-            "brand":"The Jamieson Collection",
             "logo": "https://iartx.com/icons/icon-72x72.png",
             "offers": [
               {
