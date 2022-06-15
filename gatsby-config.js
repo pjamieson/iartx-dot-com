@@ -35,6 +35,12 @@ module.exports = {
     },
     "gatsby-plugin-offline",
     "gatsby-plugin-react-helmet",
+    {
+      resolve: "gatsby-plugin-react-helmet-canonical-urls",
+      options: {
+        siteUrl: "https://iartx.com",
+      },
+    },
     "gatsby-plugin-sass",
     {
       resolve: "gatsby-source-filesystem",
