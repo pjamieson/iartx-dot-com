@@ -44,6 +44,9 @@
   font-display: block;
 }
 
+body {
+  background-color: $blake-dark-grey;
+}
 h1, h2, h3, h4, h5, h6, p {
   font-family: "Stolzl" !important;
   color: $blake-dark-grey;
@@ -73,7 +76,7 @@ p {
   max-width: 1280px; // width of Nest Hub Max
   min-height: 100vh;
   flex-direction: column; // This makes the footer stick to the bottom of the viewport
-  background-color: #fff;
+  background-color: $blake-dark-grey;
   @media (min-width: 1280px) { // center in window larger than max width
     margin-left: calc((100vw - 1280px)*.5);
   }
@@ -146,9 +149,7 @@ p {
   .navbar-brand {
     font-size: 1.6rem;
     margin-right: 0;
-    a {
-      text-decoration: none;
-    }
+    text-decoration: none;
     .logo {
       max-height: 40px;
       padding-right: .4rem;
