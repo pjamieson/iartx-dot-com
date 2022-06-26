@@ -15,6 +15,8 @@ const ImageSet = ({ creator, title, form, prof, images }) => {
 
   const alt_text = `The ${form} ${title} by the ${prof} ${creatorname}`
 
+  let key = 0
+  
   return (
     <section>
       { !two_up &&
@@ -32,7 +34,7 @@ const ImageSet = ({ creator, title, form, prof, images }) => {
           <p>Click on any image below to enlarge it</p>
           <MDBLightbox className="uk-grid-small uk-child-width-1-2@s uk-child-width-1-3@m uk-text-center" uk-grid="masonry: true">
           { images.map(image => {
-            return <MDBLightboxItem
+            return <MDBLightboxItem key={++key}
               src={getImageUrl(image, "medium")}
               fullscreenSrc={getImageUrl(image, "large")}
               className="card" />

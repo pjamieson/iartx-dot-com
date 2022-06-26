@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 import { CartContext } from "../context/cart-context"
 
-import SocialLinks from "../constants/sociallinks"
+//import SocialLinks from "../constants/sociallinks"
 
 import {
   MDBCollapse,
@@ -51,7 +51,7 @@ const Navbar = () => {
 
           <MDBNavbarNav left>
             <MDBNavbarItem>
-              <SocialLinks />
+              {/*<SocialLinks />*/}
             </MDBNavbarItem>
           </MDBNavbarNav>
 
@@ -257,6 +257,27 @@ const Navbar = () => {
                   </MDBDropdownItem>
                   <MDBDropdownItem>
                     <Link className="menu-link" to="/cards/card-series/">Cards by Series</Link>
+                  </MDBDropdownItem>
+                </MDBDropdownMenu>
+              </MDBDropdown>
+            </MDBNavbarItem>
+
+            <MDBNavbarItem>
+              <MDBDropdown>
+                <MDBDropdownToggle>
+                  <div className="nav-menu-item">
+                    <p>TYPEWRITERS</p>
+                  </div>
+                </MDBDropdownToggle>
+                <MDBDropdownMenu>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/typewriters/gossen-typewriter/">Gossen</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/typewriters/hermes-typewriter/">Hermes</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link className="menu-link" to="/typewriters/remington-typewriter/">Remington</Link>
                   </MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>

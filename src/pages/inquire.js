@@ -163,8 +163,8 @@ const InquirePage = ({ location }) => {
                       type="text"
                       id="contact-subject"
                       wrapperClass="mb-3 me-1"
-                      value={subj}
-                      label="Subject*"
+                      value={subject}
+                      label="Subject"
                       disabled
                     />
                   </div>

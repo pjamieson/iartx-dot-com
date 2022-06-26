@@ -6,7 +6,7 @@ import { formatPrice } from "../utils/format"
 import { getImageUrl } from "../utils/image-url"
 
 const CardImageCaptionLink = ({ item, caption_format }) => {
-  //console.log("CardImageLinkTitle item", item)
+  console.log("CardImageLinkTitle item", item)
 
   // Use the primary image, the first of the images set
   const image_url = ( item.images[0] ? getImageUrl(item.images[0], "medium") : "" )
@@ -39,6 +39,10 @@ const CardImageCaptionLink = ({ item, caption_format }) => {
     line2 = item.cardseries.name
     link = `/cards/${item.slug}/`
     alt_text = `The trading card ${item.title} by ${getCreatorFullName(item.artist)}`
+  } else if (caption_format === "Typewriter") {
+    line2 = item.subtitle
+    link = `/gallery/${item.slug}/`
+    alt_text = `${item.title} ${item.subtitle}`
   }
 
   return (

@@ -132,7 +132,12 @@ const CartPage = () => {
                               <h4 className="mt-3 mb-0" key={item.sku}>
                                 {item.title}
                               </h4>
-                              <p className='text-muted'>by {item.creator}</p>
+                              { item.creator !== "typewriter" &&
+                                <p className='text-muted'>by {item.creator}</p>
+                              }
+                              { item.creator === "typewriter" &&
+                                <p className='text-muted'>A Vintage Typewriter</p>
+                              }
                               <p className='text-muted'>{item.subtitle}</p>
                             </div>
                           </td>

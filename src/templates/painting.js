@@ -41,7 +41,7 @@ const PaintingPage = ({
 }) => {
   const { isInCart, addToCart } = useContext(CartContext)
 
-  const creatorname = getCreatorFullName(artist)
+  const creatorname = (form === "Typewriter" ? "typewriter" : getCreatorFullName(artist))
 
   const itemType = "painting"
   const subt = subtitle ? subtitle : `An original ${form}`
@@ -133,25 +133,29 @@ const PaintingPage = ({
 
               <ImageSet creator={artist} title={title} form={form} prof="artist" images={images} />
 
-              { (qtyAvail > 0) &&
-                <div className="back-btn">
-                  <Link to={`/artists/${artist.slug}/`} className="btn-floating btn-action btn-primary">
-                    <i className="fas fa-chevron-left"></i>
-                  </Link>
-                </div>
-              }
-              { (qtyAvail <= 0) &&
-                <div className="back-btn">
-                  <Link to={`/archive/`} className="btn-floating btn-action btn-primary">
-                    <i className="fas fa-chevron-left"></i>
-                  </Link>
-                </div>
-              }
+              <div className="back-btn">
+                { form !== "Typewriter" &&
+                    <Link to={`/artists/${artist.slug}/`} className="btn-floating btn-action btn-primary">
+                      <i className="fas fa-chevron-left"></i>
+                    </Link>
+                }
+                { form === "Typewriter" &&
+                    <Link to={`/typewriters/${subgenres[0].slug}/`} className="btn-floating btn-action btn-primary">
+                      <i className="fas fa-chevron-left"></i>
+                    </Link>
+                }
+              </div>
+
             </div> {/* item-gallery */}
 
             <div className="item-description">
               <div className="details">
-                <h2>An original {form}<br />by {creatorname}</h2>
+                { form !== "Typewriter" &&
+                  <h2>An original {form}<br />by {creatorname}</h2>
+                }
+                { form === "Typewriter" &&
+                  <h2>A Vintage Typewriter</h2>
+                }
                 { (subtitle && subtitle.length) &&
                   <h3 className="subtitle">{subtitle}</h3>
                 }
@@ -250,6 +254,7 @@ export const query = graphql`
       }
       subgenres {
         name
+        slug
       }
       date
       size

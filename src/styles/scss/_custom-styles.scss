@@ -138,6 +138,7 @@ p {
     opacity: .9;
   }
   .navbar-nav {
+    margin-top: 14px;
     .nav-link {
       padding: 0px 10px;
     }
@@ -186,7 +187,7 @@ p {
     }
   }
   .dropdown-toggle {
-    margin: -10px 0 0 0;
+    margin: -6px 0 0 0;
     padding: 0 12px;
     background-color: $blake-dark-grey !important;
     opacity: .98;
@@ -800,6 +801,9 @@ p {
           &.padded-header {
             padding-top: 3rem;
           }
+        }
+        h3 {
+          padding-top: 1rem;
         }
         p {
           margin: 0 0 .8rem 0;
