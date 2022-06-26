@@ -85,7 +85,7 @@ const PaintingPage = ({
   const seo_description = `Images of and details about the original ${form} “${title}” by the ${prof} ${creatorname}.`
   const productDescription = subtitle ? subtitle : `An original ${form} by ${creatorname}`
   const productUrl = `https://iartx.com/gallery/${slug}/`
-  const productImageUrl = image ? getImageUrl(image, "small") : getImageUrl(images[0], "small")
+  const productImageUrl = getImageUrl(images[0], "small")
   const productAvailability = qtyAvailNow > 0 ? "http://schema.org/InStock" : "http://schema.org/OutOfStock"
 
   return (
