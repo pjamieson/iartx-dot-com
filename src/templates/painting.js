@@ -82,7 +82,7 @@ const PaintingPage = ({
   const prof = subgenres[0].name === "Haitian Art" ? "Haitian artist" : "artist"
 
   // Schema.org calculated values
-  const seo_description = (form === "Typewriter" ? `Images and details about the ${title} typewriter from The Jamieson Collection` : `Images of and details about the original ${form} “${title}” by the ${prof} ${creatorname)
+  const seo_description = (form === "Typewriter" ? `Images and details about the ${title} typewriter from The Jamieson Collection` : `Images of and details about the original ${form} “${title}” by the ${prof} ${creatorname}`)
 
   const productCategory = (form === "Typewriter" ? "Office Supplies > Office Equipment > Typewriters" : "Home & Garden > Decor > Artwork > Posters, Prints, & Visual Artwork")
 
