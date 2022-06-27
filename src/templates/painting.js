@@ -82,8 +82,11 @@ const PaintingPage = ({
   const prof = subgenres[0].name === "Haitian Art" ? "Haitian artist" : "artist"
 
   // Schema.org calculated values
-  const seo_description = `Images of and details about the original ${form} “${title}” by the ${prof} ${creatorname}.`
-  const productDescription = subtitle ? subtitle : `An original ${form} by ${creatorname}`
+  const seo_description = (form === "Typewriter" ? `Images and details about the ${title} typewriter from The Jamieson Collection` : `Images of and details about the original ${form} “${title}” by the ${prof} ${creatorname)
+
+  const productCategory = (form === "Typewriter" ? "Office Supplies > Office Equipment > Typewriters" : "Home & Garden > Decor > Artwork > Posters, Prints, & Visual Artwork")
+
+  const productDescription = (subtitle ? subtitle : `An original ${form} by ${creatorname}`)
   const productUrl = `https://iartx.com/gallery/${slug}/`
   const productImageUrl = getImageUrl(images[0], "small")
   const productAvailability = qtyAvailNow > 0 ? "http://schema.org/InStock" : "http://schema.org/OutOfStock"
@@ -99,7 +102,7 @@ const PaintingPage = ({
             "@type": "Product",
             "productID": "${sku}",
             "sku": "${sku}",
-            "category": "Home & Garden > Decor > Artwork > Posters, Prints, & Visual Artwork",
+            "category": "${productCategory}",
             "name": "${title}",
             "description": "${productDescription}",
             "url": "${productUrl}",
@@ -107,8 +110,8 @@ const PaintingPage = ({
               "${productImageUrl}"
             ],
             "brand": {
-              "@type": "Brand"
-              "name": "The Jamieson Collection"
+              "@type": "Brand",
+              "name": "${creatorname}"
             },
             "logo": "https://iartx.com/icons/icon-72x72.png",
             "offers": [
