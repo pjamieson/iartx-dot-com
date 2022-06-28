@@ -56,6 +56,7 @@ const Navbar = () => {
           </MDBNavbarNav>
 
           <MDBNavbarNav right>
+          <div className="menu-items">
             <MDBNavbarItem>
               <MDBDropdown>
                 <MDBDropdownToggle>
@@ -306,7 +307,7 @@ const Navbar = () => {
                 </MDBDropdownMenu>
               </MDBDropdown>
             </MDBNavbarItem>
-
+          </div>
           </MDBNavbarNav>
 
         </MDBCollapse>

@@ -130,6 +130,7 @@ p {
 // navbar
 .navbar {
   padding: 0;
+  height: 60px;
   max-width: 1280px !important; // same as site max width
   box-shadow: none;
   font-family: "Boston" !important;
@@ -138,13 +139,23 @@ p {
     opacity: .9;
   }
   .navbar-nav {
-    margin-top: 14px;
+    margin-top: 1px;
+    margin-left: 2px !important;
+    width: 130px !important;
+    @media (min-width: 768px) {
+      margin-top: 0;
+      margin-left: auto !important;
+      width: 100% !important;
+    }
     .nav-link {
       padding: 0px 10px;
     }
     .menu-sub {
+      margin: 0;
       font-size: .75rem;
       color: $secondary-color;
+      text-transform: none;
+      white-space: nowrap;
     }
   }
   .navbar-brand {
@@ -176,25 +187,38 @@ p {
   .nav-menu-item {
     text-align: center;
     font-size: 1rem;
+    margin-top: 1.5rem;
+    height: 1.5rem;
+    vertical-align: top;
     p {
       margin: 0 0 -.4rem 0;
       padding: 0;
       color: white;
       font-family: "Boston" !important;
+      font-size: 1rem;
     }
     @media (min-width: 768px) {
       font-size: 1.2rem;
     }
   }
   .dropdown-toggle {
-    margin: -6px 0 0 0;
+    margin: 1px 0 0 0;
     padding: 0 12px;
+    height: 60px;
+    width: 140px;
     background-color: $blake-dark-grey !important;
     opacity: .98;
+    @media (min-width: 768px) {
+      margin: -10px 0 0 0;
+      padding: 0 12px;
+      height: 67px;
+      width: inherit;
+    }
     &:hover, &:focus {
       background-color: black !important;
     }
     &::after {
+      margin-top: 0.75rem;
       color: $secondary-color;
     }
     .dropdown-item:hover {
@@ -233,20 +257,36 @@ p {
     padding: 0 1rem;
   }
 }
-.collapse.show.navbar-collapse {
+.dropdown-divider {
+  margin: 0.5rem 1rem;
+  border-top: 1px solid rgba(255,255,255,.8);
+}
+.collapse.show.navbar-collapse,
+.collapse.navbar-collapse {
   margin-left: -1rem;
   justify-content: center;
   height: 75px !important;
   .navbar-nav {
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
+    .menu-items {
+      display: flex;
+      flex-direction: column;
+      @media (min-width: 768px) {
+        flex-direction: row;
+      }
+    }
   }
 }
 .dropdown-menu {
-  margin: -4px 0 0 0;
+  margin: -10px 0 0 127px;
   padding-bottom: .5rem;
   background-color: $blake-dark-grey;
   border-radius: .2rem;
   opacity: .98;
+  @media (min-width: 768px) {
+    margin: -4px 0 0 0;
+  }
   a {
     font-family: "Boston" !important;
     font-size: 1rem;
