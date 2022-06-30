@@ -120,6 +120,7 @@ const PaintingPage = ({
                 "url": "${productUrl}",
                 "price": "${price}",
                 "priceCurrency": "USD",
+                "priceValidUntil": "2022-07-31",
                 "itemCondition": "https://schema.org/UsedCondition",
                 "availability": "${productAvailability}"
               }

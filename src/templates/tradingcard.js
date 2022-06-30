@@ -99,7 +99,10 @@ const Tradingcard = ({
             "description": "${subtitle}",
             "url": "${productUrl}",
             "image": "${productImageUrl}",
-            "brand":"The Jamieson Collection",
+            "brand": {
+              "@type": "Brand",
+              "name": "Topps"
+            },
             "logo": "https://iartx.com/icons/icon-72x72.png",
             "offers": [
               {
@@ -107,6 +110,7 @@ const Tradingcard = ({
                 "url": "${productUrl}",
                 "price": "${price}",
                 "priceCurrency": "USD",
+                "priceValidUntil": "2022-07-31",
                 "itemCondition": "https://schema.org/NewCondition",
                 "availability": "${productAvailability}"
               }
