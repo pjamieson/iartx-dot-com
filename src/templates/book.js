@@ -112,7 +112,10 @@ const BookPage = ({
             "description": "${productDescription}",
             "url": "${productUrl}",
             "image": "${productImageUrl}",
-            "brand": "${publisher}",
+            "brand": {
+              "@type": "Brand",
+              "name": "${publisher}"
+            },
             "logo": "https://iartx.com/icons/icon-72x72.png",
             "offers": [
               {
