@@ -102,6 +102,7 @@ const PaintingPage = ({
             "@type": "Product",
             "productID": "${sku}",
             "sku": "${sku}",
+            "identifier_exists": "false",
             "category": "${productCategory}",
             "name": "${title}",
             "description": "${productDescription}",

@@ -95,6 +95,8 @@ const BookPage = ({
   const productCondition = isAsNew ? "https://schema.org/NewCondition" : "http://schema.org/UsedCondition"
   const productAvailability = qtyAvailNow > 0 ? "http://schema.org/InStock" : "http://schema.org/OutOfStock"
 
+  const productIdentifierExists = (isbn && isbn.length > 9) ? "true" : "false"
+
   return (
     <Layout>
       <Seo title={title} description={seo_description} />
@@ -107,6 +109,7 @@ const BookPage = ({
             "productID": "${sku}",
             "sku": "${sku}",
             "isbn": "${isbn}",
+            "identifier_exists": "${productIdentifierExists}",
             "category": "Media > Books > Print Books",
             "name": "${title}",
             "description": "${productDescription}",

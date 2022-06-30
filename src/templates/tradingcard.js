@@ -94,6 +94,7 @@ const Tradingcard = ({
             "@type": "Product",
             "productID": "${sku}",
             "sku": "${sku}",
+            "identifier_exists": "false",
             "category": "Arts & Entertainment > Hobbies & Creative Arts > Collectibles > Collectible Trading Cards",
             "name": "${productTitle}",
             "description": "${subtitle}",
