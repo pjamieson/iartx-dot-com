@@ -6,7 +6,7 @@ import { formatPrice } from "../utils/format"
 import { getImageUrl } from "../utils/image-url"
 
 const CardImageCaptionLink = ({ item, caption_format }) => {
-  console.log("CardImageLinkTitle item", item)
+  //console.log("CardImageLinkTitle item", item)
 
   // Use the primary image, the first of the images set
   const image_url = ( item.images[0] ? getImageUrl(item.images[0], "medium") : "" )
