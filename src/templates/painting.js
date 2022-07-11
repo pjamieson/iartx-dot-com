@@ -82,6 +82,7 @@ const PaintingPage = ({
   const prof = subgenres[0].name === "Haitian Art" ? "Haitian artist" : "artist"
 
   // Schema.org calculated values
+  const productTitle = (form === "Typewriter" ? title : `${creatorname} - ${title}`)
   const seo_description = (form === "Typewriter" ? `Images and details about the ${title} typewriter from The Jamieson Collection` : `Images of and details about the original ${form} “${title}” by the ${prof} ${creatorname}`)
 
   const productCategory = (form === "Typewriter" ? "Office Supplies > Office Equipment > Typewriters" : "Home & Garden > Decor > Artwork > Posters, Prints, & Visual Artwork")
@@ -93,7 +94,7 @@ const PaintingPage = ({
 
   return (
     <Layout>
-      <Seo title={title} description={seo_description} />
+      <Seo title={productTitle} description={seo_description} />
       <Helmet>
         <script type="application/ld+json">
         {`
@@ -104,7 +105,7 @@ const PaintingPage = ({
             "sku": "${sku}",
             "identifier_exists": "false",
             "category": "${productCategory}",
-            "name": "${title}",
+            "name": "${productTitle}",
             "description": "${productDescription}",
             "url": "${productUrl}",
             "image": [
@@ -121,7 +122,7 @@ const PaintingPage = ({
                 "url": "${productUrl}",
                 "price": "${price}",
                 "priceCurrency": "USD",
-                "priceValidUntil": "2022-07-31",
+                "priceValidUntil": "2022-08-31",
                 "itemCondition": "https://schema.org/UsedCondition",
                 "availability": "${productAvailability}"
               }

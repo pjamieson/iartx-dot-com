@@ -111,7 +111,7 @@ const Tradingcard = ({
                 "url": "${productUrl}",
                 "price": "${price}",
                 "priceCurrency": "USD",
-                "priceValidUntil": "2022-07-31",
+                "priceValidUntil": "2022-08-31",
                 "itemCondition": "https://schema.org/NewCondition",
                 "availability": "${productAvailability}"
               }
