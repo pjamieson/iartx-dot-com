@@ -725,7 +725,8 @@ p {
   .img-hover-zoom {
     border-radius: 6px;
     img {
-      border-radius: 6px;
+      margin-left: 2px;
+      border-radius: 6px 6px 0 0;
     }
   }
   .card {
