@@ -94,6 +94,8 @@ const Tradingcard = ({
             "@type": "Product",
             "productID": "${sku}",
             "sku": "${sku}",
+            "gtin": "",
+            "mpn": "",
             "identifier_exists": "false",
             "category": "Arts & Entertainment > Hobbies & Creative Arts > Collectibles > Collectible Trading Cards",
             "name": "${productTitle}",
