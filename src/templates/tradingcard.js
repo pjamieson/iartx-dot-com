@@ -102,10 +102,6 @@ const Tradingcard = ({
             "description": "${subtitle}",
             "url": "${productUrl}",
             "image": "${productImageUrl}",
-            "brand": {
-              "@type": "Brand",
-              "name": "Topps"
-            },
             "logo": "https://iartx.com/icons/icon-72x72.png",
             "offers": [
               {
