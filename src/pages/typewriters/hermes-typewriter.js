@@ -19,7 +19,7 @@ const HermesTypewritersPage = ({ data }) => {
     allStrapiPainting: { nodes: paintings },
   } = data
 
-  const seo_description = "Images of vintage Hermes typewriters offered for sale on iArtX.com, with links to details about each typewriter."
+  const seo_description = "A brief history of Hermes portable typewriter models manufactured from the 1930s through the 1970s, covering Hermes 2000, 3000, Featherweight, Baby and Rocket."
 
   return (
     <Layout>
@@ -53,7 +53,7 @@ const HermesTypewritersPage = ({ data }) => {
               <p>1954 Hermes Baby</p>
             </div>
             <div className="historical-text">
-              <h2>A Brief History of E. Paillard S.A. and their Hermes Typewriters</h2>
+              <h2>A Brief History of E. Paillard S.A. and the Hermes Portable Typewriters</h2>
 
               <p>Hermes typewriters were designed and manufactured by the firm E. Paillard & Cie. S.A., of Yverdon, Switzerland. (Some erroneously state that these typewriters were products of Hermès of Paris; they were not.) Paillard had started out as a family business in 1814, making watch and music box mechanisms. They produced standard-size manual typewriter models beginning in 1923, expanded into cameras and projectors (branded Bolex Paillard) in the 1940s, and entered the electric typewriter market in 1959.</p>
 
