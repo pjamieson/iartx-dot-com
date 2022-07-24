@@ -10,7 +10,7 @@ const HaitianArtPage = ({ data }) => {
     allStrapiPainting: { nodes: paintings },
   } = data
 
-  const seo_description = "Illustrates the Haitian Art offered for sale on iArtX.com, including paintings, and wood and metal sculptures."
+  const seo_description = "Examples of Haitian Art from the 1950s to the 2020s, including paintings, and wood and metal sculptures. Illustrates the curated selection of Haitian Art offered for sale on iArtX.com."
 
   return (
     <Layout>

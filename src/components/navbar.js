@@ -66,10 +66,13 @@ const Navbar = () => {
                 </MDBDropdownToggle>
                 <MDBDropdownMenu>
                   <MDBDropdown dropright>
-                    <MDBDropdownToggle>Artists A - E</MDBDropdownToggle>
+                    <MDBDropdownToggle>Artists A - D</MDBDropdownToggle>
                     <MDBDropdownMenu>
                       <MDBDropdownItem>
                         <Link className="menu-link" to="/artists/aladin-agathe/">Aladin, Agathe</Link>
+                      </MDBDropdownItem>
+                      <MDBDropdownItem>
+                        <Link className="menu-link" to="/artists/arijac-jacques-harry/">Arijac (Harry Jacques)</Link>
                       </MDBDropdownItem>
                       <MDBDropdownItem>
                         <Link className="menu-link" to="/artists/auguste-toussaint/">Auguste, Toussaint</Link>
@@ -105,22 +108,19 @@ const Navbar = () => {
                   </MDBDropdown>
 
                   <MDBDropdown dropright>
-                    <MDBDropdownToggle>Artists F - K</MDBDropdownToggle>
+                    <MDBDropdownToggle>Artists E - K</MDBDropdownToggle>
                     <MDBDropdownMenu>
                       <MDBDropdownItem>
-                        <Link className="menu-link" to="/artists/francois-roger/">François, Roger</Link>
+                        <Link className="menu-link" to="/artists/efdot-friedensohn-eric/">Efdot (Eric Friedensohn)</Link>
                       </MDBDropdownItem>
                       <MDBDropdownItem>
-                        <Link className="menu-link" to="/artists/efdot-friedensohn-eric/">Friedensohn, Eric “Efdot”</Link>
+                        <Link className="menu-link" to="/artists/francois-roger/">François, Roger</Link>
                       </MDBDropdownItem>
                       <MDBDropdownItem>
                         <Link className="menu-link" to="/artists/hector-jean-voltaire/">Hector, Jean Voltaire</Link>
                       </MDBDropdownItem>
                       <MDBDropdownItem>
                         <Link className="menu-link" to="/artists/hung-pham-quoc/">Hùng, Phạm Quốc</Link>
-                      </MDBDropdownItem>
-                      <MDBDropdownItem>
-                        <Link className="menu-link" to="/artists/arijac-jacques-harry/">Jacques, Harry “Arijac”</Link>
                       </MDBDropdownItem>
                       <MDBDropdownItem>
                         <Link className="menu-link" to="/artists/jamieson-blake/">Jamieson, Blake</Link>
