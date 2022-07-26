@@ -25,7 +25,7 @@ const HermesTypewritersPage = ({ data }) => {
     <Layout>
       <Seo title="Hermes Typewriters" description={seo_description} />
       <div className="container page-container">
-        <h1>Typewriters - Hermes</h1>
+        <h1>Hermes Typewriters - Portables & Ultra-Portables</h1>
 
         { paintings.length === 0 &&
           <MDBCard>
