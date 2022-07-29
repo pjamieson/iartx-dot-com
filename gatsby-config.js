@@ -17,8 +17,14 @@ module.exports = {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         trackingIds: [
-          "G-R82NFHN55T",
+          `${process.env.GATSBY_GOOGLE_ANALYTICS_ID}`,
+          `${process.env.GATSBY_GOOGLE_ADS_ID}`,
         ],
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: true,
+          respectDNT: true,
+        },
       },
     },
     {

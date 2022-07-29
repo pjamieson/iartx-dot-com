@@ -196,6 +196,9 @@ const PaintingPage = ({
                     <button type="button" className="btn btn-add-to-cart btn-primary btn-rounded" onClick={() => {
                       addToCart(cartItem, qty)
                       setInCart(true)
+                      window.gtag("event", "conversion", {
+                        send_to: [`${process.env.GATSBY_GOOGLE_ADS_ID}/Mc6uCNTLgdEDEMvG1c8D`]
+                      })
                     }}>
                       <i className="fas fa-cart-plus"></i>Add to Cart
                     </button>
