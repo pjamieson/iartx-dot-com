@@ -89,7 +89,8 @@ const BookPage = ({
 
   // Schema.org calculated values
   const seo_description = `Images of and details about the book “${title}” by ${creatorname}.`
-  const productDescription = subtitle ? subtitle : `A ${binding} book by ${creatorname}`
+  const productName = `${creatorname} - ${title}`
+  const productDescription = subtitle ? `A ${binding} book by ${creatorname}. ${subtitle}` : `A ${binding} book by ${creatorname}.`
   const productUrl = `https://iartx.com/books/${slug}/`
   const productImageUrl = getImageUrl(images[0], "small")
   const productCondition = isAsNew ? "https://schema.org/NewCondition" : "http://schema.org/UsedCondition"
