@@ -11,7 +11,7 @@ import hermes1 from "../../images/Hermes 1936 Baby Featherweight 400.jpg"
 import hermes2 from "../../images/Hermes 1949 Baby 400.jpg"
 import hermes3 from "../../images/Hermes 1954 Baby 400.jpg"
 import hermes4 from "../../images/Hermes 1969 Rocket 400.jpg"
-import hermes5 from "../../images/Hermes 1970 3000 400.jpg"
+import hermes5 from "../../images/Hermes 1969 3000 400.jpg"
 import hermes6 from "../../images/Hermes 1972 3000 400.jpg"
 
 const HermesTypewritersPage = ({ data }) => {
