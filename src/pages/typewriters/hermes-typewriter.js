@@ -95,9 +95,9 @@ const HermesTypewritersPage = ({ data }) => {
               </div>
               <p>1969 Hermes Rocket</p>
               <div className="image-container">
-                <img className="card" src={hermes5} alt="1970 Hermes 3000 typewriter" />
+                <img className="card" src={hermes5} alt="1969 Hermes 3000 typewriter" />
               </div>
-              <p>1970 Hermes 3000 (second generation)</p>
+              <p>1969 Hermes 3000 (second generation)</p>
               <div className="image-container">
                 <img className="card" src={hermes6} alt="1972 Hermes 3000 typewriter" />
               </div>
