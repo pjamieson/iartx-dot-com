@@ -98,15 +98,15 @@ const HermesTypewritersPage = ({ data }) => {
               <div className="image-container">
                 <img className="card" src={hermes21} alt="1969 Hermes Rocket typewriter" />
               </div>
-              <p>1961 Hermes 3000 (first generation)</p>
+              <p>1961 Hermes 3000 (1st generation)</p>
               <div className="image-container">
                 <img className="card" src={hermes22} alt="1961 Hermes 3000 typewriter" />
               </div>
-              <p>1969 Hermes 3000 (second generation)</p>
+              <p>1969 Hermes 3000 (2nd generation)</p>
               <div className="image-container">
                 <img className="card" src={hermes23} alt="1972 Hermes 3000 typewriter" />
               </div>
-              <p>1972 Hermes 3000 (third generation)</p>
+              <p>1972 Hermes 3000 (3rd generation)</p>
             </div>
           </section>
 
