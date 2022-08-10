@@ -11,8 +11,9 @@ import hermes1 from "../../images/Hermes 1936 Baby Featherweight 400.jpg"
 import hermes2 from "../../images/Hermes 1949 Baby 400.jpg"
 import hermes3 from "../../images/Hermes 1954 Baby 400.jpg"
 import hermes4 from "../../images/Hermes 1969 Rocket 400.jpg"
-import hermes5 from "../../images/Hermes 1969 3000 400.jpg"
-import hermes6 from "../../images/Hermes 1972 3000 400.jpg"
+import hermes21 from "../../images/Hermes 1961 3000 400.jpg"
+import hermes22 from "../../images/Hermes 1969 3000 400.jpg"
+import hermes23 from "../../images/Hermes 1972 3000 400.jpg"
 
 const HermesTypewritersPage = ({ data }) => {
   const {
@@ -51,6 +52,10 @@ const HermesTypewritersPage = ({ data }) => {
                 <img className="card" src={hermes3} alt="1954 Hermes Baby typewriter" />
               </div>
               <p>1954 Hermes Baby</p>
+              <div className="image-container">
+                <img className="card" src={hermes4} alt="1969 Hermes Baby typewriter" />
+              </div>
+              <p>1969 Hermes Baby</p>
             </div>
             <div className="historical-text">
               <h2>A Brief History of E. Paillard S.A. and their Hermes Portable Typewriters</h2>
@@ -91,15 +96,15 @@ const HermesTypewritersPage = ({ data }) => {
             </div>
             <div className="historical-images">
               <div className="image-container">
-                <img className="card" src={hermes4} alt="1969 Hermes Rocket typewriter" />
+                <img className="card" src={hermes21} alt="1969 Hermes Rocket typewriter" />
               </div>
-              <p>1969 Hermes Rocket</p>
+              <p>1961 Hermes 3000 (first generation)</p>
               <div className="image-container">
-                <img className="card" src={hermes5} alt="1969 Hermes 3000 typewriter" />
+                <img className="card" src={hermes22} alt="1961 Hermes 3000 typewriter" />
               </div>
               <p>1969 Hermes 3000 (second generation)</p>
               <div className="image-container">
-                <img className="card" src={hermes6} alt="1972 Hermes 3000 typewriter" />
+                <img className="card" src={hermes23} alt="1972 Hermes 3000 typewriter" />
               </div>
               <p>1972 Hermes 3000 (third generation)</p>
             </div>
