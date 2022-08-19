@@ -760,6 +760,12 @@ p {
       }
     }
   }
+  .na-card {
+    margin: 0 auto;
+    width: fit-content;
+    max-width: none;
+    background-color: $secondary-color;
+  }
   .imageset {
     margin-top: 1em;
   }
