@@ -7,7 +7,6 @@ import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import CardImageCaptionLink from "../../components/card-image-caption-link"
 
-
 import remington1 from "../../images/Remington 1934 front 400.jpg"
 import remington2 from "../../images/Remington 1934 back 400.jpg"
 import remington3 from "../../images/Remington 1934 case 400.jpg"
@@ -17,13 +16,13 @@ const RemingtonTypewritersPage = ({ data }) => {
     allStrapiPainting: { nodes: paintings },
   } = data
 
-  const seo_description = "A brief history of Remington Noiseless typewriter models, with illustrations of collectable examples offered for purchase."
+  const seo_description = "A brief history of Noiseless typewriter models, including Remington Noiseless Portable, Monarch Deluxe Noiseless, and Underwood Noiseless 77, with illustrations of collectable examples offered for purchase."
 
   return (
     <Layout>
       <Seo title="Remington Typewriters - Noiseless Models" description={seo_description} />
       <div className="container page-container">
-        <h1>Typewriters - Remington</h1>
+        <h1>Typewriters - Remington Noiseless Models</h1>
 
         <section className="brand-story">
           <div className="historical-images">
@@ -39,13 +38,13 @@ const RemingtonTypewritersPage = ({ data }) => {
           <div className="historical-text">
             <h2>A Brief History of "Noiseless" Typewriters</h2>
 
-            <p>"Noiseless" typewriters employ a thrust-action that prevents the machine's typebars from striking its platen at full force. Essentially, the typebars' travel ends just as it reaches the platen, thus reducing—though certainly not eliminating—the sound made by the strike. Introduced in 1891 on the Franklin typewriter, the noiseless mechanism was subsequently enhanced by its creator, Wellington P. Kidder, and adopted by the Noiseless Typewriter Company of Middletown, Connecticut, who released their <b>Noiseless Portable</b> in 1921.</p>
+            <p>"Noiseless" typewriters employ a thrust-action that prevents the machine's typebars from striking its platen at full force. Essentially, the typebars' motion halts just as it reaches the platen, thus reducing—though certainly not eliminating—the sound made by the strike. Introduced in 1891 on the Franklin typewriter, the noiseless mechanism was subsequently enhanced by its creator, Wellington P. Kidder, and adopted by the Noiseless Typewriter Company of Middletown, Connecticut, who released their <b>Noiseless Portable</b> in 1921.</p>
 
             <h3>Remington Buys the Noiseless Typewriter Company</h3>
 
-            <p>In 1924, Remington bought the Noiseless Typewriter Company. George G. Going, the inventor of the Noiseless Portable, went on to work for Remington. About seven years later, in August 1931, Remington introduced their <b>Remington Noiseless Portable</b>, followed in November 1931 by the larger <b>Remington Noiseless Model Seven</b>. The "beefier" <b>Remington Noiseless 8</b>—virtually identical to the Noiseless Model Seven—was launched in October 1932.</p>
+            <p>In 1924, Remington bought the Noiseless Typewriter Company. George G. Going, the inventor of the Noiseless Portable, went on to work for Remington. About seven years later, in August 1931, Remington introduced their <b>Remington Noiseless Portable</b>, followed in November 1931 by the larger <b>Remington Noiseless Model Seven</b>. The "beefier" <b>Remington Noiseless 8</b>—virtually identical to the Noiseless Model Seven under the hood—was launched in October 1932.</p>
 
-            <p>The <b>Remington Noiseless Junior</b> was introduced in September 1933. A scaled down version if the Remington Noiseless Portable, has no backspace, no tabs, and no ribbon color selector. It retailed for $57.50, $12.00 less that its more—functional brother. Reportedly, only 1401 Remington Noiseless Juniors were manufactured before production was halted.</p>
+            <p>The <b>Remington Noiseless Junior</b> was introduced in September 1933. A scaled down version if the Remington Noiseless Portable, it has no backspace, no tabs, and no ribbon color selector. It retailed for $57.50, $12.00 less that its more—functional brother. Reportedly, only 1401 Remington Noiseless Juniors were manufactured before its production was halted.</p>
 
             <h3>Underwood Noiseless Models - Re-branded Remingtons</h3>
 
