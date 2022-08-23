@@ -44,7 +44,7 @@ const RemingtonTypewritersPage = ({ data }) => {
 
             <p>In 1924, Remington bought the Noiseless Typewriter Company. George G. Going, the inventor of the Noiseless Portable, went on to work for Remington. About seven years later, in August 1931, Remington introduced their <b>Remington Noiseless Portable</b>, followed in November 1931 by the larger <b>Remington Noiseless Model Seven</b>. The "beefier" <b>Remington Noiseless 8</b>—virtually identical to the Noiseless Model Seven under the hood—was launched in October 1932.</p>
 
-            <p>The <b>Remington Noiseless Junior</b> was introduced in September 1933. A scaled down version if the Remington Noiseless Portable, it has no backspace, no tabs, and no ribbon color selector. It retailed for $57.50, $12.00 less that its more—functional brother. Reportedly, only 1401 Remington Noiseless Juniors were manufactured before its production was halted.</p>
+            <p>The <b>Remington Noiseless Junior</b> was introduced in September 1933. A scaled down version of the Remington Noiseless Portable, it has no backspace, no tabs, and no ribbon color selector. It retailed for $57.50, $12.00 less that its more—functional brother. Reportedly, only 1401 Remington Noiseless Juniors were manufactured before its production was halted.</p>
 
             <h3>Underwood Noiseless Models - Re-branded Remingtons</h3>
 
@@ -52,7 +52,7 @@ const RemingtonTypewritersPage = ({ data }) => {
 
             <h3>The Last Pre-War Noiseless Models</h3>
 
-            <p>The <b>Remington Deluxe Noiseless</b>, produced from May 1938 to April 1941, was essentially a Noiseless Seven with a smaller paper table and a touch regulator. This machine was also branded as the <b>Monarch Deluxe Noiseless</b>, the Remington Noiseless Portable, the <b>Smith Premier Noiseless Portable</b>. The retail price in 1940 was $67.50. Finally, there was the <b>Remington Deluxe Noiseless Portable</b>—called the <i>1941 Line</i>—manufactiued from about June 1940 to May 1942. It retailed for $69.50.</p>
+            <p>The <b>Remington Deluxe Noiseless</b>, produced from May 1938 to April 1941, was essentially a Noiseless Seven with a smaller paper table and a touch regulator. This machine was also branded as the <b>Monarch Deluxe Noiseless</b>, the Remington Noiseless Portable, and the <b>Smith Premier Noiseless Portable</b>. The retail price in 1940 was $67.50. Finally, there was the <b>Remington Deluxe Noiseless Portable</b>—called the <i>1941 Line</i>—manufactiued from about June 1940 to May 1942. It retailed for $69.50.</p>
 
             <p>Remington's production of typewriters stopped in 1942 as manufacturing shifted to support the war effort. Production of the desktop Noiseless #7 resumed in September 1945.</p>
 
