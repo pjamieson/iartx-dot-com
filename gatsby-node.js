@@ -1,6 +1,6 @@
-const redirects = require("./redirects.json")
+//const redirects = require("./redirects.json")
 exports.createPages = async ({ graphql, actions }) => {
-
+/*
   const { createRedirect } = actions
 	redirects.forEach(redirect =>
 		createRedirect({
@@ -9,7 +9,7 @@ exports.createPages = async ({ graphql, actions }) => {
       isPermanent: redirect.isPermanent,
 	  })
 	)
-
+*/
   const { createPage } = actions
   const result = await graphql(
     `
