@@ -77,7 +77,7 @@ const Tradingcard = ({
   }
 
   // Schema.org calculated values
-  const productTitle = `${title} - ${cardseries.name}`
+  const productTitle = `${creatorname} - ${title} - ${cardseries.name}`
   const seo_description = `Images of and details about the ${cardseries.name} trading card ${title} by ${creatorname}.`
   const productUrl = `https://iartx.com/cards/${slug}/`
   const productImageUrl = getImageUrl(images[0], "small")
@@ -109,7 +109,7 @@ const Tradingcard = ({
                 "url": "${productUrl}",
                 "price": "${price}",
                 "priceCurrency": "USD",
-                "priceValidUntil": "2022-09-30",
+                "priceValidUntil": "2022-10-31",
                 "itemCondition": "https://schema.org/NewCondition",
                 "availability": "${productAvailability}"
               }

@@ -105,7 +105,7 @@
   },
   {
     "fromPath": "/domond-wilmino-1.html",
-    "toPath": "/gallery/domond-wilmino-marchandes/",
+    "toPath": "/artists/domond-wilmino/",
     "isPermanent": true
   },
   {
@@ -185,12 +185,12 @@
   },
   {
     "fromPath": "/jose-hilome.html",
-    "toPath": "/artists/jose-hilome/",
+    "toPath": "/art/haitian-art/",
     "isPermanent": true
   },
   {
     "fromPath": "/jose-hilome-1.html",
-    "toPath": "/gallery/jose-hilome-trois-femmes/",
+    "toPath": "/art/haitian-art/",
     "isPermanent": true
   },
   {
@@ -275,12 +275,12 @@
   },
   {
     "fromPath": "/obin-philome.html",
-    "toPath": "/artists/obin-philome/",
+    "toPath": "/art/haitian-art/",
     "isPermanent": true
   },
   {
     "fromPath": "/obin-philome-1.html",
-    "toPath": "/gallery/obin-philome-sur-la-route/",
+    "toPath": "/art/haitian-art/",
     "isPermanent": true
   },
   {
@@ -295,7 +295,7 @@
   },
   {
     "fromPath": "/pierre-andre-2.html",
-    "toPath": "/gallery/pierre-andre-annual-offering/",
+    "toPath": "/artists/pierre-andre/",
     "isPermanent": true
   },
   {
