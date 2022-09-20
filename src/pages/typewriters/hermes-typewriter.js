@@ -11,6 +11,7 @@ import hermes1 from "../../images/Hermes 1936 Baby Featherweight 400.jpg"
 import hermes2 from "../../images/Hermes 1949 Baby 400.jpg"
 import hermes3 from "../../images/Hermes 1954 Baby 400.jpg"
 import hermes4 from "../../images/Hermes 1969 Rocket 400.jpg"
+import hermes20 from "../../images/Hermes 1938 2000 400.jpg"
 import hermes21 from "../../images/Hermes 1961 3000 400.jpg"
 import hermes22 from "../../images/Hermes 1969 3000 400.jpg"
 import hermes23 from "../../images/Hermes 1972 3000 400.jpg"
@@ -43,7 +44,7 @@ const HermesTypewritersPage = ({ data }) => {
             </div>
             <p>1954 Hermes Baby</p>
             <div className="image-container">
-              <img className="card" src={hermes4} alt="1969 Hermes Baby typewriter" />
+              <img className="card" src={hermes4} alt="1969 Hermes Rocket typewriter" />
             </div>
             <p>1969 Hermes Baby</p>
           </div>
@@ -86,7 +87,11 @@ const HermesTypewritersPage = ({ data }) => {
           </div>
           <div className="historical-images">
             <div className="image-container">
-              <img className="card" src={hermes21} alt="1969 Hermes Rocket typewriter" />
+              <img className="card" src={hermes20} alt="1938 Hermes 2000 typewriter" />
+            </div>
+            <p>1938 Hermes 2000</p>
+            <div className="image-container">
+              <img className="card" src={hermes21} alt="1961 Hermes 3000 typewriter" />
             </div>
             <p>1961 Hermes 3000 (1st generation)</p>
             <div className="image-container">
