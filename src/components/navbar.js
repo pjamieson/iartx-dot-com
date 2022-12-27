@@ -165,9 +165,6 @@ const Navbar = () => {
                         <Link className="menu-link" to="/artists/st-fleur-michelle/">St. Fleur, Michelle</Link>
                       </MDBDropdownItem>
                       <MDBDropdownItem>
-                        <Link className="menu-link" to="/artists/stephane-micius/">Stephane, Micius</Link>
-                      </MDBDropdownItem>
-                      <MDBDropdownItem>
                         <Link className="menu-link" to="/artists/taylor-j/">Taylor, J.</Link>
                       </MDBDropdownItem>
                       <MDBDropdownItem>
