@@ -10,7 +10,8 @@ import CardImageCaptionLink from "../../components/card-image-caption-link"
 import hermes1 from "../../images/Hermes 1936 Baby Featherweight 400.jpg"
 import hermes2 from "../../images/Hermes 1949 Baby 400.jpg"
 import hermes3 from "../../images/Hermes 1954 Baby 400.jpg"
-import hermes4 from "../../images/Hermes 1969 Rocket 400.jpg"
+import hermes4 from "../../images/Hermes 1959 Rocket 400.jpg"
+import hermes5 from "../../images/Hermes 1969 Rocket 400.jpg"
 import hermes20 from "../../images/Hermes 1938 2000 400.jpg"
 import hermes21 from "../../images/Hermes 1961 3000 400.jpg"
 import hermes22 from "../../images/Hermes 1969 3000 400.jpg"
@@ -44,9 +45,13 @@ const HermesTypewritersPage = ({ data }) => {
             </div>
             <p>1954 Hermes Baby</p>
             <div className="image-container">
-              <img className="card" src={hermes4} alt="1969 Hermes Rocket typewriter" />
+              <img className="card" src={hermes4} alt="1959 Hermes Rocket typewriter" />
             </div>
-            <p>1969 Hermes Baby</p>
+            <p>1959 Hermes Rocket</p>
+            <div className="image-container">
+              <img className="card" src={hermes5} alt="1969 Hermes Rocket typewriter" />
+            </div>
+            <p>1969 Hermes Rocket</p>
           </div>
           <div className="historical-text">
             <h2>A Brief History of E. Paillard S.A. and their Hermes Portable Typewriters</h2>
