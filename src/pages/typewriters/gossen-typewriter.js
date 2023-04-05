@@ -136,6 +136,8 @@ const GossenTypewritersPage = ({ data }) => {
 
     <p className="source"><b>Davis, Will</b>. <em><a href="http://www.willdavis.org/Reiseschreibmaschinen2.html" target="_blank" rel="noopener noreferrer">Reiseschreibmaschinen 2:  The Tippa</a>.</em> An undated web page about the Gossen, Adler, and Triumph Tippas. Retreived 03 Apr 2023. [It appears this page was originally illustrated with 16 photos; sadly it now only has placeholders for them.]</p>
 
+    <p className="source"><b>GMC Istruments</b>. <em><a href="https://www.gmc-instruments.de/en/company/about-us/history/" target="_blank" rel="noopener noreferrer">History of the Gossen Company</a>.</em> Retreived 05 Apr 2023. [Gossen Company history on the website of the company that now (April 2023) owns it. Scroll to bottom of the page and open the <em>History in Detail: 1906 - 1954</em> tab.]</p>
+
     <p className="source"><b>Messenger, Robert</b>. <em><a href="https://oztypewriter.blogspot.com/2012/01/gossen-tippa-mighty-mouse-of.html" target="_blank" rel="noopener noreferrer">The Gossen Tippa: The Mighty Mouse of Typewriters</a>.</em> Blog post dated 07 Jan 2012. Retreived 03 Apr 2023. [This is the best discussion and comparison  of the various Tippa models that we have seen.]</p>
 
     <p className="source"><b>Munk, Theodore</b>. <em><a href="https://munk.org/typecast/2015/12/26/gossen-tippa-serials-updated/" target="_blank" rel="noopener noreferrer">Gossen Tippa Serials Updated!</a>.</em> Blog post dated 26 Dec 2015. Retreived 05 Apr 2023. [Munk announces refinements to the TWDB Tippa serial number pages, and pointes out that Adler simply continued their numbering from where Gossen stopped.]</p>
