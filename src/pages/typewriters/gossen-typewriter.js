@@ -126,7 +126,7 @@ const GossenTypewritersPage = ({ data }) => {
 
     <p className="source"><b>Messenger, Robert</b>. <em><a href="https://oztypewriter.blogspot.com/2012/05/adler-tippa-pilot-portable-typewriter.html" target="_blank" rel="noopener noreferrer">The Adler Tippa Pilot Portable Typewriter</a>.</em> Blog post dated 14 May 2012. Retreived 03 Apr 2023. [There are no Adler Tippa Pilot galleries in the Typewriter Database, but Robert Messenger shows us his.]</p>
 
-    <p className="source"><b>van Gaalen, Laurenz</b>. <em><a href="https://typewriterdatabase.com/1957-adler-tippa.16254.typewriter" target="_blank" rel="noopener noreferrer">1957 Adler Tippa #4157439 Gallery at TypewriterDatabase.com</a>.</em> Retreived 03 Apr 2023. [This Adler Tippa was probably made by Gossen. It has a metal lid, the leather breifcase, and apparently came with a Gossen-branded instructions.]</p>
+    <p className="source"><b>van Gaalen, Laurenz</b>. <em><a href="https://typewriterdatabase.com/1957-adler-tippa.16254.typewriter" target="_blank" rel="noopener noreferrer">1957 Adler Tippa #4157439 Gallery at TypewriterDatabase.com</a>.</em> Retreived 03 Apr 2023. [This Adler Tippa was probably made by Gossen. It has a metal lid, the leather breifcase, and apparently came with Gossen-branded instructions.]</p>
 
     <h4>Primary Sources:</h4>
 
