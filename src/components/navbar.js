@@ -266,13 +266,13 @@ const Navbar = () => {
                 </MDBDropdownToggle>
                 <MDBDropdownMenu>
                   <MDBDropdownItem>
-                    <Link className="menu-link" to="/typewriters/gossen-typewriter/">Gossen</Link>
+                    <Link className="menu-link" to="/typewriters/gossen-typewriter/">Gossen Tippa</Link>
                   </MDBDropdownItem>
                   <MDBDropdownItem>
-                    <Link className="menu-link" to="/typewriters/hermes-typewriter/">Hermes</Link>
+                    <Link className="menu-link" to="/typewriters/hermes-typewriter/">Hermes Portables</Link>
                   </MDBDropdownItem>
                   <MDBDropdownItem>
-                    <Link className="menu-link" to="/typewriters/remington-typewriter/">Remington</Link>
+                    <Link className="menu-link" to="/typewriters/remington-typewriter/">Remington Noiseless</Link>
                   </MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>
