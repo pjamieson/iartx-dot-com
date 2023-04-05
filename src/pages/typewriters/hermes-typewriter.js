@@ -88,6 +88,8 @@ const HermesTypewritersPage = ({ data }) => {
 
             <h4>Primary Sources:</h4>
 
+            <p className="source">Polt, Richard. <b>The Typewriter Revolution</b>. Woodstock, VT: The Countryman Press [2015]. Pages 102 (Hermes 3000) and 109 (Hermes Baby).</p>
+
             <p className="source"><b>TypewriterDatabase[dot]com</b>. <em><a href="https://typewriterdatabase.com/hermes.82.typewriter-serial-number-database" target="_blank" rel="noopener noreferrer">Hermes Typewriter Serial Numbers</a>.</em> Retreived 05 Apr 2023.</p>
 
             <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/Hermes.2000.82.bmys" target="_blank" rel="noopener noreferrer">Hermes 2000 Typewriters by Year then Serial Number</a>.</em> Retreived 05 Apr 2023. [Photo-illustrated galleries of typewriters of this model]</p>
@@ -104,7 +106,7 @@ const HermesTypewritersPage = ({ data }) => {
 
             <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/Hermes.Rocket.82.bmys" target="_blank" rel="noopener noreferrer">Hermes Rocket Typewriters by Year then Serial Number</a>.</em> Retreived 05 Apr 2023. [Photo-illustrated galleries of typewriters of this model]</p>
 
-            <p className="source">Polt, Richard. <b>The Typewriter Revolution</b>. Woodstock, VT: The Countryman Press [2015].</p>
+            <p className="source"><b>Typewriter Museum [Helsinki, Finland]</b>. <em><a href="https://typewriter.slk.fi/typewriter-collection/hermes/" target="_blank" rel="noopener noreferrer">Hermes Typewriters Page</a>.</em> Retreived 05 Apr 2023.</p>
           </div>
 
           <div className="historical-images">
