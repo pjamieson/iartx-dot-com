@@ -108,7 +108,7 @@ const GossenTypewritersPage = ({ data }) => {
 
     <p>The earliest <em>Triumph</em> Tippa I have seen (other than a re-branded Gossen Tippa B) appears to be a re-branded, rounded-look <em>Adler</em> Tippa manufactured in 1961. A <b>Triumph Tippa 1</b>-branded model—looking very much like an <em>Adler</em> Tippa 1—appeared in 1965. Japan-made, plastic, <b>Triumph Tippa S</b> and <em>Triumph</em> Tippa-branded machines—looking very much like the <em>Adler</em> Tippa S—were manufactured from the early to the late 1970s.</p>
 
-    <p>Theodore Munk, the mastermind behind the Typewriter Database, notes that—under <em>Royal/Litton</em>—the Tippa S continued in the form of the <b>Royal Caravan</b> and the 1976 and the <b>Royal Sahara</b>. These plastic machines were made in Holland begining in the mid-1970s. The Caravan had tabs; the Sahara did not.</p>
+    <p>Theodore Munk, the mastermind behind the Typewriter Database, notes that—under <em>Royal/Litton</em>—the Tippa S continued in the form of the <b>Royal Caravan</b> and the <b>Royal Sahara</b>. These plastic machines were made in Holland begining in the mid-1970s. The Caravan had tabs; the Sahara did not.</p>
 
     <p>Richard Polt's <em>The Classic Typewriter Page presents Writers and their Typewriters</em> web page lists the following writers as users of  Tippa models: Noel Coward (Gossen Pilot), Jack Higgins (Adler Tippa), Erich Kästner (Gossen Tippa), Stanley Kubrick (Adler Tippa S), and Joe Orton (Adler Tippa). Given the ultraportable size, the solid feel, and the quality of the Gossen models, it surprises me that only two Gossen typewriter-using writers are noted.</p>
 
