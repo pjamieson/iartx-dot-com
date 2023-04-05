@@ -127,7 +127,7 @@ const BookPage = ({
                 "url": "${productUrl}",
                 "price": "${price}",
                 "priceCurrency": "USD",
-                "priceValidUntil": "2022-10-31",
+                "priceValidUntil": "2023-10-31",
                 "itemCondition": "${productCondition}",
                 "availability": "${productAvailability}"
               }
