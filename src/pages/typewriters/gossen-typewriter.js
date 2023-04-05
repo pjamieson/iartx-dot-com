@@ -90,9 +90,9 @@ const GossenTypewritersPage = ({ data }) => {
 
     <h3>Gossen Tippa Case Options — The Office in a Briefcase</h3>
 
-    <p>Different case options were offered for Gossen Tippas from the beginnig. Initially, the most common was the standard metal lid that attaches directly to the machine. The color of that lid typically matches the color of the typewriter itself. Inside the metal lid, there is no room for storage, but there are metal clips mounted on both sides of the base to secure writing instruments or cleaning brushes. Gossen offered an optional, well-made, branded leather briefcase with a compartment that the typewriter (with its metal lid attached) slides into, and another compartment to hold fresh paper and typed sheets.</p>
+    <p>Different case options were offered for Gossen Tippas from the beginning. Initially, the most common was the standard metal lid that attaches directly to the machine. The color of that lid typically matches the color of the typewriter itself. Inside the metal lid, there is no room for storage, but there are metal clips mounted on both sides of the base to secure writing instruments or cleaning brushes. Gossen offered an optional, well-made, branded leather briefcase with a compartment that the typewriter (with its metal lid attached) slides into, and another compartment to hold fresh paper and typed sheets.</p>
 
-    <p>The suitcase-style leather case came in several colors, and included (usually) a burgandy-colored folder attached inside the case lid to hold paper and/or the instructions pamphlet. Branding printed in white on that folder reads <em>Tippa-Boy</em> (In the Typewriter Database, this Tippa-Boy case branding shows up at least three times with a Tippa A Mk. II machine.), <em>Tippa-B</em>, or <em>Tippa necessaire</em> (seen in the Typewriter Database, mostly with Tippa Pilot machines).</p>
+    <p>The suitcase-style leather case came in several colors, and included (usually) a burgundy-colored folder attached inside the case lid to hold paper and/or the instructions pamphlet. Branding printed in white on that folder reads <em>Tippa-Boy</em> (In the Typewriter Database, this Tippa-Boy case branding shows up at least three times with a Tippa A Mk. II machine.), <em>Tippa-B</em>, or <em>Tippa necessaire</em> (seen in the Typewriter Database, mostly with Tippa Pilot machines).</p>
 
     <h3>Autumn 1956 — Gossen Sells Tippa License to Adler</h3>
 
@@ -107,6 +107,8 @@ const GossenTypewritersPage = ({ data }) => {
     <p>1959 saw the launch of the first Adler-designed-and-manufactured Tippa. (Adler had already been manufacturing other typewriter models in Germany for over 60 years.) Their Tippa had a new rounded look, with its design winning awards in Milan in 1960 and in Germany in 1962. The two-piece shell was plastic. Slightly-evolved models, called the <b>Adler Tippa 1</b> and the <b>Adler Tippa 2</b> appeared in 1964 and 1966. A boxy-looking model, the <b>Adler Tippa S</b>, was manufactured in Holland by the merged Triumph-Adler and launched in 1967. That model—with production moving to Japan in the early 1970s—was offered into 1976.</p>
 
     <p>The earliest <em>Triumph</em> Tippa I have seen (other than a re-branded Gossen Tippa B) appears to be a re-branded, rounded-look <em>Adler</em> Tippa manufactured in 1961. A <b>Triumph Tippa 1</b>-branded model—looking very much like an <em>Adler</em> Tippa 1—appeared in 1965. Japan-made, plastic, <b>Triumph Tippa S</b> and <em>Triumph</em> Tippa-branded machines—looking very much like the <em>Adler</em> Tippa S—were manufactured from the early to the late 1970s.</p>
+
+    <p>Theodore Munk, the mastermind behind the Typewriter Database, notes that—under <em>Royal/Litton</em>—the Tippa S continued in the form of the <b>Royal Caravan</b> and the 1976 and the <b>Royal Sahara</b>. These plastic machines were made in Holland begining in the mid-1970s. The Caravan had tabs; the Sahara did not.</p>
 
     <p>Richard Polt's <em>The Classic Typewriter Page presents Writers and their Typewriters</em> web page lists the following writers as users of  Tippa models: Noel Coward (Gossen Pilot), Jack Higgins (Adler Tippa), Erich Kästner (Gossen Tippa), Stanley Kubrick (Adler Tippa S), and Joe Orton (Adler Tippa). Given the ultraportable size, the solid feel, and the quality of the Gossen models, it surprises me that only two Gossen typewriter-using writers are noted.</p>
 
@@ -136,6 +138,8 @@ const GossenTypewritersPage = ({ data }) => {
 
     <p className="source"><b>Messenger, Robert</b>. <em><a href="https://oztypewriter.blogspot.com/2012/01/gossen-tippa-mighty-mouse-of.html" target="_blank" rel="noopener noreferrer">The Gossen Tippa: The Mighty Mouse of Typewriters</a>.</em> Blog post dated 07 Jan 2012. Retreived 03 Apr 2023. [This is the best discussion and comparison  of the various Tippa models that we have seen.]</p>
 
+    <p className="source"><b>Munk, Theodore</b>. <em><a href="https://munk.org/typecast/2015/12/26/gossen-tippa-serials-updated/" target="_blank" rel="noopener noreferrer">Gossen Tippa Serials Updated!</a>.</em> Blog post dated 26 Dec 2015. Retreived 05 Apr 2023. [Munk announces refinements to the TWDB Tippa serial number pages, and pointes out that Adler simply continued their numbering from where Gossen stopped.]</p>
+
     <p className="source"><b>Polt, Richard.</b> <em>The Typewriter Revolution: A Typist's Companion for the 21st Century</em>. Woodstock, VT: The Countryman Press [2015]. Page 106, including a photo of a Gossen Tippa Pilot.</p>
 
     <p className="source"><b>—</b>. <em><a href="https://site.xavier.edu/polt/typewriters/typers.html" target="_blank" rel="noopener noreferrer">The Classic Typewriter Page presents Writers and their Typewriters</a>.</em> Retreived 04 Apr 2023. [Enumerates nearly 600 authors, and lists the typewriter model(s) each was known to use. Often includes links to images of the writers with their machines.]</p>
@@ -155,6 +159,10 @@ const GossenTypewritersPage = ({ data }) => {
     <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/Gossen.Tippa+B.37.bmys" target="_blank" rel="noopener noreferrer">Gossen Tippa B Typewriters by Year then Serial Number</a>.</em> Retreived 03 Apr 2023. [Photo-illustrated galleries of typewriters of this model]</p>
 
     <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/Gossen.Pilot.37.bmys" target="_blank" rel="noopener noreferrer">Gossen Pilot Typewriters by Year then Serial Number</a>.</em> Retreived 03 Apr 2023. [Photo-illustrated galleries of typewriters of this model]</p>
+
+    <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/Royal.Caravan.72.bmys" target="_blank" rel="noopener noreferrer">Royal Caravan Typewriters by Year then Serial Number</a>.</em> Retreived 05 Apr 2023. [Photo-illustrated galleries of typewriters of this model]</p>
+
+    <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/Royal.Sahara.72.bmys" target="_blank" rel="noopener noreferrer">Royal Sahara Typewriters by Year then Serial Number</a>.</em> Retreived 05 Apr 2023. [Photo-illustrated galleries of typewriters of this model]</p>
 
     <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/triumph.94.typewriter-serial-number-database" target="_blank" rel="noopener noreferrer">Triumph Typewriter Serial Numbers</a>.</em> Retreived 03 Apr 2023.</p>
 
