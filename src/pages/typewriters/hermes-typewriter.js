@@ -87,9 +87,26 @@ const HermesTypewritersPage = ({ data }) => {
             <p>According to the website of the Typewriter Museum at Helisinki [Finland] Business College, E. Paillard S.A. was absorbed by Olivetti S.p.A. (Italy) in 1981.</p>
 
             <h4>Primary Sources:</h4>
-            <p className="source"><b>TypewriterDatabase[dot]com</b>. The <em>Hermes Typewriter Serial Numbers</em> page at https://typewriterdatabase.com/hermes.82.typewriter-serial-number-database, and the photo-illustrated <em>...Typewriters by Year then Serial Numbers</em> pages for Hermes Baby, Hermes Baby Featherweight, Hermes Rocket, Hermes 2000, and Hermes 3000.</p>
+
+            <p className="source"><b>TypewriterDatabase[dot]com</b>. <em><a href="https://typewriterdatabase.com/hermes.82.typewriter-serial-number-database" target="_blank" rel="noopener noreferrer">Hermes Typewriter Serial Numbers</a>.</em> Retreived 05 Apr 2023.</p>
+
+            <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/Hermes.2000.82.bmys" target="_blank" rel="noopener noreferrer">Hermes 2000 Typewriters by Year then Serial Number</a>.</em> Retreived 05 Apr 2023. [Photo-illustrated galleries of typewriters of this model]</p>
+
+            <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/Hermes.3000.82.bmys" target="_blank" rel="noopener noreferrer">Hermes 3000 Typewriters by Year then Serial Number</a>.</em> Retreived 05 Apr 2023. [Photo-illustrated galleries of typewriters of this model]</p>
+
+            <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/Hermes.Baby.82.bmys" target="_blank" rel="noopener noreferrer">Hermes Baby Typewriters by Year then Serial Number</a>.</em> Retreived 05 Apr 2023. [Photo-illustrated galleries of typewriters of this model]</p>
+
+            <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/Hermes.Baby+Featherweight.82.bmys" target="_blank" rel="noopener noreferrer">Hermes Baby Featherweight Typewriters by Year then Serial Number</a>.</em> Retreived 05 Apr 2023. [Photo-illustrated galleries of typewriters of this model]</p>
+
+            <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/Hermes.Media+2000.82.bmys" target="_blank" rel="noopener noreferrer">Hermes Media 2000 Typewriters by Year then Serial Number</a>.</em> Retreived 05 Apr 2023. [Photo-illustrated galleries of typewriters of this model]</p>
+
+            <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/Hermes.Media+3.82.bmys" target="_blank" rel="noopener noreferrer">Hermes Media 3 Typewriters by Year then Serial Number</a>.</em> Retreived 05 Apr 2023. [Photo-illustrated galleries of typewriters of this model]</p>
+
+            <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/Hermes.Rocket.82.bmys" target="_blank" rel="noopener noreferrer">Hermes Rocket Typewriters by Year then Serial Number</a>.</em> Retreived 05 Apr 2023. [Photo-illustrated galleries of typewriters of this model]</p>
+
             <p className="source">Polt, Richard. <b>The Typewriter Revolution</b>. Woodstock, VT: The Countryman Press [2015].</p>
           </div>
+
           <div className="historical-images">
             <div className="image-container">
               <img className="card" src={hermes20} alt="1938 Hermes 2000 typewriter" />
