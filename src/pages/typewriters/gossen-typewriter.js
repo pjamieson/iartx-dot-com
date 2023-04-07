@@ -130,8 +130,6 @@ const GossenTypewritersPage = ({ data }) => {
 
     <p className="source"><b>van Gaalen, Laurenz</b>. <em><a href="https://typewriterdatabase.com/1957-adler-tippa.16254.typewriter" target="_blank" rel="noopener noreferrer">1957 Adler Tippa #4157439 Gallery at TypewriterDatabase.com</a>.</em> Retreived 03 Apr 2023. [This Adler Tippa was probably made by Gossen. It has a metal lid, the leather breifcase, and apparently came with Gossen-branded instructions.]</p>
 
-    <p className="source"><b>Wallapop Spain</b>. <em><a href="https://es.wallapop.com/item/vintage-maquina-de-escribir-con-funda-1950s-745491921" target="_blank" rel="noopener noreferrer">1953 Gossen Tippa #78337 with Spanish keyboard and leather briefcase</a>.</em> Retreived 06 Apr 2023. [I tried to purchase this beauty and work out shipping from Spain to California with the seller, but failed. He thought I was a scammer and blocked me from purchasing from him! I hope this machine finds a good home.]</p>
-
      <h4>Primary Sources:</h4>
 
     <p className="source"><b>Dal Chiele, Paolo</b>. <em><a href="https://typewriterdatabase.com/1949-gossen-tippa.13802.typewriter" target="_blank" rel="noopener noreferrer">1949 Gossen Tippa #10815 Gallery at TypewriterDatabase.com</a>.</em> Retreived 04 Apr 2023. [Dal Chiele discusses the features of Gossen's first Tippas and shares numerous pictures of his Tippa A Mk. I, including side-by-side shots with an Erika 10 and a Tippa B.]</p>
