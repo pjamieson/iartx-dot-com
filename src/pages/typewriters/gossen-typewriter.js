@@ -84,6 +84,8 @@ const GossenTypewritersPage = ({ data }) => {
     
     <p>Typewriter collector Paolo Dal Chiele identifies the first two models of the Gossen Tippa as the <em>Tippa A Mk. I</em> and the <em>Tippa A Mk. II</em>. He notes distinguishing features of the Mk. I include its round, glass key tops, and two lid release buttons, one centered on each side of the lid. This model was manufactured into 1950 until it was replaced by the Mk. II. That second model has plastic, tombstone-shaped key tops and a single release button centered on the front end of the lid. The Mk. II was produced into 1953.</p>
 
+    <p>A Gossen Tippa promotional brochure—illustrating the Mk. II model—noted that the typefaces offered were Pica and Elite, and the colors available were black, cerulean blue, light grey, maroon, sand, and ivory white. The listed price was then DM325 [US$77.50] (with metal lid), plus DM70 [US$17] for the optional leather briefcase.</p>
+
     <p>A new model—often identified as the <b>Gossen Tippa B</b>—appeared in 1953. Although we have seen one with a metal lid, the Tippa B generally replaced the earlier base and lid with a base/lid combination that has a small leather suitcase look. This lockable case provides storage room in the lid. Over the ribbons, a pair of gull-wing covers with rounded tips replaced the earlier one-piece cover, and the ribbon/stencil selector was eliminated. Initially, the Tippa B retained the original Tippa's small, rotating carriage return lever, but in early 1954 that lever was replaced with a longer, easier-to-use one.</p>
 
     <p>In 1955, an evolved Tippa version named the <b>Gossen Tippa Pilot</b> appeared. In addition to the <em>Gossen Tippa</em> nameplate on the top of the shell, below the right ribbon cover, a chromed metal <em>pilot</em> logo was added below the left ribbon cover. A ribbon/stencil selector was again included. The Pilot model would prove to be the last in Gossen's line of typewriters. </p>
@@ -147,6 +149,8 @@ const GossenTypewritersPage = ({ data }) => {
     <p className="source"><b>Polt, Richard.</b> <em>The Typewriter Revolution: A Typist's Companion for the 21st Century</em>. Woodstock, VT: The Countryman Press [2015]. Page 106, including a photo of a Gossen Tippa Pilot.</p>
 
     <p className="source"><b>—</b>. <em><a href="https://site.xavier.edu/polt/typewriters/typers.html" target="_blank" rel="noopener noreferrer">The Classic Typewriter Page presents Writers and their Typewriters</a>.</em> Retreived 04 Apr 2023. [Enumerates nearly 600 authors, and lists the typewriter model(s) each was known to use. Often includes links to images of the writers with their machines.]</p>
+
+    <p className="source"><b>—</b>. <em><a href="http://writingball.blogspot.com/2013/05/gossen-tippa-brochure.html" target="_blank" rel="noopener noreferrer">Gossen Tippa brochure</a>.</em> Blog post dated 13 May 2013. Retreived 07 Apr 2023. [Polt shares images of a Gossen Tippa promotional brochure.]</p>
 
     <p className="source"><b>TypewriterDatabase[dot]com</b>. <em><a href="https://typewriterdatabase.com/adler.26.typewriter-serial-number-database" target="_blank" rel="noopener noreferrer">Adler Typewriter Serial Numbers</a>.</em> Retreived 03 Apr 2023.</p>
 
