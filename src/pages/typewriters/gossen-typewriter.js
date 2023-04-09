@@ -36,7 +36,7 @@ const GossenTypewritersPage = ({ data }) => {
     <Layout>
       <Seo title="Gossen Tippa and Adler Tippa Typewriters" description={seo_description} />
       <div className="container page-container">
-        <h1>Gossen Typewriters - Tippa, Tippa-B & Tippa Pilot</h1>
+        <h1>Gossen Typewriters - Tippa, Tippa B & Tippa Pilot</h1>
 
 <section className="brand-story">
   <div className="historical-images">
@@ -120,63 +120,63 @@ const GossenTypewritersPage = ({ data }) => {
 
     <h4>Interesting Tippa Examples:</h4>
 
-    <p className="source"><b>Barlow, David MacGregor</b>. <em><a href="https://typewriterdatabase.com/1952-gossen-tippa-b.19879.typewriter" target="_blank" rel="noopener noreferrer">1952 Gossen Tippa #70061 Gallery at TypewriterDatabase.com</a>.</em> Retreived 03 Apr 2023. [Barlow shares pictures of his Tippa A Mk. II, which has a Tippa-Boy, leather suitcase-style case rather than the usual metal lid.]</p>
+    <p className="source"><b>Barlow, David MacGregor</b>. <em><a href="https://typewriterdatabase.com/1952-gossen-tippa-b.19879.typewriter" target="_blank" rel="noopener noreferrer">1952 Gossen Tippa #70061 Gallery at TypewriterDatabase.com</a>.</em> Retrieved 03 Apr 2023. [Barlow shares pictures of his Tippa A Mk. II, which has a Tippa-Boy, leather suitcase-style case rather than the usual metal lid.]</p>
 
-    <p className="source">—. <em><a href="https://typewriterdatabase.com/1957-triumph-tippa-b-necessaire.19878.typewriter" target="_blank" rel="noopener noreferrer">1957 Triumph Tippa B Necessaire #1342751 Gallery at TypewriterDatabase.com</a>.</em> Retreived 03 Apr 2023. [Barlow shares pictures of his Triumph Tippa B in a metal lid. Triumph branding plates aside, one might suspect that this machine was actually manufactured by Gossen.]</p>
+    <p className="source">—. <em><a href="https://typewriterdatabase.com/1957-triumph-tippa-b-necessaire.19878.typewriter" target="_blank" rel="noopener noreferrer">1957 Triumph Tippa B Necessaire #1342751 Gallery at TypewriterDatabase.com</a>.</em> Retrieved 03 Apr 2023. [Barlow shares pictures of his Triumph Tippa B in a metal lid. Triumph branding plates aside, one might suspect that this machine was actually manufactured by Gossen.]</p>
 
-     <p className="source"><b>Hill, Mark</b>. <em><a href="https://typewriterdatabase.com/1954-gossen-tippa.15979.typewriter" target="_blank" rel="noopener noreferrer">1954 Gossen Tippa B #104504 Gallery at TypewriterDatabase.com</a>.</em> Retreived 03 Apr 2023. [A gorgeous, like-new Gossen Tippa B in a Tippa-B branded case.]</p>
+     <p className="source"><b>Hill, Mark</b>. <em><a href="https://typewriterdatabase.com/1954-gossen-tippa.15979.typewriter" target="_blank" rel="noopener noreferrer">1954 Gossen Tippa B #104504 Gallery at TypewriterDatabase.com</a>.</em> Retrieved 03 Apr 2023. [A gorgeous, like-new Gossen Tippa B in a Tippa-B branded case.]</p>
 
-    <p className="source"><b>Messenger, Robert</b>. <em><a href="https://oztypewriter.blogspot.com/2012/05/adler-tippa-pilot-portable-typewriter.html" target="_blank" rel="noopener noreferrer">The Adler Tippa Pilot Portable Typewriter</a>.</em> Blog post dated 14 May 2012. Retreived 03 Apr 2023. [There are no Adler Tippa Pilot galleries in the Typewriter Database, but Robert Messenger shows us his.]</p>
+    <p className="source"><b>Messenger, Robert</b>. <em><a href="https://oztypewriter.blogspot.com/2012/05/adler-tippa-pilot-portable-typewriter.html" target="_blank" rel="noopener noreferrer">The Adler Tippa Pilot Portable Typewriter</a>.</em> Blog post dated 14 May 2012. Retrieved 03 Apr 2023. [There are no Adler Tippa Pilot galleries in the Typewriter Database, but Robert Messenger shows us his.]</p>
 
-    <p className="source"><b>van Gaalen, Laurenz</b>. <em><a href="https://typewriterdatabase.com/1957-adler-tippa.16254.typewriter" target="_blank" rel="noopener noreferrer">1957 Adler Tippa #4157439 Gallery at TypewriterDatabase.com</a>.</em> Retreived 03 Apr 2023. [This Adler Tippa was probably made by Gossen. It has a metal lid, the leather breifcase, and apparently came with Gossen-branded instructions.]</p>
+    <p className="source"><b>van Gaalen, Laurenz</b>. <em><a href="https://typewriterdatabase.com/1957-adler-tippa.16254.typewriter" target="_blank" rel="noopener noreferrer">1957 Adler Tippa #4157439 Gallery at TypewriterDatabase.com</a>.</em> Retrieved 03 Apr 2023. [This Adler Tippa was probably made by Gossen. It has a metal lid, the leather breifcase, and apparently came with Gossen-branded instructions.]</p>
 
      <h4>Primary Sources:</h4>
 
-    <p className="source"><b>Dal Chiele, Paolo</b>. <em><a href="https://typewriterdatabase.com/1949-gossen-tippa.13802.typewriter" target="_blank" rel="noopener noreferrer">1949 Gossen Tippa #10815 Gallery at TypewriterDatabase.com</a>.</em> Retreived 04 Apr 2023. [Dal Chiele discusses the features of Gossen's first Tippas and shares numerous pictures of his Tippa A Mk. I, including side-by-side shots with an Erika 10 and a Tippa B.]</p>
+    <p className="source"><b>Dal Chiele, Paolo</b>. <em><a href="https://typewriterdatabase.com/1949-gossen-tippa.13802.typewriter" target="_blank" rel="noopener noreferrer">1949 Gossen Tippa #10815 Gallery at TypewriterDatabase.com</a>.</em> Retrieved 04 Apr 2023. [Dal Chiele discusses the features of Gossen's first Tippas and shares numerous pictures of his Tippa A Mk. I, including side-by-side shots with an Erika 10 and a Tippa B.]</p>
 
-    <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/1951-gossen-tippa.15336.typewriter" target="_blank" rel="noopener noreferrer">1951 Gossen Tippa #30284 Gallery at TypewriterDatabase.com</a>.</em> Retreived 04 Apr 2023. [Dal Chiele shares numerous pictures of his Tippa A Mk. II, including wide and detail shots of the machine at various stages of disassembly and repair.]</p>
+    <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/1951-gossen-tippa.15336.typewriter" target="_blank" rel="noopener noreferrer">1951 Gossen Tippa #30284 Gallery at TypewriterDatabase.com</a>.</em> Retrieved 04 Apr 2023. [Dal Chiele shares numerous pictures of his Tippa A Mk. II, including wide and detail shots of the machine at various stages of disassembly and repair.]</p>
 
-    <p className="source"><b>Davis, Will</b>. <em><a href="http://www.willdavis.org/Reiseschreibmaschinen2.html" target="_blank" rel="noopener noreferrer">Reiseschreibmaschinen 2:  The Tippa</a>.</em> An undated web page about the Gossen, Adler, and Triumph Tippas. Retreived 03 Apr 2023. [It appears this page was originally illustrated with 16 photos; sadly it now only has placeholders for them.]</p>
+    <p className="source"><b>Davis, Will</b>. <em><a href="http://www.willdavis.org/Reiseschreibmaschinen2.html" target="_blank" rel="noopener noreferrer">Reiseschreibmaschinen 2:  The Tippa</a>.</em> An undated web page about the Gossen, Adler, and Triumph Tippas. Retrieved 03 Apr 2023. [It appears this page was originally illustrated with 16 photos; sadly it now only has placeholders for them.]</p>
 
-    <p className="source"><b>GMC Istruments</b>. <em><a href="https://www.gmc-instruments.de/en/company/about-us/history/" target="_blank" rel="noopener noreferrer">History of the Gossen Company</a>.</em> Retreived 05 Apr 2023. [Gossen Company history on the website of the company that now (April 2023) owns it. Scroll to bottom of the page and open the <em>History in Detail: 1906 - 1954</em> tab.]</p>
+    <p className="source"><b>GMC Istruments</b>. <em><a href="https://www.gmc-instruments.de/en/company/about-us/history/" target="_blank" rel="noopener noreferrer">History of the Gossen Company</a>.</em> Retrieved 05 Apr 2023. [Gossen Company history on the website of the company that now (April 2023) owns it. Scroll to bottom of the page and open the <em>History in Detail: 1906 - 1954</em> tab.]</p>
 
-    <p className="source"><b>Messenger, Robert</b>. <em><a href="https://oztypewriter.blogspot.com/2012/01/gossen-tippa-mighty-mouse-of.html" target="_blank" rel="noopener noreferrer">The Gossen Tippa: The Mighty Mouse of Typewriters</a>.</em> Blog post dated 07 Jan 2012. Retreived 03 Apr 2023. [This is the best discussion and comparison  of the various Tippa models that we have seen.]</p>
+    <p className="source"><b>Messenger, Robert</b>. <em><a href="https://oztypewriter.blogspot.com/2012/01/gossen-tippa-mighty-mouse-of.html" target="_blank" rel="noopener noreferrer">The Gossen Tippa: The Mighty Mouse of Typewriters</a>.</em> Blog post dated 07 Jan 2012. Retrieved 03 Apr 2023. [This is the best discussion and comparison  of the various Tippa models that we have seen.]</p>
 
-    <p className="source"><b>Munk, Theodore</b>. <em><a href="https://munk.org/typecast/2015/12/26/gossen-tippa-serials-updated/" target="_blank" rel="noopener noreferrer">Gossen Tippa Serials Updated!</a>.</em> Blog post dated 26 Dec 2015. Retreived 05 Apr 2023. [Munk announces refinements to the TWDB Tippa serial number pages, and pointes out that Adler simply continued their numbering from where Gossen stopped.]</p>
+    <p className="source"><b>Munk, Theodore</b>. <em><a href="https://munk.org/typecast/2015/12/26/gossen-tippa-serials-updated/" target="_blank" rel="noopener noreferrer">Gossen Tippa Serials Updated!</a>.</em> Blog post dated 26 Dec 2015. Retrieved 05 Apr 2023. [Munk announces refinements to the TWDB Tippa serial number pages, and pointes out that Adler simply continued their numbering from where Gossen stopped.]</p>
 
     <p className="source"><b>Polt, Richard.</b> <em>The Typewriter Revolution: A Typist's Companion for the 21st Century</em>. Woodstock, VT: The Countryman Press [2015]. Page 106, including a photo of a Gossen Tippa Pilot.</p>
 
-    <p className="source"><b>—</b>. <em><a href="https://site.xavier.edu/polt/typewriters/typers.html" target="_blank" rel="noopener noreferrer">The Classic Typewriter Page presents Writers and their Typewriters</a>.</em> Retreived 04 Apr 2023. [Enumerates nearly 600 authors, and lists the typewriter model(s) each was known to use. Often includes links to images of the writers with their machines.]</p>
+    <p className="source"><b>—</b>. <em><a href="https://site.xavier.edu/polt/typewriters/typers.html" target="_blank" rel="noopener noreferrer">The Classic Typewriter Page presents Writers and their Typewriters</a>.</em> Retrieved 04 Apr 2023. [Enumerates nearly 600 authors, and lists the typewriter model(s) each was known to use. Often includes links to images of the writers with their machines.]</p>
 
-    <p className="source"><b>—</b>. <em><a href="http://writingball.blogspot.com/2013/05/gossen-tippa-brochure.html" target="_blank" rel="noopener noreferrer">Gossen Tippa brochure</a>.</em> Blog post dated 13 May 2013. Retreived 07 Apr 2023. [Polt shares images of a Gossen Tippa promotional brochure.]</p>
+    <p className="source"><b>—</b>. <em><a href="http://writingball.blogspot.com/2013/05/gossen-tippa-brochure.html" target="_blank" rel="noopener noreferrer">Gossen Tippa brochure</a>.</em> Blog post dated 13 May 2013. Retrieved 07 Apr 2023. [Polt shares images of a Gossen Tippa promotional brochure.]</p>
 
-    <p className="source"><b>TypewriterDatabase[dot]com</b>. <em><a href="https://typewriterdatabase.com/adler.26.typewriter-serial-number-database" target="_blank" rel="noopener noreferrer">Adler Typewriter Serial Numbers</a>.</em> Retreived 03 Apr 2023.</p>
+    <p className="source"><b>TypewriterDatabase[dot]com</b>. <em><a href="https://typewriterdatabase.com/adler.26.typewriter-serial-number-database" target="_blank" rel="noopener noreferrer">Adler Typewriter Serial Numbers</a>.</em> Retrieved 03 Apr 2023.</p>
 
-    <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/Adler.Tippa.26.bmys" target="_blank" rel="noopener noreferrer">Adler Tippa Typewriters by Year then Serial Number</a>.</em> Retreived 03 Apr 2023. [Photo-illustrated galleries of typewriters of this model]</p>
+    <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/Adler.Tippa.26.bmys" target="_blank" rel="noopener noreferrer">Adler Tippa Typewriters by Year then Serial Number</a>.</em> Retrieved 03 Apr 2023. [Photo-illustrated galleries of typewriters of this model]</p>
 
-    <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/Adler.Tippa+1.26.bmys" target="_blank" rel="noopener noreferrer">Adler Tippa 1 Typewriters by Year then Serial Number</a>.</em> Retreived 03 Apr 2023. [Photo-illustrated galleries of typewriters of this model]</p>
+    <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/Adler.Tippa+1.26.bmys" target="_blank" rel="noopener noreferrer">Adler Tippa 1 Typewriters by Year then Serial Number</a>.</em> Retrieved 03 Apr 2023. [Photo-illustrated galleries of typewriters of this model]</p>
 
-    <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/Adler.Tippa+S.26.bmys" target="_blank" rel="noopener noreferrer">Adler Tippa S Typewriters by Year then Serial Number</a>.</em> Retreived 03 Apr 2023. [Photo-illustrated galleries of typewriters of this model]</p>
+    <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/Adler.Tippa+S.26.bmys" target="_blank" rel="noopener noreferrer">Adler Tippa S Typewriters by Year then Serial Number</a>.</em> Retrieved 03 Apr 2023. [Photo-illustrated galleries of typewriters of this model]</p>
 
-    <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/gossentippa.37.typewriter-serial-number-database" target="_blank" rel="noopener noreferrer">Gossen Typewriter Serial Numbers</a>.</em> Retreived 03 Apr 2023.</p>
+    <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/gossentippa.37.typewriter-serial-number-database" target="_blank" rel="noopener noreferrer">Gossen Typewriter Serial Numbers</a>.</em> Retrieved 03 Apr 2023.</p>
 
-    <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/Gossen.Tippa.37.bmys" target="_blank" rel="noopener noreferrer">Gossen Tippa Typewriters by Year then Serial Number</a>.</em> Retreived 03 Apr 2023. [Photo-illustrated galleries of typewriters of this model]</p>
+    <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/Gossen.Tippa.37.bmys" target="_blank" rel="noopener noreferrer">Gossen Tippa Typewriters by Year then Serial Number</a>.</em> Retrieved 03 Apr 2023. [Photo-illustrated galleries of typewriters of this model]</p>
 
-    <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/Gossen.Tippa+B.37.bmys" target="_blank" rel="noopener noreferrer">Gossen Tippa B Typewriters by Year then Serial Number</a>.</em> Retreived 03 Apr 2023. [Photo-illustrated galleries of typewriters of this model]</p>
+    <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/Gossen.Tippa+B.37.bmys" target="_blank" rel="noopener noreferrer">Gossen Tippa B Typewriters by Year then Serial Number</a>.</em> Retrieved 03 Apr 2023. [Photo-illustrated galleries of typewriters of this model]</p>
 
-    <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/Gossen.Pilot.37.bmys" target="_blank" rel="noopener noreferrer">Gossen Pilot Typewriters by Year then Serial Number</a>.</em> Retreived 03 Apr 2023. [Photo-illustrated galleries of typewriters of this model]</p>
+    <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/Gossen.Pilot.37.bmys" target="_blank" rel="noopener noreferrer">Gossen Pilot Typewriters by Year then Serial Number</a>.</em> Retrieved 03 Apr 2023. [Photo-illustrated galleries of typewriters of this model]</p>
 
-    <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/Royal.Caravan.72.bmys" target="_blank" rel="noopener noreferrer">Royal Caravan Typewriters by Year then Serial Number</a>.</em> Retreived 05 Apr 2023. [Photo-illustrated galleries of typewriters of this model]</p>
+    <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/Royal.Caravan.72.bmys" target="_blank" rel="noopener noreferrer">Royal Caravan Typewriters by Year then Serial Number</a>.</em> Retrieved 05 Apr 2023. [Photo-illustrated galleries of typewriters of this model]</p>
 
-    <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/Royal.Sahara.72.bmys" target="_blank" rel="noopener noreferrer">Royal Sahara Typewriters by Year then Serial Number</a>.</em> Retreived 05 Apr 2023. [Photo-illustrated galleries of typewriters of this model]</p>
+    <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/Royal.Sahara.72.bmys" target="_blank" rel="noopener noreferrer">Royal Sahara Typewriters by Year then Serial Number</a>.</em> Retrieved 05 Apr 2023. [Photo-illustrated galleries of typewriters of this model]</p>
 
-    <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/triumph.94.typewriter-serial-number-database" target="_blank" rel="noopener noreferrer">Triumph Typewriter Serial Numbers</a>.</em> Retreived 03 Apr 2023.</p>
+    <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/triumph.94.typewriter-serial-number-database" target="_blank" rel="noopener noreferrer">Triumph Typewriter Serial Numbers</a>.</em> Retrieved 03 Apr 2023.</p>
 
-    <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/Triumph.Tippa.94.bmys" target="_blank" rel="noopener noreferrer">Triumph Tippa Typewriters by Year then Serial Number</a>.</em> Retreived 03 Apr 2023. [Photo-illustrated galleries of typewriters of this model]</p>
+    <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/Triumph.Tippa.94.bmys" target="_blank" rel="noopener noreferrer">Triumph Tippa Typewriters by Year then Serial Number</a>.</em> Retrieved 03 Apr 2023. [Photo-illustrated galleries of typewriters of this model]</p>
 
-    <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/Triumph.Tippa+1.94.bmys" target="_blank" rel="noopener noreferrer">Triumph Tippa 1 Typewriters by Year then Serial Number</a>.</em> Retreived 03 Apr 2023. [Photo-illustrated galleries of typewriters of this model]</p>
+    <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/Triumph.Tippa+1.94.bmys" target="_blank" rel="noopener noreferrer">Triumph Tippa 1 Typewriters by Year then Serial Number</a>.</em> Retrieved 03 Apr 2023. [Photo-illustrated galleries of typewriters of this model]</p>
 
-    <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/Triumph.Tippa+S.94.bmys" target="_blank" rel="noopener noreferrer">Triumph Tippa S Typewriters by Year then Serial Number</a>.</em> Retreived 03 Apr 2023. [Photo-illustrated galleries of typewriters of this model]</p>
+    <p className="source"><b>—</b>. <em><a href="https://typewriterdatabase.com/Triumph.Tippa+S.94.bmys" target="_blank" rel="noopener noreferrer">Triumph Tippa S Typewriters by Year then Serial Number</a>.</em> Retrieved 03 Apr 2023. [Photo-illustrated galleries of typewriters of this model]</p>
   </div>
   <div className="historical-images">
     <div className="image-container">
