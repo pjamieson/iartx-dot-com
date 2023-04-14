@@ -210,9 +210,9 @@ const GossenTypewritersPage = ({ data }) => {
     </div>
   <p>The serial number on early Gossen Tippas is etched on the inside bottom of the machine, below the right ribbon spool.</p>
   <div className="image-container">
-      <img className="card" src={tippa28} alt="Gossen typewriter leather breifcase" />
+      <img className="card" src={tippa28} alt="Gossen Tippa typewriter and leather breifcase" />
     </div>
-    <p>Gossen Tippa leather breifcase</p>
+    <p>Gossen Tippa and leather breifcase</p>
     <div className="image-container">
       <img className="card" src={tippa29} alt="Gossen typewriter in lid and leather breifcase" />
     </div>
