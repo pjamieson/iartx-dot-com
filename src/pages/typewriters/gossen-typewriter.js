@@ -133,7 +133,7 @@ const GossenTypewritersPage = ({ data }) => {
 
     <h3>Meanwhile, more from Gossen...</h3>
 
-    <p>In the 1970s, I regularly used typewriters. We always had several in the house when I was growing up. Though I have forgotten what brand I used when writing papers for university in the 70s, I do recall that it was a portable with a plastic shell and case.) However, I well-remember leasing an <em>IBM Selectric</em> in 1978 and 1979 to produce master copies of catalog pages of scarce books that I had scouted and was offering for sale. I also bought a new <b>Gossen Super Pilot</b> light meter to help me properly expose my film while photographing those books to ilustrate my catalogs. Word Processing on a PC soon followed, but I still have—and use—that Gossen light meter.</p>
+    <p>In the 1970s, I regularly used typewriters. We always had several in the house when I was growing up. Though I have forgotten what brand I used when writing papers for university in the 70s, I do recall that it was a portable with a plastic shell and case. However, I well-remember leasing an <em>IBM Selectric</em> in 1978 and 1979 to produce master copies of catalog pages of scarce books that I had scouted and was offering for sale. I also bought a new <b>Gossen Super Pilot</b> light meter to help me properly expose my film while photographing those books to ilustrate my catalogs. Word Processing on a PC soon followed, but I still have—and use—that Gossen light meter.</p>
 
     <h4>Interesting Tippa Examples:</h4>
 
@@ -228,7 +228,7 @@ const GossenTypewritersPage = ({ data }) => {
   <div className="image-container">
       <img className="card" src={tippa28} alt="Gossen Tippa typewriter and leather breifcase" />
     </div>
-    <p>Gossen Tippa and leather breifcase</p>
+    <p>Gossen Tippa, with metal lid and leather breifcase</p>
     <div className="image-container">
       <img className="card" src={tippa29} alt="Gossen typewriter in lid and leather breifcase" />
     </div>
