@@ -8,7 +8,7 @@ import Seo from "../../components/seo"
 import CardImageCaptionLink from "../../components/card-image-caption-link"
 
 import tippa1 from "../../images/Placeholder 400.png"
-import tippa2 from "../../images/1950 Gossen Tippa 400.jpg"
+import tippa2 from "../../images/1952 Gossen Tippa 400.jpg"
 import tippa3 from "../../images/Placeholder 400.png"
 import tippa4 from "../../images/Placeholder 400.png"
 import tippa5 from "../../images/Placeholder 400.png"
@@ -22,7 +22,7 @@ import tippa24 from "../../images/Tippa Hermes Back2 400.jpg"
 import tippa25 from "../../images/Tippa Hermes Case Det1 400.jpg"
 import tippa26 from "../../images/1950 Gossen Tippa cn 400.png"
 import tippa27 from "../../images/1950 Gossen Tippa sn 400.png"
-import tippa28 from "../../images/Placeholder 400.png"
+import tippa28 from "../../images/Gossen Tippa Briefcase 400.jpg"
 import tippa29 from "../../images/GossenSuperPilot 400.jpg"
 
 const GossenTypewritersPage = ({ data }) => {
@@ -45,9 +45,9 @@ const GossenTypewritersPage = ({ data }) => {
     </div>
     <p>Gossen Tippa (Model A Mk. I)</p>
     <div className="image-container">
-      <img className="card" src={tippa2} alt="1950 Gossen Tippa typewriter" />
+      <img className="card" src={tippa2} alt="1952 Gossen Tippa typewriter" />
     </div>
-    <p>1950 Gossen Tippa (Model A Mk. II)</p>
+    <p>1952 Gossen Tippa (Model A Mk. II)</p>
     <div className="image-container">
       <img className="card" src={tippa3} alt="Gossen Tippa B typewriter" />
     </div>
