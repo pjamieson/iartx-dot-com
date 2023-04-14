@@ -22,8 +22,9 @@ import tippa24 from "../../images/Tippa Hermes Back2 400.jpg"
 import tippa25 from "../../images/Tippa Hermes Case Det1 400.jpg"
 import tippa26 from "../../images/1950 Gossen Tippa cn 400.png"
 import tippa27 from "../../images/1950 Gossen Tippa sn 400.png"
-import tippa28 from "../../images/Gossen Tippa Briefcase 400.jpg"
-import tippa29 from "../../images/GossenSuperPilot 400.jpg"
+import tippa28 from "../../images/Gossen Tippa Briefcase0 400.jpg"
+import tippa29 from "../../images/Gossen Tippa Briefcase1 400.jpg"
+import tippa30 from "../../images/GossenSuperPilot 400.jpg"
 
 const GossenTypewritersPage = ({ data }) => {
   const {
@@ -209,11 +210,15 @@ const GossenTypewritersPage = ({ data }) => {
     </div>
   <p>The serial number on early Gossen Tippas is etched on the inside bottom of the machine, below the right ribbon spool.</p>
   <div className="image-container">
-      <img className="card" src={tippa28} alt="Gossen typewriter in lid and leather breifcase" />
+      <img className="card" src={tippa28} alt="Gossen typewriter leather breifcase" />
+    </div>
+    <p>Gossen Tippa leather breifcase</p>
+    <div className="image-container">
+      <img className="card" src={tippa29} alt="Gossen typewriter in lid and leather breifcase" />
     </div>
     <p>Gossen Tippa in lid and leather breifcase</p>
   <div className="image-container">
-      <img className="card" src={tippa29} alt="Gossen Super Pilot photographic light meter" />
+      <img className="card" src={tippa30} alt="Gossen Super Pilot photographic light meter" />
     </div>
     <p>Fun Fact: The Gossen Super Pilot light meter's "pilot" logo is the same design as that of the Gossen Tippa Pilot typewriter!</p>
 </div>
