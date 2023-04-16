@@ -241,26 +241,26 @@ const GossenTypewritersPage = ({ data }) => {
 </section>
 
 <section className="gallery">
-  <h2 className="typewriter-gallery">Tippa Typewriters Offered for Purchase</h2>
-  { paintings.length === 0 &&
-    <MDBCard className="na-card">
-      <MDBCardBody>
-        <div>
-          <h2 className='mt-1 text-center'>Coming soon...</h2>
-        </div>
-      </MDBCardBody>
-    </MDBCard>
-  }
-  { paintings.length > 0 &&
-    <div className="uk-grid-small uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid="masonry: true">
-    {paintings.map(painting => {
-      return <div key={painting.sku}>
-        {painting.images && <CardImageCaptionLink item={painting} caption_format="Typewriter" /> }
-        </div>
-      })}
-    </div>
-  }
-</section>
+          <h2 className="typewriter-gallery">Tippa Typewriters Offered for Purchase</h2>
+          { paintings.length === 0 &&
+            <MDBCard className="na-card">
+              <MDBCardBody>
+                <div>
+                  <h2 className='mt-1 text-center'>More Tippa typewriters coming soon...</h2>
+                </div>
+              </MDBCardBody>
+            </MDBCard>
+          }
+          { paintings.length > 0 &&
+            <div className="uk-grid-small uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid="masonry: true">
+            {paintings.map(painting => {
+              return <div key={painting.sku}>
+                {painting.images && <CardImageCaptionLink item={painting} caption_format="Typewriter" /> }
+                </div>
+              })}
+            </div>
+          }
+        </section>
 
       </div>
     </Layout>
