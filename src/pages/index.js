@@ -40,7 +40,7 @@ const IndexPage = ({data}) => {
             <li>Satisfaction guaranteed with returns accepted for any reason.</li>
           </ul>
           <p className="dark-grey-text">
-            Scroll down for a quick look at representative examples of available art works, books and trading cards. Tap or click on an image to go directly to the Gallery Page that describes that item in detail.
+            Scroll down for a quick look at representative examples of available typewriters, art works, books and trading cards. Tap or click on an image to go directly to the Gallery Page that describes that item in detail.
           </p>
           <p className="dark-grey-text">
             Explore the menu links above for a more granular breakdown of available items, with each linked page offering more examples.
