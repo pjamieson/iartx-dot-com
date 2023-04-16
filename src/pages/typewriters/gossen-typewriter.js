@@ -271,7 +271,7 @@ export const query = graphql`
 {
   allStrapiPainting(
     filter: {
-      subgenres: {elemMatch: {slug: {eq: "Typewriter"}}},
+      subgenres: {elemMatch: {slug: {eq: "gossen-typewriter"}}},
       qty: {gt: 0}
     },
     sort: {
