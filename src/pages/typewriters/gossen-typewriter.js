@@ -20,8 +20,9 @@ import tippa22 from "../../images/Tippa Hermes Case Full1 400.jpg"
 import tippa23 from "../../images/Tippa Hermes Front1 400.jpg"
 import tippa24 from "../../images/Tippa Hermes Back2 400.jpg"
 import tippa25 from "../../images/Tippa Hermes Case Det1 400.jpg"
-import tippa26 from "../../images/1950 Gossen Tippa cn 400.png"
-import tippa27 from "../../images/1950 Gossen Tippa sn 400.png"
+import tippa26a from "../../images/1950 Gossen Tippa cn 400.png"
+import tippa26b from "../../images/1950 Gossen Tippa sn 400.png"
+import tippa26c from "../../images/1952 Gossen Tippa sn 400.jpg"
 import tippa28 from "../../images/Gossen Tippa Briefcase0 400.jpg"
 import tippa29 from "../../images/Gossen Tippa Briefcase1 400.jpg"
 import tippa30 from "../../images/GossenSuperPilot 400.jpg"
@@ -218,22 +219,26 @@ const GossenTypewritersPage = ({ data }) => {
     </div>
     <p> Gossen Tippa / Hermes Baby</p>
     <div className="image-container">
-      <img className="card" src={tippa26} alt="Location of the number stamped on 1950 Gossen Tippa typewriter carriage rails" />
+      <img className="card" src={tippa26a} alt="Location of the number stamped on 1950 Gossen Tippa typewriter carriage rails" />
     </div>
-    <p>The number stamped on the right side of Gossen Tippa carriage rails is NOT the machine's serial number.</p>
+    <p>The number stamped on the right side of Gossen Tippa carriage rail is <b>NOT</b> the machine's serial number.</p>
     <div className="image-container">
-      <img className="card" src={tippa27} alt="1Location of the serial number stamped on 1950 Gossen Tippa typewriters" />
+      <img className="card" src={tippa26b} alt="1Location of the serial number stamped on 1950 Gossen Tippa typewriters" />
     </div>
-  <p>The serial number on early Gossen Tippas is etched on the inside bottom of the machine, below the right ribbon spool.</p>
-  <div className="image-container">
-      <img className="card" src={tippa28} alt="Gossen Tippa typewriter and leather breifcase" />
-    </div>
-    <p>Gossen Tippa, with metal lid and leather breifcase</p>
+    <p>The serial number on early Gossen Tippas is etched on the inside bottom of the machine, below the right ribbon spool.</p>
     <div className="image-container">
-      <img className="card" src={tippa29} alt="Gossen typewriter in lid and leather breifcase" />
-    </div>
-    <p>Gossen Tippa in lid and leather breifcase</p>
-  <div className="image-container">
+        <img className="card" src={tippa26c} alt="1Location of the serial number stamped on 1952 Gossen Tippa typewriters" />
+      </div>
+    <p>The serial number on later Gossen Tippas, Gossen Tippa Bs, and Gossen Tippa Pilots is lettered on the right inside bottom of the machine, just below the carriage rail.</p>
+    <div className="image-container">
+        <img className="card" src={tippa28} alt="Gossen Tippa typewriter and leather breifcase" />
+      </div>
+      <p>Gossen Tippa, with metal lid and leather breifcase</p>
+      <div className="image-container">
+        <img className="card" src={tippa29} alt="Gossen typewriter in lid and leather breifcase" />
+      </div>
+      <p>Gossen Tippa in lid and leather breifcase</p>
+    <div className="image-container">
       <img className="card" src={tippa30} alt="Gossen Super Pilot photographic light meter" />
     </div>
     <p>Fun Fact: The Gossen Super Pilot light meter's "pilot" logo is the same design as that of the Gossen Tippa Pilot typewriter!</p>
