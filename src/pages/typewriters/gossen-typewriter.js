@@ -45,15 +45,15 @@ const GossenTypewritersPage = ({ data }) => {
     <div className="image-container">
       <img className="card" src={tippa1} alt="1949 Gossen Tippa typewriter" />
     </div>
-    <p>1949 Gossen Tippa (Model A Mk. I) - Ivory shell and lid</p>
+    <p>1949 Gossen Tippa (Model A Mk. I) with Ivory color shell and lid</p>
     <div className="image-container">
       <img className="card" src={tippa2} alt="1952 Gossen Tippa typewriter" />
     </div>
-    <p>1952 Gossen Tippa (Model A Mk. II) - Sand color</p>
+    <p>1952 Gossen Tippa (Model A Mk. II) with Sand color shell and lid</p>
     <div className="image-container">
       <img className="card" src={tippa3} alt="1953 Gossen Tippa B typewriter" />
     </div>
-    <p>1953 Gossen Tippa B - Gray color</p>
+    <p>1953 Gossen Tippa B with Gray color shell and lid</p>
     <div className="image-container">
       <img className="card" src={tippa4} alt="Gossen Tippa Pilot typewriter" />
     </div>
