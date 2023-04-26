@@ -7,9 +7,9 @@ import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import CardImageCaptionLink from "../../components/card-image-caption-link"
 
-import tippa1 from "../../images/Placeholder 400.png"
+import tippa1 from "../../images/1949 Gossen Tippa 400.jpg"
 import tippa2 from "../../images/1952 Gossen Tippa 400.jpg"
-import tippa3 from "../../images/Placeholder 400.png"
+import tippa3 from "../../images/1953 Gossen Tippa B 400.jpg"
 import tippa4 from "../../images/Placeholder 400.png"
 import tippa5 from "../../images/Placeholder 400.png"
 import tippa6 from "../../images/1968 Adler Tippa S 400 2.jpg"
@@ -43,17 +43,17 @@ const GossenTypewritersPage = ({ data }) => {
 <section className="brand-story">
   <div className="historical-images">
     <div className="image-container">
-      <img className="card" src={tippa1} alt="Gossen Tippa typewriter" />
+      <img className="card" src={tippa1} alt="1949 Gossen Tippa typewriter" />
     </div>
-    <p>Gossen Tippa (Model A Mk. I)</p>
+    <p>1949 Gossen Tippa (Model A Mk. I) - Ivory shell and lid</p>
     <div className="image-container">
       <img className="card" src={tippa2} alt="1952 Gossen Tippa typewriter" />
     </div>
-    <p>1952 Gossen Tippa (Model A Mk. II)</p>
+    <p>1952 Gossen Tippa (Model A Mk. II) - Sand color</p>
     <div className="image-container">
-      <img className="card" src={tippa3} alt="Gossen Tippa B typewriter" />
+      <img className="card" src={tippa3} alt="1953 Gossen Tippa B typewriter" />
     </div>
-    <p>Gossen Tippa B</p>
+    <p>1953 Gossen Tippa B - Gray color</p>
     <div className="image-container">
       <img className="card" src={tippa4} alt="Gossen Tippa Pilot typewriter" />
     </div>
