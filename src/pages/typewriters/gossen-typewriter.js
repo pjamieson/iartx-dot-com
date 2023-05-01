@@ -11,8 +11,8 @@ import tippa1 from "../../images/1949 Gossen Tippa 400.jpg"
 import tippa2 from "../../images/1952 Gossen Tippa 400.jpg"
 import tippa3 from "../../images/1953 Gossen Tippa B 400.jpg"
 import tippa4 from "../../images/Placeholder 400.png"
-import tippa5 from "../../images/Placeholder 400.png"
-import tippa6 from "../../images/1968 Adler Tippa S 400 2.jpg"
+import tippa5 from "../../images/1964 Adler Tippa 1 400.jpg"
+import tippa6 from "../../images/1968 Adler Tippa S 400.jpg"
 import tippa7 from "../../images/Placeholder 400.png"
 import tippa20 from "../../images/Tippa Hermes Det4 400.jpg"
 import tippa21 from "../../images/Tippa Hermes Top Full 400.jpg"
@@ -61,7 +61,7 @@ const GossenTypewritersPage = ({ data }) => {
     <div className="image-container">
       <img className="card" src={tippa5} alt="Adler Tippa 1 typewriter" />
     </div>
-    <p>Adler Tippa 1</p>
+    <p>1964 Adler Tippa 1</p>
     <div className="image-container">
       <img className="card" src={tippa6} alt="1968 Adler Tippa S typewriter" />
     </div>
