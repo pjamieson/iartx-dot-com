@@ -221,7 +221,7 @@ const GossenTypewritersPage = ({ data }) => {
     <div className="image-container">
       <img className="card" src={tippa26a} alt="Location of the number stamped on 1950 Gossen Tippa typewriter carriage rails" />
     </div>
-    <p>The number stamped on the right side of Gossen Tippa carriage rails is <b>NOT</b> the machine's serial number.</p>
+    <p>The number stamped on the right end of Gossen Tippa carriage rails is <b>NOT</b> the machine's serial number.</p>
     <div className="image-container">
       <img className="card" src={tippa26b} alt="1Location of the serial number stamped on 1950 Gossen Tippa typewriters" />
     </div>
