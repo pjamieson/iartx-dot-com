@@ -115,7 +115,7 @@ const GossenTypewritersPage = ({ data }) => {
 
     <h3>Tippa Typewriters after Gossen: Adler and Triumph</h3>
 
-    <p>1959 saw the launch of the first Adler-designed-and-manufactured Tippa. (Adler had been manufacturing other typewriter models in Germany for over 60 years.) Their Tippa had a new rounded look, winning design awards in Milan in 1960 and in Germany in 1962. The two-piece shell was plastic. Models, called the <b>Adler Tippa 1</b> and the <b>Adler Tippa 2</b> appeared in 1964 and 1966. A boxy-looking model, the <b>Adler Tippa S</b>, was manufactured in Holland by the merged Triumph-Adler and launched in 1967. That model—with production moving to Japan in the early 1970s—was offered into 1976.</p>
+    <p>1959 saw the launch of the first Adler-designed-and-manufactured Tippa. (Adler had been manufacturing other typewriter models in Germany for over 60 years.) Their Tippa had a new rounded look, winning design awards in Milan in 1960 and in Germany in 1962. It measured one inch deeper and just over a pound heavier than the original Gossen Tippa. The two-piece shell was plastic. Models, called the <b>Adler Tippa 1</b> and the <b>Adler Tippa 2</b> appeared in 1964 and 1966. A boxy-looking model, the <b>Adler Tippa S</b>, was manufactured in Holland by the merged Triumph-Adler and launched in 1967. That model—with production moving to Japan in the early 1970s—was offered into 1976.</p>
 
     <p>Theodore Munk, the mastermind behind the Typewriter Database, notes that—under <em>Royal/Litton</em>—the Tippa S continued in the form of the <b>Royal Caravan</b> and the <b>Royal Sahara</b>. These plastic machines were made in Holland begining in the mid-1970s. The Caravan had tabs; the Sahara did not.</p>
 
@@ -225,7 +225,7 @@ const GossenTypewritersPage = ({ data }) => {
     <div className="image-container">
       <img className="card" src={tippa26b} alt="1Location of the serial number stamped on 1950 Gossen Tippa typewriters" />
     </div>
-    <p>The serial number on early Gossen Tippas is etched on the inside bottom of the machine, below the right ribbon spool.</p>
+    <p>The serial number on early Gossen Tippas is stamped on the inside bottom of the machine, below the right ribbon spool.</p>
     <div className="image-container">
         <img className="card" src={tippa26c} alt="1Location of the serial number stamped on 1952 Gossen Tippa typewriters" />
       </div>
