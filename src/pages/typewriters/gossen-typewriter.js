@@ -74,7 +74,7 @@ const GossenTypewritersPage = ({ data }) => {
     <div className="image-container">
       <img className="card" src={tippa7} alt="1968 Adler Tippa S typewriter" />
     </div>
-    <p>1977 Ader Tippa S</p>
+    <p>1977 Adler Tippa S</p>
   </div>
   <div className="historical-text">
     <h2>A Brief History of the Gossen Tippa Portable Typewriter Models, with a glance at Adler and Triumph Tippas</h2>
