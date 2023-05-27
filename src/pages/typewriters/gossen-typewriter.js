@@ -14,7 +14,7 @@ import tippa3 from "../../images/1953 Gossen Tippa B 400.jpg"
 import tippa4 from "../../images/Placeholder 400.png"
 import tippa5 from "../../images/1964 Adler Tippa 1 400.jpg"
 import tippa6 from "../../images/1968 Adler Tippa S 400.jpg"
-import tippa7 from "../../images/Placeholder 400.png"
+import tippa7 from "../../images/1977 Alder Tippa S 400.webp"
 import tippa20 from "../../images/Tippa Hermes Det4 400.jpg"
 import tippa21 from "../../images/Tippa Hermes Top Full 400.jpg"
 import tippa22 from "../../images/Tippa Hermes Case Full1 400.jpg"
@@ -74,7 +74,7 @@ const GossenTypewritersPage = ({ data }) => {
     <div className="image-container">
       <img className="card" src={tippa7} alt="1968 Adler Tippa S typewriter" />
     </div>
-    <p>1970s Ader or Triumph model</p>
+    <p>1977 Ader Tippa S</p>
   </div>
   <div className="historical-text">
     <h2>A Brief History of the Gossen Tippa Portable Typewriter Models, with a glance at Adler and Triumph Tippas</h2>
