@@ -2,6 +2,12 @@ const redirects = require("./redirects.json")
 exports.createPages = async ({ graphql, actions }) => {
 
   const { createRedirect } = actions
+	createRedirect({
+	    fromPath: "/typewriters/gossen-typewriter/",
+	    toPath: "https://ultraportabletypewriters.com/gossen-tippa/",
+			statusCode: 200,
+	    isPermanent: true
+	})
 	redirects.forEach(redirect =>
 		createRedirect({
 	    fromPath: redirect.fromPath,
