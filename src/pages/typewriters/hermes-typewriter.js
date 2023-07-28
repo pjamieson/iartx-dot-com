@@ -30,9 +30,12 @@ const HermesTypewritersPage = () => {
   const seo_description = "A brief history of Hermes portable typewriter models manufactured from the 1930s through the 1970s, covering Hermes 2000, 3000, Featherweight, Baby and Rocket."
 */
   return (
-    <Helmet>
-      <meta http-equiv="Refresh" content="0" url="https://ultraportabletypewriters.com/hermes-portables/" />
-    </Helmet>
+    <>
+      <Helmet>
+        <meta http-equiv="Refresh" content="0" url="https://ultraportabletypewriters.com/hermes-portables/" />
+      </Helmet>
+      <a> href="https://ultraportabletypewriters.com/hermes-portables/"</a>
+    </>
 
 /*    <Layout>
       <Seo title="Hermes Typewriters" description={seo_description} />
