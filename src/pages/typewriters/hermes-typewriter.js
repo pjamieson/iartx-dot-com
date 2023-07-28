@@ -1,4 +1,6 @@
 import React from "react"
+import { Helmet } from "react-helmet"
+/*
 import { graphql } from "gatsby"
 
 import { MDBCard, MDBCardBody } from "mdb-react-ui-kit"
@@ -18,14 +20,21 @@ import hermes22 from "../../images/Hermes 1969 3000 400.jpg"
 import hermes23 from "../../images/Hermes 1972 3000 400.jpg"
 
 const HermesTypewritersPage = ({ data }) => {
+  */
+const HermesTypewritersPage = () => {
+  /*
   const {
     allStrapiPainting: { nodes: paintings },
   } = data
 
   const seo_description = "A brief history of Hermes portable typewriter models manufactured from the 1930s through the 1970s, covering Hermes 2000, 3000, Featherweight, Baby and Rocket."
-
+*/
   return (
-    <Layout>
+    <Helmet>
+      <meta http-equiv="Refresh" content="0; url="https://ultraportabletypewriters.com/hermes-portables/" />
+    </Helmet>
+
+/*    <Layout>
       <Seo title="Hermes Typewriters" description={seo_description} />
       <div className="container page-container">
         <h1>Hermes Typewriters - Portables & Ultra-Portables</h1>
@@ -153,9 +162,10 @@ const HermesTypewritersPage = ({ data }) => {
 
       </div>
     </Layout>
+    */
   )
 }
-
+/*
 export const query = graphql`
 {
   allStrapiPainting(
@@ -204,5 +214,5 @@ export const query = graphql`
   }
 }
 `
-
+*/
 export default HermesTypewritersPage
