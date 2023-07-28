@@ -31,7 +31,7 @@ const HermesTypewritersPage = () => {
 */
   return (
     <Helmet>
-      <meta http-equiv="Refresh" content="0; url="https://ultraportabletypewriters.com/hermes-portables/" />
+      <meta http-equiv="Refresh" content="0" url="https://ultraportabletypewriters.com/hermes-portables/" />
     </Helmet>
 
 /*    <Layout>
