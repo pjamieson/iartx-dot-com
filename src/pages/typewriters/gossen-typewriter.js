@@ -7,6 +7,7 @@ import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import CardImageCaptionLink from "../../components/card-image-caption-link"
 
+import tippa0 from "../../images/1948 Gossen Tippa 400.webp"
 import tippa1 from "../../images/1949 Gossen Tippa 400.jpg"
 import tippa2a from "../../images/1952 Gossen Tippa 400.jpg"
 import tippa2b from "../../images/1953 Gossen Tippa 400.jpg"
@@ -43,6 +44,10 @@ const GossenTypewritersPage = ({ data }) => {
 
 <section className="brand-story">
   <div className="historical-images">
+    <div className="image-container">
+      <img className="card" src={tippa0} alt="1948 Gossen Tippa typewriter" />
+    </div>
+    <p>1948 Gossen Tippa (Model A Mk. I) with Maroon color shell and lid</p>
     <div className="image-container">
       <img className="card" src={tippa1} alt="1949 Gossen Tippa typewriter" />
     </div>

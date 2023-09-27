@@ -28,7 +28,7 @@ const HermesTypewritersPage = ({ data }) => {
     <Layout>
       <Seo title="Hermes Typewriters" description={seo_description} />
       <div className="container page-container">
-        <h1>Hermes Typewriters - Portables & Ultra-Portables</h1>
+        <h1>Hermes Typewriters - Portables & Ultraportables</h1>
 
         <section className="brand-story">
           <div className="historical-images">
